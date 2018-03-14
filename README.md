@@ -23,29 +23,55 @@ If this is your first time interacting with the curriculum processing tools, and
 
 For working and improving the curriculum tools, we must first understand how unified plugins ecosystem works (via [`through`](https://github.com/wooorm/trough)) and for some advanced cases, how we can [extend the parser](https://github.com/remarkjs/remark/tree/master/packages/remark-parse#extending-the-parser).
 
-## Resources
-
-*  with guides
-
-*
-
-*
-
-*
-
 ## API
 
 ```js
 const {
-  types,
+  types: compilerTypes,
+  getCompiler
+} = require('@enkidevs/curriculum-compiler')
+const {
+  types: parserTypes,
   getParser
 } = require('@enkidevs/curriculum-parser')
 
-const parser = getParser(types.INSIGHT)
+const parser = getParser(parserTypes.INSIGHT)
+const ast = parser.parseSync('some markdown string')
+const compiler = getCompiler(parserTypes.INSIGHT, compilerTypes.STRING)
+const markdownString = compiler.compileSync(ast)
 
-const ast = parser.parseSync('some markdown string') // or vfile(/path/to/markdown-file)
+// or an insight to html
+const insightHtml = getCompiler(
+  parserTypes.INSIGHT,
+  compilerTypes.HTML
+).compileSync(
+  getParser(parserTypes.INSIGHT)
+    .parseSync('some markdown string for an insight')
+)
 
-const markdownString = parser.stringifySync(ast)  // we get back the markdown string
+// or a question to react
+const questionReact = getCompiler(
+  parserTypes.QUESTION,
+  compilerTypes.REACT
+).compileSync(
+  getParser(parserTypes.QUESTION)
+    .parseSync('some markdown string for a question')
+)
+
+// there's also shorthands
+const {
+  html,
+  react
+} = require('@enkidevs/curriculum-renderer')
+
+const insightHtml = html.insight(
+  'some markdown string for an insight'
+)
+
+// or a question to react
+const questionReact = react.question(
+  'some markdown string for a question'
+)
 ```
 
 ## Usage
