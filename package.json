@@ -34,16 +34,14 @@
   },
   "homepage": "https://github.com/enkidevs/curriculum-processor#readme",
   "devDependencies": {
+    "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-jest": "^21.14.0",
     "eslint-plugin-node": "^6.0.1",
-    "jest": "^22.4.2",
-    "jest-in-case": "^1.0.2",
     "lerna": "^2.9.0",
     "pre-commit": "^1.2.2",
-    "prettier": "1.11.1",
-    "rimraf": "^2.6.2"
+    "prettier": "1.11.1"
   },
   "jest": {
     "testRegex": "/src.*__tests__/.*\\.test.js$"

@@ -2,20 +2,16 @@
 
 [Enki curriculum](https://github.com/enkidevs/curriculum) processors are divied into 3 packages:
 
-- [@enkidevs/curriculum-compiler]()
-  - Compile parsed AST into target platforms
+- [@enkidevs/curriculum-compiler-string]()
+  - Compile parsed curriculum AST into a string
 - [@enkidevs/curriculum-parser]()
-  - Parse curriculum markdown strings into ASTs based on our transformer rules
-- [@enkidevs/curriculum-transformers]()
-  - Rules on how to parse the curriculum
-- [@enkidevs/curriculum-renderer]()
-  - Wrapper package that the clients can use to render content to different platforms
+  - Parse curriculum markdown strings into ASTs
+- [@enkidevs/curriculum-helpers]()
+  - Helpers for processing the curriculum
 
 The text processing architecture is based on [`unifiedjs`](https://unifiedjs.github.io/), mainly it's markdown interfaces via [`remarkjs`](https://remark.js.org/).
 
-The processes provides a parser that generates an [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([sample AST](https://astexplorer.net/#/gist/0a92bbf654aca4fdfb3f139254cf0bad/ffe102014c188434c027e43661dbe6ec30042ee2)) from a markdown string and a compiler that compiles an AST into a desired platform. At the moment we have the following compilers:
-
-- [string]()
+The processes provides a parser that generates an [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([sample AST](https://astexplorer.net/#/gist/0a92bbf654aca4fdfb3f139254cf0bad/ffe102014c188434c027e43661dbe6ec30042ee2)) from a markdown string and a compiler that compiles an AST into a desired platform.
 
 The process of parsing->transforming->compiling is describe on [unified's Github page](https://github.com/unifiedjs/unified#description) as well.
 
@@ -27,49 +23,17 @@ For working and improving the curriculum tools, we must first understand how uni
 
 ```js
 const {
-  types: compilerTypes,
-  getCompiler
-} = require('@enkidevs/curriculum-compiler')
+  contentTypes
+} = require('@enkidevs/curriculum-helpers')
 const {
-  types: parserTypes,
   getParser
 } = require('@enkidevs/curriculum-parser')
-
-const parser = getParser(parserTypes.INSIGHT)
-const ast = parser.parseSync('some markdown string')
-const compiler = getCompiler(parserTypes.INSIGHT, compilerTypes.STRING)
-const markdownString = compiler.compileSync(ast)
-
-// or an insight to html
-const insightHtml = getCompiler(
-  parserTypes.INSIGHT,
-  compilerTypes.HTML
-).compileSync(
-  getParser(parserTypes.INSIGHT)
-    .parseSync('some markdown string for an insight')
-)
-
-// or a question to react
-const questionReact = getCompiler(
-  parserTypes.QUESTION,
-  compilerTypes.REACT
-).compileSync(
-  getParser(parserTypes.QUESTION)
-    .parseSync('some markdown string for a question')
-)
-
-// there's also shorthands
 const {
-  html,
-  react
-} = require('@enkidevs/curriculum-renderer')
+  getCompiler
+} = require('@enkidevs/curriculum-compiler-string')
 
-const insightHtml = html.insight(
-  'some markdown string for an insight'
-)
-
-// or a question to react
-const questionReact = react.question(
-  'some markdown string for a question'
-)
+const parser = getParser(contentTypes.INSIGHT)
+const ast = parser.parseSync('some markdown string')
+const compiler = getCompiler(contentTypes.INSIGHT)
+const markdownString = compiler.compileSync(ast)
 ```
