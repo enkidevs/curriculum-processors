@@ -73,28 +73,3 @@ const questionReact = react.question(
   'some markdown string for a question'
 )
 ```
-
-## Usage
-
-```js
-const {
-  types, getProcessor
-} = require('@enkidevs/curriculum-parser');
-
-const remark2rehype = require('remark-rehype');
-const doc = require('rehype-document');
-const format = require('rehype-format');
-const html = require('rehype-stringify');
-var vfile = require('to-vfile');
-var report = require('vfile-reporter');
-
-getProcessor(types.INSIGHT)
-  .use(remark2rehype)
-  .use(doc, { title: 'Insight' })
-  .use(format)
-  .use(html)
-  .process(vfile.readSync('insight.md'), function (err, file) {
-    console.error(report(err || file));
-    console.log(String(file));
-  });
-```
