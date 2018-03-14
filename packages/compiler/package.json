@@ -6,10 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nemanja Stojanovic <me@nem035.com>",
+  "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkidevs/curriculum-processors.git"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enkidevs/curriculum-processors/issues"
+  },
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "dependencies": {
-    "remark-stringify": "^5.0.0"
+    "remark-stringify": "^5.0.0",
+    "@enkidevs/curriculum-transformers": "^0.1.0"
   },
   "jest": {
     "testRegex": "/.*__tests__/.*\\.test.js$"

@@ -4,12 +4,7 @@
   "description": "Enki curriculum parser",
   "main": "src/index.js",
   "scripts": {
-    "format": "prettier-standard 'src/**/*.js'",
-    "lint": "eslint . --ignore-path .gitignore",
-    "prepublishOnly": "npm run test",
-    "pretest": "npm run lint",
-    "test:watch": "jest --watchAll",
-    "test": "npm run lint && jest --notify"
+    "test": "jest --notify"
   },
   "keywords": [
     "enki",
@@ -17,31 +12,19 @@
     "parser",
     "ast"
   ],
-  "pre-commit": [
-    "format",
-    "test"
-  ],
   "files": [
-    "src"
+    "index.js"
   ],
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
-  "lint-staged": {
-    "linters": {
-      "src/**/*.js": [
-        "prettier-standard",
-        "git add"
-      ]
-    }
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enkidevs/curriculum-parser.git"
+    "url": "git+https://github.com/enkidevs/curriculum-processors.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enkidevs/curriculum-parser/issues"
+    "url": "https://github.com/enkidevs/curriculum-processors/issues"
   },
-  "homepage": "https://github.com/enkidevs/curriculum-parser#readme",
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "devDependencies": {
     "jest": "^22.4.2",
     "jest-in-case": "^1.0.2",
@@ -52,7 +35,8 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "mdast-util-compact": "^1.0.1"
+    "mdast-util-compact": "^1.0.1",
+    "@enkidevs/curriculum-transformers": "^0.1.0"
   },
   "jest": {
     "testRegex": "/.*__tests__/.*\\.test.js$"
