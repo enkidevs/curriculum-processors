@@ -1,0 +1,23 @@
+{
+  "name": "@enkidevs/curriculum-transformers",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nemanja Stojanovic <me@nem035.com>",
+  "license": "MIT",
+  "jest": {
+    "testRegex": "/.*__tests__/.*\\.test.js$"
+  },
+  "dependencies": {
+    "decode-uri-component": "^0.2.0",
+    "js-yaml": "^3.11.0",
+    "remark-frontmatter": "^1.2.0",
+    "remark-parse": "^5.0.0",
+    "unified": "^6.1.6",
+    "unist-util-map": "^1.0.3",
+    "unist-util-visit": "^1.3.0"
+  }
+}

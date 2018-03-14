@@ -1,0 +1,17 @@
+{
+  "name": "@enkidevs/curriculum-compiler",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nemanja Stojanovic <me@nem035.com>",
+  "license": "MIT",
+  "dependencies": {
+    "remark-stringify": "^5.0.0"
+  },
+  "jest": {
+    "testRegex": "/.*__tests__/.*\\.test.js$"
+  }
+}

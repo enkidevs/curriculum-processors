@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "format": "prettier 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
+    "lint": "eslint . --ignore-path .gitignore",
+    "pretest": "npm run lint",
+    "publishPackages": "lerna publish --cd-version=patch --yes",
+    "test:watch": "jest --watchAll",
+    "test": "lerna run test --stream"
+  },
+  "keywords": [
+    "enki",
+    "curriculum",
+    "transformer",
+    "processor",
+    "ast"
+  ],
+  "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
+  "pre-commit": [
+    "format",
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkidevs/curriculum-processor.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enkidevs/curriculum-processor/issues"
+  },
+  "homepage": "https://github.com/enkidevs/curriculum-processor#readme",
+  "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-jest": "^21.14.0",
+    "eslint-plugin-node": "^6.0.1",
+    "jest": "^22.4.2",
+    "jest-in-case": "^1.0.2",
+    "lerna": "^2.9.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "1.11.1",
+    "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "testRegex": "/src.*__tests__/.*\\.test.js$"
+  }
+}
