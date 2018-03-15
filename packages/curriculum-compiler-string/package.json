@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-compiler-string",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,9 +23,13 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "index.js",
+    "plugins"
+  ],
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "dependencies": {
-    "@enkidevs/curriculum-helpers": "^1.0.2",
+    "@enkidevs/curriculum-helpers": "^1.0.4",
     "remark-stringify": "^5.0.0",
     "unified": "^6.1.6"
   },

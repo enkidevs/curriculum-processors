@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-parser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Enki curriculum parser",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "index.js",
+    "plugins"
+  ],
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "repository": {
     "type": "git",
@@ -31,7 +35,7 @@
     "jsonfile": "^4.0.0"
   },
   "dependencies": {
-    "@enkidevs/curriculum-helpers": "^1.0.2",
+    "@enkidevs/curriculum-helpers": "^1.0.4",
     "decode-uri-component": "^0.2.0",
     "js-yaml": "^3.11.0",
     "mdast-util-compact": "^1.0.1",
