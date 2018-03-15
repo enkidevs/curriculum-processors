@@ -2,7 +2,7 @@
   "type": "root",
   "children": [
     {
-      "type": "headline",
+      "type": "questionHeadline",
       "value": "which algorithm is to be use in the following scenario?",
       "children": [
         {

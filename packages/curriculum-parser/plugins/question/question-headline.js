@@ -1,6 +1,6 @@
 const map = require('unist-util-map')
 
-module.exports = function headline () {
+module.exports = function questionHeadline () {
   return transform
 
   function transform (ast) {
@@ -10,8 +10,9 @@ module.exports = function headline () {
   function parseHeadline (node) {
     if (node.type === 'heading' && node.depth === 3) {
       return {
-        type: 'headline',
-        value: node.children[0].value
+        type: 'questionHeadline',
+        value: node.children[0].value,
+        children: node.children
       }
     }
     return node

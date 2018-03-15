@@ -89,7 +89,7 @@
       "name": "Exercise",
       "children": [
         {
-          "type": "headline",
+          "type": "questionHeadline",
           "value": "Question",
           "children": [
             {
