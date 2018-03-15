@@ -2,12 +2,16 @@
 
 [Enki curriculum](https://github.com/enkidevs/curriculum) processors are divied into 3 packages:
 
-- [@enkidevs/curriculum-compiler-string]()
+- [@enkidevs/curriculum-compiler-string](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-compiler-string)
   - Compile parsed curriculum AST into a string
-- [@enkidevs/curriculum-parser]()
+- [@enkidevs/curriculum-parser](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser)
   - Parse curriculum markdown strings into ASTs
-- [@enkidevs/curriculum-helpers]()
+- [@enkidevs/curriculum-helpers](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-helpers)
   - Helpers for processing the curriculum
+
+The `curriculum-parser` and the `curriculum-compiler` folders have an `index.sandbox.js` file at their respective root levels who's purpose is to serve as a playground for them.
+
+## Concepts
 
 The text processing architecture is based on [`unifiedjs`](https://unifiedjs.github.io/), mainly it's markdown interfaces via [`remarkjs`](https://remark.js.org/).
 
