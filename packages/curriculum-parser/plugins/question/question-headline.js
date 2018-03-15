@@ -11,7 +11,6 @@ module.exports = function questionHeadline () {
     if (node.type === 'heading' && node.depth === 3) {
       return {
         type: 'questionHeadline',
-        value: node.children[0].value,
         children: node.children
       }
     }

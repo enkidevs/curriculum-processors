@@ -90,7 +90,6 @@
       "children": [
         {
           "type": "questionHeadline",
-          "value": "Question",
           "children": [
             {
               "type": "text",
