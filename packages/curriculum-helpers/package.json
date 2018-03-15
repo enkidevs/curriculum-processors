@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -12,6 +12,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/enkidevs/curriculum-processors/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "jest": {

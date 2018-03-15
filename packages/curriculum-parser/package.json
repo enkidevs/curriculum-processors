@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enki curriculum parser",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,9 @@
     "parser",
     "ast"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "index.js"
   ],
