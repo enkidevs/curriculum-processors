@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Enki curriculum parser",
   "main": "index.js",
   "scripts": {
@@ -15,9 +15,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "index.js"
-  ],
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "repository": {
     "type": "git",
