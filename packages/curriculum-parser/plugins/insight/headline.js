@@ -11,7 +11,7 @@ module.exports = function headline () {
     if (node.type === 'heading' && node.depth === 1) {
       return {
         type: 'headline',
-        value: node.children[0].value
+        children: node.children
       }
     }
     return node

@@ -61,7 +61,6 @@
     },
     {
       "type": "headline",
-      "value": "Balanced vs. Unbalanced Binary Trees",
       "children": [
         {
           "type": "text",
