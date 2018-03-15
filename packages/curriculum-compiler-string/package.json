@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --notify"
   },
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "repository": {
@@ -27,9 +27,9 @@
     "unified": "^6.1.6"
   },
   "devDependencies": {
-    "@enkidevs/curriculum-parser": "^0.4.0",
     "jest": "^22.4.2",
-    "jest-in-case": "^1.0.2"
+    "jest-in-case": "^1.0.2",
+    "jsonfile": "^4.0.0"
   },
   "jest": {
     "testRegex": "/.*__tests__/.*\\.test.js$"

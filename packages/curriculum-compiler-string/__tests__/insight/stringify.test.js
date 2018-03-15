@@ -1,17 +1,22 @@
+const path = require('path')
+const fs = require('fs')
 const jestInCase = require('jest-in-case')
+const jsonfile = require('jsonfile')
 const { contentTypes } = require('@enkidevs/curriculum-helpers')
-const { getParser } = require('@enkidevs/curriculum-parser')
-const { loadFixtures } =  require('../../../../test-helpers')
 const { getCompiler } = require('../../index')
+
+const fixturePath = (dir, name) =>
+  path.join(__dirname, '../', 'fixtures', 'insight', dir, name)
 
 jestInCase(
   'Insight AST to String Compilation (Async)',
   async fixture => {
-    const parser = getParser(contentTypes.INSIGHT)
     const compiler = getCompiler(contentTypes.INSIGHT)
-    const ast = await parser.parse(fixture.text)
     const str = await compiler.compile(fixture.ast)
     expect(str).toEqual(fixture.stringified)
   },
-  loadFixtures('insight')
+  ['exercise', 'sample'].map(dir => ({
+    stringified: fs.readFileSync(fixturePath(dir, 'stringified.md'), 'utf8'),
+    ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json'))
+  }))
 )

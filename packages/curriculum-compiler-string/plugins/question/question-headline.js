@@ -1,20 +1,20 @@
 const unified = require('unified')
 const markdown = require('../markdown')
 
-module.exports = function headline() {
+module.exports = function questionHeadline() {
   const { Compiler } = this
 
   if (Compiler) {
     const { visitors } = Compiler.prototype
     if (visitors) {
-      visitors.headline = function(headline) {
+      visitors.questionHeadline = function(questionHeadline) {
         const content = unified()
           .use(markdown)
           .stringify({
             type: 'root',
-            children: headline.children
+            children: questionHeadline.children
           })
-        return `# ${content}`
+        return `### ${content}`
       }
     }
   }

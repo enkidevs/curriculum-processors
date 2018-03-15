@@ -1,7 +1,4 @@
-// Use this sandbox to play with the compiler
-const { getCompiler } = require('./index')
-
-const ast = {
+{
   "type": "root",
   "children": [
     {
@@ -146,7 +143,3 @@ const ast = {
     }
   }
 }
-
-const x = getCompiler('insight').compileSync(ast)
-
-process.stdout.write(x)

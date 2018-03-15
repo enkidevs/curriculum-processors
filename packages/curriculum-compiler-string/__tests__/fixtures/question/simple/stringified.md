@@ -4,5 +4,5 @@ Enki is awesome.
 
 ???
 
--   true
--   false
+* true
+* false
