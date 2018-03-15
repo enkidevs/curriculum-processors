@@ -7,8 +7,8 @@ function getPlugins(type) {
   switch (type) {
     case contentTypes.MARKDOWN:
       return [...plugins.markdown]
-    case contentTypes.INSIGHT:
     case contentTypes.EXERCISE:
+    case contentTypes.INSIGHT:
       return [...plugins.markdown, ...plugins.insight, ...plugins.question]
     case contentTypes.QUESTION:
       return [...plugins.markdown, ...plugins.question]

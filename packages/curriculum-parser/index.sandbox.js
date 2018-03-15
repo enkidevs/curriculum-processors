@@ -24,6 +24,7 @@ standards:
 # Py practice functional features
 
 ---
+
 ## Exercise
 
 ### Question
