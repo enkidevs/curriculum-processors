@@ -1,23 +1,35 @@
+// Use this sandbox to play with the parser
 const parser = require('./index')
 
 console.log(
   JSON.stringify(
     parser.getParser(
-      'question'
-    ).parseSync(`
-  ### which algorithm is to be use in the following scenario?
-  Consider a complete, weighted graph. If we want to compute its minimum spanning tree,
-  which starts from a given node we choose, which algorithm should we use?
+      'exercise'
+    ).parseSync(`---
+author: SebaRaba
+levels:
+  - beginner
+  - basic
+  - medium
+type: exerciseList
+links:
+  - '[link to official documentation](http://python-3-patterns-idioms-test.readthedocs.io/en/latest/Comprehensions.html) {website}'
+  - '[link to a video](https://www.youtube.com/watch?v=3dt4OGnU5sM){video}'
+linkType: codewars
+link: https://www.codewars.com/kata/stop-gninnips-my-sdrow
+standards:
+    py.functional-programming-features.0: 3000
+---
 
+# Py practice functional features
 
-  ???
+---
+## Exercise
 
-  * Prim’s algorithm
-  * Kruskal’s algorithm
-  * Knapsack algorithm
-  * Dijkstra’s algorithm
+### Question
 
-  `),
+Practice list comprehensions in python.
+`),
   null,
   2
   )
