@@ -53,6 +53,23 @@ Which of the following data structures is a type of *maximally-unbalanced* binar
 * Max-heap
 
 ---
+## Quiz
+---
+## Quiz
+
+### what is the output of the following script?
+
+#!/bin/bash
+a=1
+{ a=2 }
+echo $a
+
+* "Error: unexpected end of file"
+* 1
+* 2
+* $a
+
+---
 ## Footnotes
 
 [1: AVL tree]

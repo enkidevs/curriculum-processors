@@ -994,6 +994,327 @@
     },
     {
       "type": "section",
+      "name": "Quiz",
+      "children": []
+    },
+    {
+      "type": "section",
+      "name": "Quiz",
+      "children": [
+        {
+          "type": "questionHeadline",
+          "children": [
+            {
+              "type": "text",
+              "value": "what is the output of the following script?",
+              "position": {
+                "start": {
+                  "line": 60,
+                  "column": 5,
+                  "offset": 8892
+                },
+                "end": {
+                  "line": 60,
+                  "column": 48,
+                  "offset": 8935
+                },
+                "indent": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "#!/bin/bash\na=1\n{ a=2 }\necho $a",
+              "position": {
+                "start": {
+                  "line": 62,
+                  "column": 1,
+                  "offset": 8937
+                },
+                "end": {
+                  "line": 65,
+                  "column": 8,
+                  "offset": 8968
+                },
+                "indent": [
+                  1,
+                  1,
+                  1
+                ]
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 62,
+              "column": 1,
+              "offset": 8937
+            },
+            "end": {
+              "line": 65,
+              "column": 8,
+              "offset": 8968
+            },
+            "indent": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\"Error: unexpected end of file\"",
+                      "position": {
+                        "start": {
+                          "line": 67,
+                          "column": 3,
+                          "offset": 8972
+                        },
+                        "end": {
+                          "line": 67,
+                          "column": 34,
+                          "offset": 9003
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 67,
+                      "column": 3,
+                      "offset": 8972
+                    },
+                    "end": {
+                      "line": 67,
+                      "column": 34,
+                      "offset": 9003
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 67,
+                  "column": 1,
+                  "offset": 8970
+                },
+                "end": {
+                  "line": 67,
+                  "column": 34,
+                  "offset": 9003
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1",
+                      "position": {
+                        "start": {
+                          "line": 68,
+                          "column": 3,
+                          "offset": 9006
+                        },
+                        "end": {
+                          "line": 68,
+                          "column": 4,
+                          "offset": 9007
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 68,
+                      "column": 3,
+                      "offset": 9006
+                    },
+                    "end": {
+                      "line": 68,
+                      "column": 4,
+                      "offset": 9007
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 68,
+                  "column": 1,
+                  "offset": 9004
+                },
+                "end": {
+                  "line": 68,
+                  "column": 4,
+                  "offset": 9007
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2",
+                      "position": {
+                        "start": {
+                          "line": 69,
+                          "column": 3,
+                          "offset": 9010
+                        },
+                        "end": {
+                          "line": 69,
+                          "column": 4,
+                          "offset": 9011
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 69,
+                      "column": 3,
+                      "offset": 9010
+                    },
+                    "end": {
+                      "line": 69,
+                      "column": 4,
+                      "offset": 9011
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 69,
+                  "column": 1,
+                  "offset": 9008
+                },
+                "end": {
+                  "line": 69,
+                  "column": 4,
+                  "offset": 9011
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$a",
+                      "position": {
+                        "start": {
+                          "line": 70,
+                          "column": 3,
+                          "offset": 9014
+                        },
+                        "end": {
+                          "line": 70,
+                          "column": 5,
+                          "offset": 9016
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 70,
+                      "column": 3,
+                      "offset": 9014
+                    },
+                    "end": {
+                      "line": 70,
+                      "column": 5,
+                      "offset": 9016
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 70,
+                  "column": 1,
+                  "offset": 9012
+                },
+                "end": {
+                  "line": 70,
+                  "column": 5,
+                  "offset": 9016
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 67,
+              "column": 1,
+              "offset": 8970
+            },
+            "end": {
+              "line": 70,
+              "column": 5,
+              "offset": 9016
+            },
+            "indent": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
       "name": "Footnotes",
       "children": [
         {
@@ -1009,14 +1330,14 @@
                   "value": "1: AVL tree",
                   "position": {
                     "start": {
-                      "line": 58,
+                      "line": 75,
                       "column": 2,
-                      "offset": 8882
+                      "offset": 9037
                     },
                     "end": {
-                      "line": 58,
+                      "line": 75,
                       "column": 13,
-                      "offset": 8893
+                      "offset": 9048
                     },
                     "indent": []
                   }
@@ -1024,14 +1345,14 @@
               ],
               "position": {
                 "start": {
-                  "line": 58,
+                  "line": 75,
                   "column": 1,
-                  "offset": 8881
+                  "offset": 9036
                 },
                 "end": {
-                  "line": 58,
+                  "line": 75,
                   "column": 14,
-                  "offset": 8894
+                  "offset": 9049
                 },
                 "indent": []
               }
@@ -1041,14 +1362,14 @@
               "value": "\nSelf-balancing binary search tree, in which the height of the two child subtrees of any node differ by at most one.",
               "position": {
                 "start": {
-                  "line": 58,
+                  "line": 75,
                   "column": 14,
-                  "offset": 8894
+                  "offset": 9049
                 },
                 "end": {
-                  "line": 59,
+                  "line": 76,
                   "column": 116,
-                  "offset": 9010
+                  "offset": 9165
                 },
                 "indent": [
                   1
@@ -1058,14 +1379,14 @@
           ],
           "position": {
             "start": {
-              "line": 58,
+              "line": 75,
               "column": 1,
-              "offset": 8881
+              "offset": 9036
             },
             "end": {
-              "line": 59,
+              "line": 76,
               "column": 116,
-              "offset": 9010
+              "offset": 9165
             },
             "indent": [
               1
@@ -1085,14 +1406,14 @@
                   "value": "2: Red-Black tree",
                   "position": {
                     "start": {
-                      "line": 61,
+                      "line": 78,
                       "column": 2,
-                      "offset": 9013
+                      "offset": 9168
                     },
                     "end": {
-                      "line": 61,
+                      "line": 78,
                       "column": 19,
-                      "offset": 9030
+                      "offset": 9185
                     },
                     "indent": []
                   }
@@ -1100,14 +1421,14 @@
               ],
               "position": {
                 "start": {
-                  "line": 61,
+                  "line": 78,
                   "column": 1,
-                  "offset": 9012
+                  "offset": 9167
                 },
                 "end": {
-                  "line": 61,
+                  "line": 78,
                   "column": 20,
-                  "offset": 9031
+                  "offset": 9186
                 },
                 "indent": []
               }
@@ -1117,14 +1438,14 @@
               "value": "\nSelf-balancing binary search tree, in which nodes store an additional bit of data: whether the node is black or red. All of the tree's leaves must be black and, in case of a node being red, its two children must be black.",
               "position": {
                 "start": {
-                  "line": 61,
+                  "line": 78,
                   "column": 20,
-                  "offset": 9031
+                  "offset": 9186
                 },
                 "end": {
-                  "line": 62,
+                  "line": 79,
                   "column": 222,
-                  "offset": 9253
+                  "offset": 9408
                 },
                 "indent": [
                   1
@@ -1134,14 +1455,14 @@
           ],
           "position": {
             "start": {
-              "line": 61,
+              "line": 78,
               "column": 1,
-              "offset": 9012
+              "offset": 9167
             },
             "end": {
-              "line": 62,
+              "line": 79,
               "column": 222,
-              "offset": 9253
+              "offset": 9408
             },
             "indent": [
               1
@@ -1158,9 +1479,9 @@
       "offset": 0
     },
     "end": {
-      "line": 63,
+      "line": 80,
       "column": 1,
-      "offset": 9254
+      "offset": 9409
     }
   }
 }
