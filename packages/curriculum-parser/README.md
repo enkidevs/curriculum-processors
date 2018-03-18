@@ -14,5 +14,5 @@ const {
   getParser
 } = require('@enkidevs/curriculum-parser')
 
-const markdownString = getParser(contentTypes.INSIGHT).parseSync(ast)
+const ast = getParser(contentTypes.INSIGHT).parseSync(markdownString)
 ```
