@@ -1,5 +1,4 @@
 const unified = require('unified')
-const compactAst = require('mdast-util-compact')
 const { contentTypes } = require('@enkidevs/curriculum-helpers')
 const plugins = require('./plugins')
 
@@ -18,20 +17,20 @@ function getPlugins(type) {
 }
 
 function getParser(type) {
-  function parse(md, { compact = false } = {}) {
+  function parse(md) {
     return new Promise((resolve, reject) => {
       const processor = unified().use(getPlugins(type))
       processor.run(processor.parse(md), (err, ast) => {
         if (err) return reject(err)
-        resolve(compact ? compactAst(ast) : ast)
+        resolve(ast)
       })
     })
   }
 
-  function parseSync(md, { compact = false } = {}) {
+  function parseSync(md) {
     const processor = unified().use(getPlugins(type))
     const ast = processor.runSync(processor.parse(md))
-    return compact ? compactAst(ast) : ast
+    return ast
   }
 
   return {

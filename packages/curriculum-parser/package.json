@@ -38,7 +38,6 @@
     "@enkidevs/curriculum-helpers": "^1.0.4",
     "decode-uri-component": "^0.2.0",
     "js-yaml": "^3.11.0",
-    "mdast-util-compact": "^1.0.1",
     "remark-frontmatter": "^1.2.0",
     "remark-parse": "^5.0.0",
     "unified": "^6.1.6",
