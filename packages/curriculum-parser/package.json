@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-parser",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Enki curriculum parser",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "jsonfile": "^4.0.0"
   },
   "dependencies": {
-    "@enkidevs/curriculum-helpers": "^1.1.0",
+    "@enkidevs/curriculum-helpers": "^1.1.1",
     "decode-uri-component": "^0.2.0",
     "js-yaml": "^3.11.0",
     "remark-frontmatter": "^1.2.0",
