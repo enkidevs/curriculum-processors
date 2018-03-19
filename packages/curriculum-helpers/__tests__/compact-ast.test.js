@@ -1,4 +1,4 @@
-const compactAst = require('../compact-ast')
+const compactAst = require('../lib/compact-ast')
 
 describe('Compact AST', () => {
   test('should compact ast', () => {

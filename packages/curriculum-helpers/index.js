@@ -1,5 +1,2 @@
-const contentTypes = require('./content-types')
 
-module.exports = {
-  contentTypes
-}
+module.exports = require('./lib')

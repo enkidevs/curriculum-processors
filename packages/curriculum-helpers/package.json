@@ -19,7 +19,8 @@
     "access": "public"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "lib"
   ],
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "dependencies": {
