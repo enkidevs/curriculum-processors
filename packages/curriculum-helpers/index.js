@@ -1,9 +1,4 @@
-const contentTypes = {
-  MARKDOWN: 'markdown',
-  INSIGHT: 'insight',
-  EXERCISE: 'exercise',
-  QUESTION: 'question'
-}
+const contentTypes = require('./content-types')
 
 module.exports = {
   contentTypes

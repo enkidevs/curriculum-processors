@@ -3,7 +3,9 @@
   "version": "1.0.4",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest --notify"
+  },
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "repository": {
     "type": "git",
@@ -20,6 +22,13 @@
     "index.js"
   ],
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
+  "dependencies": {
+    "unist-util-assert": "^1.0.1",
+    "unist-util-map": "^1.0.3"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2"
+  },
   "jest": {
     "testRegex": "/.*__tests__/.*\\.test.js$"
   }
