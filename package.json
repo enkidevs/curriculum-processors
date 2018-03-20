@@ -7,7 +7,7 @@
     "format": "prettier 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
     "lint": "eslint . --ignore-path .gitignore",
     "pretest": "npm run lint",
-    "publishPackages": "lerna publish --cd-version=patch --yes",
+    "publish": "lerna publish",
     "test:watch": "jest --watchAll",
     "test": "lerna run test --stream"
   },
