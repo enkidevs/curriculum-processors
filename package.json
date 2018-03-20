@@ -26,13 +26,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enkidevs/curriculum-processor.git"
+    "url": "git+https://github.com/enkidevs/curriculum-processors.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enkidevs/curriculum-processor/issues"
+    "url": "https://github.com/enkidevs/curriculum-processors/issues"
   },
-  "homepage": "https://github.com/enkidevs/curriculum-processor#readme",
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "devDependencies": {
     "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
