@@ -1,4 +1,7 @@
-# Enki Curriculum Compiler String
+# Enki Curriculum Helpers
+
+[npm-badge]: https://img.shields.io/npm/v/@enkidevs/curriculum-helpers.png?style=flat-square
+[npm]: https://www.npmjs.com/package/@enkidevs/curriculum-helpers
 
 Helpers for parsing/transforming/compiling Enki Curriculum from and to different formats.
 

@@ -1,4 +1,7 @@
-# Enki Curriculum Compiler String
+# Enki Curriculum Parser
+
+[npm-badge]: https://img.shields.io/npm/v/@enkidevs/curriculum-parser.png?style=flat-square
+[npm]: https://www.npmjs.com/package/@enkidevs/curriculum-parser
 
 Parses Enki Curriculum markdown into an AST.
 
