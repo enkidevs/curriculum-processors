@@ -1,7 +1,7 @@
 {
   "name": "@enkidevs/curriculum-compiler-string",
   "version": "1.1.1",
-  "description": "",
+  "description": "Compiles Enki Curriculum AST into a markdown string",
   "main": "index.js",
   "scripts": {
     "test": "jest --notify"

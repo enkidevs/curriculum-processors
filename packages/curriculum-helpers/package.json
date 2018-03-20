@@ -1,7 +1,7 @@
 {
   "name": "@enkidevs/curriculum-helpers",
   "version": "1.1.1",
-  "description": "",
+  "description": "Helpers for parsing/transforming/compiling Enki Curriculum from and to different formats",
   "main": "index.js",
   "scripts": {
     "test": "jest --notify"

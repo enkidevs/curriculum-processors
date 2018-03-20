@@ -1,6 +1,6 @@
 # Enki Curriculum Compiler String
 
-Parser Enki Curriculum markdown into a an AST.
+Parses Enki Curriculum markdown into an AST.
 
 See [Enki curriculum processors](https://github.com/enkidevs/curriculum-processors)  for more details.
 
