@@ -37,9 +37,8 @@ module.exports = function section () {
       newAstChildren.push(section)
     }
 
-    return {
-      ...ast,
+    return Object.assign({}, ast, {
       children: newAstChildren
-    }
+    })
   }
 }

@@ -16,11 +16,10 @@ module.exports = function questionCode () {
         .use(markdown)
         .use(questionGap)
       const ast = processor.runSync(processor.parse(node.value))
-      return {
-        ...node,
+      return Object.assign({}, node, {
         question: true,
         children: ast.children
-      }
+      })
     }
     return node
   }

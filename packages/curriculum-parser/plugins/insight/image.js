@@ -12,10 +12,9 @@ module.exports = function image () {
     if (node.type === 'image') {
       const decodedUrl = decode(node.url)
       if (decodedUrl.startsWith('<svg')) {
-        return {
-          ...node,
+        return Object.assign({}, node, {
           svg: true
-        }
+        })
       }
     }
     return node
