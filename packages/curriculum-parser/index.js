@@ -16,10 +16,14 @@ function getPlugins(type) {
   }
 }
 
+function getProcessor(type) {
+  return unified().use(getPlugins(type))
+}
+
 function getParser(type) {
   function parse(md) {
     return new Promise((resolve, reject) => {
-      const processor = unified().use(getPlugins(type))
+      const processor = getProcessor(type)
       processor.run(processor.parse(md), (err, ast) => {
         if (err) return reject(err)
         resolve(ast)
@@ -28,7 +32,7 @@ function getParser(type) {
   }
 
   function parseSync(md) {
-    const processor = unified().use(getPlugins(type))
+    const processor = getProcessor(type)
     const ast = processor.runSync(processor.parse(md))
     return ast
   }
@@ -41,5 +45,6 @@ function getParser(type) {
 
 module.exports = {
   getParser,
+  getProcessor,
   plugins
 }
