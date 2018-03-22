@@ -45,5 +45,6 @@
   },
   "jest": {
     "testRegex": "/src.*__tests__/.*\\.test.js$"
-  }
+  },
+  "dependencies": {}
 }
