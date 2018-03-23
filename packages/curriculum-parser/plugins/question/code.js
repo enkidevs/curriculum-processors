@@ -18,12 +18,12 @@ module.exports = function questionCode() {
           'line',
           undefined,
           line
-            .split(/(\?{3})/)
+            .split(/(\?{3})/) // split using a group so we also capture ???
             .map(
               chunk =>
                 chunk === '???'
                   ? u('questionGap', undefined, '???')
-                  : u('text', undefined, chunk)
+                  : u('code', { lang: node.lang }, chunk)
             )
             .filter(node => Boolean(node.value)) // eliminate empty string nodes
             .reduce((lineChildren, curr, i) => {

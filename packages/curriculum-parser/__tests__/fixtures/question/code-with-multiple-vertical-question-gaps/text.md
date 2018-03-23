@@ -1,5 +1,5 @@
 What do each of the following flags represent?
-```
+```bash
 #-i =???
 #-r =???
 #-c =???
