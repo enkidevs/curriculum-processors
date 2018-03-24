@@ -47,6 +47,7 @@ Solving this problem and guaranteeing that the tree remains more-or-less balance
 Which of the following data structures is a type of *maximally-unbalanced* binary tree?
 
 ???
+
 * Ordered linked list
 * Ordered array
 * Weighted graph
@@ -54,15 +55,15 @@ Which of the following data structures is a type of *maximally-unbalanced* binar
 
 ---
 ## Quiz
----
-## Quiz
 
 ### what is the output of the following script?
 
+```bash
 #!/bin/bash
 a=1
 { a=2 }
 echo $a
+```
 
 * "Error: unexpected end of file"
 * 1

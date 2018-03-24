@@ -165,7 +165,8 @@
               "offset": 72
             },
             "indent": []
-          }
+          },
+          "correct": true
         },
         {
           "type": "listItem",
@@ -220,7 +221,8 @@
               "offset": 80
             },
             "indent": []
-          }
+          },
+          "correct": false
         }
       ],
       "position": {
@@ -237,7 +239,8 @@
         "indent": [
           1
         ]
-      }
+      },
+      "answers": true
     }
   ],
   "position": {

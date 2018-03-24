@@ -764,14 +764,14 @@
                       "value": "Ordered linked list",
                       "position": {
                         "start": {
-                          "line": 50,
+                          "line": 51,
                           "column": 3,
-                          "offset": 8798
+                          "offset": 8799
                         },
                         "end": {
-                          "line": 50,
+                          "line": 51,
                           "column": 22,
-                          "offset": 8817
+                          "offset": 8818
                         },
                         "indent": []
                       }
@@ -779,14 +779,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 50,
+                      "line": 51,
                       "column": 3,
-                      "offset": 8798
+                      "offset": 8799
                     },
                     "end": {
-                      "line": 50,
+                      "line": 51,
                       "column": 22,
-                      "offset": 8817
+                      "offset": 8818
                     },
                     "indent": []
                   }
@@ -794,17 +794,18 @@
               ],
               "position": {
                 "start": {
-                  "line": 50,
+                  "line": 51,
                   "column": 1,
-                  "offset": 8796
+                  "offset": 8797
                 },
                 "end": {
-                  "line": 50,
+                  "line": 51,
                   "column": 22,
-                  "offset": 8817
+                  "offset": 8818
                 },
                 "indent": []
-              }
+              },
+              "correct": true
             },
             {
               "type": "listItem",
@@ -819,14 +820,14 @@
                       "value": "Ordered array",
                       "position": {
                         "start": {
-                          "line": 51,
+                          "line": 52,
                           "column": 3,
-                          "offset": 8820
+                          "offset": 8821
                         },
                         "end": {
-                          "line": 51,
+                          "line": 52,
                           "column": 16,
-                          "offset": 8833
+                          "offset": 8834
                         },
                         "indent": []
                       }
@@ -834,14 +835,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 51,
+                      "line": 52,
                       "column": 3,
-                      "offset": 8820
+                      "offset": 8821
                     },
                     "end": {
-                      "line": 51,
+                      "line": 52,
                       "column": 16,
-                      "offset": 8833
+                      "offset": 8834
                     },
                     "indent": []
                   }
@@ -849,17 +850,18 @@
               ],
               "position": {
                 "start": {
-                  "line": 51,
+                  "line": 52,
                   "column": 1,
-                  "offset": 8818
+                  "offset": 8819
                 },
                 "end": {
-                  "line": 51,
+                  "line": 52,
                   "column": 16,
-                  "offset": 8833
+                  "offset": 8834
                 },
                 "indent": []
-              }
+              },
+              "correct": false
             },
             {
               "type": "listItem",
@@ -874,14 +876,14 @@
                       "value": "Weighted graph",
                       "position": {
                         "start": {
-                          "line": 52,
+                          "line": 53,
                           "column": 3,
-                          "offset": 8836
+                          "offset": 8837
                         },
                         "end": {
-                          "line": 52,
+                          "line": 53,
                           "column": 17,
-                          "offset": 8850
+                          "offset": 8851
                         },
                         "indent": []
                       }
@@ -889,14 +891,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 52,
+                      "line": 53,
                       "column": 3,
-                      "offset": 8836
+                      "offset": 8837
                     },
                     "end": {
-                      "line": 52,
+                      "line": 53,
                       "column": 17,
-                      "offset": 8850
+                      "offset": 8851
                     },
                     "indent": []
                   }
@@ -904,17 +906,18 @@
               ],
               "position": {
                 "start": {
-                  "line": 52,
+                  "line": 53,
                   "column": 1,
-                  "offset": 8834
+                  "offset": 8835
                 },
                 "end": {
-                  "line": 52,
+                  "line": 53,
                   "column": 17,
-                  "offset": 8850
+                  "offset": 8851
                 },
                 "indent": []
-              }
+              },
+              "correct": false
             },
             {
               "type": "listItem",
@@ -929,14 +932,14 @@
                       "value": "Max-heap",
                       "position": {
                         "start": {
-                          "line": 53,
+                          "line": 54,
                           "column": 3,
-                          "offset": 8853
+                          "offset": 8854
                         },
                         "end": {
-                          "line": 53,
+                          "line": 54,
                           "column": 11,
-                          "offset": 8861
+                          "offset": 8862
                         },
                         "indent": []
                       }
@@ -944,14 +947,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 53,
+                      "line": 54,
                       "column": 3,
-                      "offset": 8853
+                      "offset": 8854
                     },
                     "end": {
-                      "line": 53,
+                      "line": 54,
                       "column": 11,
-                      "offset": 8861
+                      "offset": 8862
                     },
                     "indent": []
                   }
@@ -959,43 +962,41 @@
               ],
               "position": {
                 "start": {
-                  "line": 53,
+                  "line": 54,
                   "column": 1,
-                  "offset": 8851
+                  "offset": 8852
                 },
                 "end": {
-                  "line": 53,
+                  "line": 54,
                   "column": 11,
-                  "offset": 8861
+                  "offset": 8862
                 },
                 "indent": []
-              }
+              },
+              "correct": false
             }
           ],
           "position": {
             "start": {
-              "line": 50,
+              "line": 51,
               "column": 1,
-              "offset": 8796
+              "offset": 8797
             },
             "end": {
-              "line": 53,
+              "line": 54,
               "column": 11,
-              "offset": 8861
+              "offset": 8862
             },
             "indent": [
               1,
               1,
               1
             ]
-          }
+          },
+          "answers": true
         }
-      ]
-    },
-    {
-      "type": "section",
-      "name": "Quiz",
-      "children": []
+      ],
+      "question": true
     },
     {
       "type": "section",
@@ -1009,14 +1010,14 @@
               "value": "what is the output of the following script?",
               "position": {
                 "start": {
-                  "line": 60,
+                  "line": 59,
                   "column": 5,
-                  "offset": 8892
+                  "offset": 8881
                 },
                 "end": {
-                  "line": 60,
+                  "line": 59,
                   "column": 48,
-                  "offset": 8935
+                  "offset": 8924
                 },
                 "indent": []
               }
@@ -1024,42 +1025,23 @@
           ]
         },
         {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "#!/bin/bash\na=1\n{ a=2 }\necho $a",
-              "position": {
-                "start": {
-                  "line": 62,
-                  "column": 1,
-                  "offset": 8937
-                },
-                "end": {
-                  "line": 65,
-                  "column": 8,
-                  "offset": 8968
-                },
-                "indent": [
-                  1,
-                  1,
-                  1
-                ]
-              }
-            }
-          ],
+          "type": "code",
+          "lang": "bash",
+          "value": "#!/bin/bash\na=1\n{ a=2 }\necho $a",
           "position": {
             "start": {
-              "line": 62,
+              "line": 61,
               "column": 1,
-              "offset": 8937
+              "offset": 8926
             },
             "end": {
-              "line": 65,
-              "column": 8,
-              "offset": 8968
+              "line": 66,
+              "column": 4,
+              "offset": 8969
             },
             "indent": [
+              1,
+              1,
               1,
               1,
               1
@@ -1085,14 +1067,14 @@
                       "value": "\"Error: unexpected end of file\"",
                       "position": {
                         "start": {
-                          "line": 67,
+                          "line": 68,
                           "column": 3,
-                          "offset": 8972
+                          "offset": 8973
                         },
                         "end": {
-                          "line": 67,
+                          "line": 68,
                           "column": 34,
-                          "offset": 9003
+                          "offset": 9004
                         },
                         "indent": []
                       }
@@ -1100,14 +1082,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 67,
+                      "line": 68,
                       "column": 3,
-                      "offset": 8972
+                      "offset": 8973
                     },
                     "end": {
-                      "line": 67,
+                      "line": 68,
                       "column": 34,
-                      "offset": 9003
+                      "offset": 9004
                     },
                     "indent": []
                   }
@@ -1115,17 +1097,18 @@
               ],
               "position": {
                 "start": {
-                  "line": 67,
+                  "line": 68,
                   "column": 1,
-                  "offset": 8970
+                  "offset": 8971
                 },
                 "end": {
-                  "line": 67,
+                  "line": 68,
                   "column": 34,
-                  "offset": 9003
+                  "offset": 9004
                 },
                 "indent": []
-              }
+              },
+              "correct": false
             },
             {
               "type": "listItem",
@@ -1140,14 +1123,14 @@
                       "value": "1",
                       "position": {
                         "start": {
-                          "line": 68,
+                          "line": 69,
                           "column": 3,
-                          "offset": 9006
+                          "offset": 9007
                         },
                         "end": {
-                          "line": 68,
+                          "line": 69,
                           "column": 4,
-                          "offset": 9007
+                          "offset": 9008
                         },
                         "indent": []
                       }
@@ -1155,14 +1138,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 68,
+                      "line": 69,
                       "column": 3,
-                      "offset": 9006
+                      "offset": 9007
                     },
                     "end": {
-                      "line": 68,
+                      "line": 69,
                       "column": 4,
-                      "offset": 9007
+                      "offset": 9008
                     },
                     "indent": []
                   }
@@ -1170,17 +1153,18 @@
               ],
               "position": {
                 "start": {
-                  "line": 68,
+                  "line": 69,
                   "column": 1,
-                  "offset": 9004
+                  "offset": 9005
                 },
                 "end": {
-                  "line": 68,
+                  "line": 69,
                   "column": 4,
-                  "offset": 9007
+                  "offset": 9008
                 },
                 "indent": []
-              }
+              },
+              "correct": false
             },
             {
               "type": "listItem",
@@ -1195,14 +1179,14 @@
                       "value": "2",
                       "position": {
                         "start": {
-                          "line": 69,
+                          "line": 70,
                           "column": 3,
-                          "offset": 9010
+                          "offset": 9011
                         },
                         "end": {
-                          "line": 69,
+                          "line": 70,
                           "column": 4,
-                          "offset": 9011
+                          "offset": 9012
                         },
                         "indent": []
                       }
@@ -1210,14 +1194,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 69,
+                      "line": 70,
                       "column": 3,
-                      "offset": 9010
+                      "offset": 9011
                     },
                     "end": {
-                      "line": 69,
+                      "line": 70,
                       "column": 4,
-                      "offset": 9011
+                      "offset": 9012
                     },
                     "indent": []
                   }
@@ -1225,17 +1209,18 @@
               ],
               "position": {
                 "start": {
-                  "line": 69,
+                  "line": 70,
                   "column": 1,
-                  "offset": 9008
+                  "offset": 9009
                 },
                 "end": {
-                  "line": 69,
+                  "line": 70,
                   "column": 4,
-                  "offset": 9011
+                  "offset": 9012
                 },
                 "indent": []
-              }
+              },
+              "correct": false
             },
             {
               "type": "listItem",
@@ -1250,14 +1235,14 @@
                       "value": "$a",
                       "position": {
                         "start": {
-                          "line": 70,
+                          "line": 71,
                           "column": 3,
-                          "offset": 9014
+                          "offset": 9015
                         },
                         "end": {
-                          "line": 70,
+                          "line": 71,
                           "column": 5,
-                          "offset": 9016
+                          "offset": 9017
                         },
                         "indent": []
                       }
@@ -1265,14 +1250,14 @@
                   ],
                   "position": {
                     "start": {
-                      "line": 70,
+                      "line": 71,
                       "column": 3,
-                      "offset": 9014
+                      "offset": 9015
                     },
                     "end": {
-                      "line": 70,
+                      "line": 71,
                       "column": 5,
-                      "offset": 9016
+                      "offset": 9017
                     },
                     "indent": []
                   }
@@ -1280,38 +1265,41 @@
               ],
               "position": {
                 "start": {
-                  "line": 70,
+                  "line": 71,
                   "column": 1,
-                  "offset": 9012
+                  "offset": 9013
                 },
                 "end": {
-                  "line": 70,
+                  "line": 71,
                   "column": 5,
-                  "offset": 9016
+                  "offset": 9017
                 },
                 "indent": []
-              }
+              },
+              "correct": false
             }
           ],
           "position": {
             "start": {
-              "line": 67,
+              "line": 68,
               "column": 1,
-              "offset": 8970
+              "offset": 8971
             },
             "end": {
-              "line": 70,
+              "line": 71,
               "column": 5,
-              "offset": 9016
+              "offset": 9017
             },
             "indent": [
               1,
               1,
               1
             ]
-          }
+          },
+          "answers": true
         }
-      ]
+      ],
+      "question": true
     },
     {
       "type": "section",
@@ -1330,14 +1318,14 @@
                   "value": "1: AVL tree",
                   "position": {
                     "start": {
-                      "line": 75,
+                      "line": 76,
                       "column": 2,
-                      "offset": 9037
+                      "offset": 9038
                     },
                     "end": {
-                      "line": 75,
+                      "line": 76,
                       "column": 13,
-                      "offset": 9048
+                      "offset": 9049
                     },
                     "indent": []
                   }
@@ -1345,14 +1333,14 @@
               ],
               "position": {
                 "start": {
-                  "line": 75,
+                  "line": 76,
                   "column": 1,
-                  "offset": 9036
+                  "offset": 9037
                 },
                 "end": {
-                  "line": 75,
+                  "line": 76,
                   "column": 14,
-                  "offset": 9049
+                  "offset": 9050
                 },
                 "indent": []
               }
@@ -1362,14 +1350,14 @@
               "value": "\nSelf-balancing binary search tree, in which the height of the two child subtrees of any node differ by at most one.",
               "position": {
                 "start": {
-                  "line": 75,
+                  "line": 76,
                   "column": 14,
-                  "offset": 9049
+                  "offset": 9050
                 },
                 "end": {
-                  "line": 76,
+                  "line": 77,
                   "column": 116,
-                  "offset": 9165
+                  "offset": 9166
                 },
                 "indent": [
                   1
@@ -1379,14 +1367,14 @@
           ],
           "position": {
             "start": {
-              "line": 75,
+              "line": 76,
               "column": 1,
-              "offset": 9036
+              "offset": 9037
             },
             "end": {
-              "line": 76,
+              "line": 77,
               "column": 116,
-              "offset": 9165
+              "offset": 9166
             },
             "indent": [
               1
@@ -1406,14 +1394,14 @@
                   "value": "2: Red-Black tree",
                   "position": {
                     "start": {
-                      "line": 78,
+                      "line": 79,
                       "column": 2,
-                      "offset": 9168
+                      "offset": 9169
                     },
                     "end": {
-                      "line": 78,
+                      "line": 79,
                       "column": 19,
-                      "offset": 9185
+                      "offset": 9186
                     },
                     "indent": []
                   }
@@ -1421,14 +1409,14 @@
               ],
               "position": {
                 "start": {
-                  "line": 78,
+                  "line": 79,
                   "column": 1,
-                  "offset": 9167
+                  "offset": 9168
                 },
                 "end": {
-                  "line": 78,
+                  "line": 79,
                   "column": 20,
-                  "offset": 9186
+                  "offset": 9187
                 },
                 "indent": []
               }
@@ -1438,14 +1426,14 @@
               "value": "\nSelf-balancing binary search tree, in which nodes store an additional bit of data: whether the node is black or red. All of the tree's leaves must be black and, in case of a node being red, its two children must be black.",
               "position": {
                 "start": {
-                  "line": 78,
+                  "line": 79,
                   "column": 20,
-                  "offset": 9186
+                  "offset": 9187
                 },
                 "end": {
-                  "line": 79,
+                  "line": 80,
                   "column": 222,
-                  "offset": 9408
+                  "offset": 9409
                 },
                 "indent": [
                   1
@@ -1455,14 +1443,14 @@
           ],
           "position": {
             "start": {
-              "line": 78,
+              "line": 79,
               "column": 1,
-              "offset": 9167
+              "offset": 9168
             },
             "end": {
-              "line": 79,
+              "line": 80,
               "column": 222,
-              "offset": 9408
+              "offset": 9409
             },
             "indent": [
               1
@@ -1479,9 +1467,9 @@
       "offset": 0
     },
     "end": {
-      "line": 80,
+      "line": 81,
       "column": 1,
-      "offset": 9409
+      "offset": 9410
     }
   }
 }

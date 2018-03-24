@@ -7,8 +7,12 @@ module.exports = function questionHeadline () {
     return map(ast, parseHeadline)
   }
 
-  function parseHeadline (node) {
-    if (node.type === 'heading' && node.depth === 3) {
+  function parseHeadline (node, index, parent) {
+    if (node.type === 'heading' && node.depth === 3
+    && (
+      parent.type === 'root' ||
+      (parent.type === 'section' && parent.question)
+    )) {
       return {
         type: 'questionHeadline',
         children: node.children

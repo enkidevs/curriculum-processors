@@ -1,5 +1,6 @@
 const unified = require('unified')
 const visit = require('unist-util-visit')
+const { sectionNames } = require('@enkidevs/curriculum-helpers')
 
 module.exports = function section () {
   return transform
@@ -30,6 +31,14 @@ module.exports = function section () {
         type: 'section',
         name: next.children[0].value,
         children: []
+      }
+
+      if ([
+        sectionNames.REVISION,
+        sectionNames.PRACTICE,
+        sectionNames.QUIZ
+      ].includes(section.name)) {
+        section.question = true;
       }
 
       astIndex += 1 // skip the heading that was included in the section above

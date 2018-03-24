@@ -2,7 +2,7 @@ const unified = require('unified')
 const map = require('unist-util-map')
 const u = require('unist-builder')
 const markdown = require('../markdown')
-const questionGap = require('./question-gap')
+const questionGap = require('./gap')
 
 module.exports = function questionCode() {
   return transform

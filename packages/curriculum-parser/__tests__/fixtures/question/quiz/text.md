@@ -9,4 +9,3 @@ which starts from a given node we choose, which algorithm should we use?
 * Kruskal’s algorithm
 * Knapsack algorithm
 * Dijkstra’s algorithm
-
