@@ -227,6 +227,8 @@ The `AnswersList` list is the last `MDASTList` in a [question section](https://g
 
 The `children` of `AnswersList` is an array of [`AnswersListItem`](#answerslistitem), sorted top-down by correctness.
 
+The number of correct answers equals the number of [`QuestionGaps`](#questiongap) in the `AswerList`'s parent AST.
+
 ```idl
 interface AnswersList <: Parent {
   type: "list";
