@@ -69,7 +69,7 @@ There can only be `1` [`Headline`](#headline) node per [`Insight`](#insight). Th
 
 `Image` ([`UnistNode`](https://github.com/syntax-tree/unist#node)) inherits from [`MDASTImage`](https://github.com/syntax-tree/mdast/blob/master/readme.md#heading).
 
-If the image url contains an encoded SVG (See [How to add images to Enki Curriculum](Images on Enki are supported only in SVG format)), the parses attaches the flag `svg: true`.
+If the image url contains an encoded SVG (See [How to add images to Enki Curriculum](https://github.com/enkidevs/curriculum/wiki/Insight-Documentation#how-to-add-images)), the parses attaches the flag `svg: true`.
 
 ```idl
 interface Image <: Node {
@@ -101,7 +101,7 @@ Yields:
 
 ### `Section`
 
-`Section` ([`UnistParent`](https://github.com/syntax-tree/unist#parent)) is a custom node special to Enki Curriculum.
+`Section` ([`UnistParent`](https://github.com/syntax-tree/unist#parent)) is a custom node specific to Enki Curriculum.
 
 It is created when text is prefixed with a [`MDASTThematicBreak`](https://github.com/syntax-tree/mdast/blob/master/readme.md#thematicbreak) followed by [`MDASTHeading`](https://github.com/syntax-tree/mdast/blob/master/readme.md#heading) of depth 2.
 
@@ -212,6 +212,8 @@ Yields:
     }
 }
 ```
+
+There can only be `1` [`YAML`](#yaml) metadata node per [`Insight`](#insight). This is checked by the [`yaml`](https://github.com/enkidevs/curriculum-processors/blob/master/packages/curriculum-parser/plugins/insight/validators/yaml.js) validator.
 
 ## Question
 
@@ -352,7 +354,7 @@ TODO
 
 ### `QuestionGap`
 
-`QuestionGap` ([`UnistNode`](https://github.com/syntax-tree/unist#node)) is a custom node special to Enki Curriculum.
+`QuestionGap` ([`UnistNode`](https://github.com/syntax-tree/unist#node)) is a custom node specific to Enki Curriculum.
 
 It is created anytime the string `"???"` is encountered.
 
