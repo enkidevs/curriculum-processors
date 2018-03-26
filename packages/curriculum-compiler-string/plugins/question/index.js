@@ -1,4 +1,5 @@
-const questionHeadline = require('./question-headline')
-const questionGap = require('./question-gap')
+const questionCode = require('./code')
+const questionHeadline = require('./headline')
+const questionGap = require('./gap')
 
-module.exports = [questionHeadline, questionGap]
+module.exports = [questionHeadline, questionGap, questionCode]

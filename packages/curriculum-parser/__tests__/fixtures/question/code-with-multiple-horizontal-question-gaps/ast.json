@@ -27,13 +27,12 @@
       ]
     },
     {
-      "type": "code",
+      "type": "questionCode",
       "lang": "bash",
       "value": "$ ??? ??? ??? eth0",
-      "question": true,
       "children": [
         {
-          "type": "line",
+          "type": "questionCodeLine",
           "children": [
             {
               "lang": "bash",

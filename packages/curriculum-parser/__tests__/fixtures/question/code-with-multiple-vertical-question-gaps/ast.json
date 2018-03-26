@@ -11,13 +11,12 @@
       ]
     },
     {
-      "type": "code",
+      "type": "questionCode",
       "lang": "bash",
       "value": "#-i =???\n#-r =???\n#-c =???\n#default =???",
-      "question": true,
       "children": [
         {
-          "type": "line",
+          "type": "questionCodeLine",
           "children": [
             {
               "lang": "bash",
@@ -31,7 +30,7 @@
           ]
         },
         {
-          "type": "line",
+          "type": "questionCodeLine",
           "children": [
             {
               "lang": "bash",
@@ -45,7 +44,7 @@
           ]
         },
         {
-          "type": "line",
+          "type": "questionCodeLine",
           "children": [
             {
               "lang": "bash",
@@ -59,7 +58,7 @@
           ]
         },
         {
-          "type": "line",
+          "type": "questionCodeLine",
           "children": [
             {
               "lang": "bash",

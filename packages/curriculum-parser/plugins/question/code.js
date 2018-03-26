@@ -13,33 +13,32 @@ module.exports = function questionCode() {
 
   function parseCode(node) {
     if (node.type === 'code' && node.value.includes('???')) {
-      const children = node.value.split('\n').map(line =>
-        u(
-          'line',
-          undefined,
-          line
-            .split(/(\?{3})/) // split using a group so we also capture ???
-            .map(
-              chunk =>
-                chunk === '???'
-                  ? u('questionGap', undefined, '???')
-                  : u('code', { lang: node.lang }, chunk)
-            )
-            .filter(node => Boolean(node.value)) // eliminate empty string nodes
-            .reduce((lineChildren, curr, i) => {
-              const prev = lineChildren[i - 1]
-              if (prev && prev.type === 'text' && prev.type === curr.type) {
-                prev.value += curr.value
-              } else {
-                lineChildren.push(curr)
-              }
-              return lineChildren
-            }, [])
-        )
-      )
       return Object.assign({}, node, {
-        question: true,
-        children
+        type: 'questionCode',
+        children: node.value.split('\n').map(line =>
+          u(
+            'questionCodeLine',
+            undefined,
+            line
+              .split(/(\?{3})/) // split using a group so we also capture ???
+              .map(
+                chunk =>
+                  chunk === '???'
+                    ? u('questionGap', undefined, '???')
+                    : u('code', { lang: node.lang }, chunk)
+              )
+              .filter(node => Boolean(node.value)) // eliminate empty string nodes
+              .reduce((lineChildren, curr, i) => {
+                const prev = lineChildren[i - 1]
+                if (prev && prev.type === 'text' && prev.type === curr.type) {
+                  prev.value += curr.value
+                } else {
+                  lineChildren.push(curr)
+                }
+                return lineChildren
+              }, [])
+          )
+        )
       })
     }
     return node
