@@ -6,21 +6,67 @@
       "children": [
         {
           "type": "text",
-          "value": "What is the specificity of the following CSS code snippet?"
+          "value": "Print the lines which contain "
+        },
+        {
+          "type": "inlineCode",
+          "value": "eth0"
+        },
+        {
+          "type": "text",
+          "value": " by pipelining "
+        },
+        {
+          "type": "inlineCode",
+          "value": "ifconfig"
+        },
+        {
+          "type": "text",
+          "value": " ‘s output :"
         }
       ]
     },
     {
-      "type": "code",
-      "lang": "css",
-      "value": "#div.selected a{}"
-    },
-    {
-      "type": "paragraph",
+      "type": "questionCode",
+      "lang": "bash",
+      "value": "$ ??? ??? ??? eth0",
       "children": [
         {
-          "type": "questionGap",
-          "value": "???"
+          "type": "questionCodeLine",
+          "children": [
+            {
+              "lang": "bash",
+              "type": "code",
+              "value": "$ "
+            },
+            {
+              "type": "questionGap",
+              "value": "???"
+            },
+            {
+              "lang": "bash",
+              "type": "code",
+              "value": " "
+            },
+            {
+              "type": "questionGap",
+              "value": "???"
+            },
+            {
+              "lang": "bash",
+              "type": "code",
+              "value": " "
+            },
+            {
+              "type": "questionGap",
+              "value": "???"
+            },
+            {
+              "lang": "bash",
+              "type": "code",
+              "value": " eth0"
+            }
+          ]
         }
       ]
     },
@@ -39,12 +85,13 @@
               "type": "paragraph",
               "children": [
                 {
-                  "type": "text",
-                  "value": "0-1-1-1"
+                  "type": "inlineCode",
+                  "value": "ifconfig"
                 }
               ]
             }
-          ]
+          ],
+          "correct": true
         },
         {
           "type": "listItem",
@@ -55,12 +102,13 @@
               "type": "paragraph",
               "children": [
                 {
-                  "type": "text",
-                  "value": "0-0-2-1"
+                  "type": "inlineCode",
+                  "value": "|"
                 }
               ]
             }
-          ]
+          ],
+          "correct": true
         },
         {
           "type": "listItem",
@@ -71,12 +119,13 @@
               "type": "paragraph",
               "children": [
                 {
-                  "type": "text",
-                  "value": "1-1-2-1"
+                  "type": "inlineCode",
+                  "value": "grep"
                 }
               ]
             }
-          ]
+          ],
+          "correct": true
         },
         {
           "type": "listItem",
@@ -87,12 +136,13 @@
               "type": "paragraph",
               "children": [
                 {
-                  "type": "text",
-                  "value": "0-2-1-0"
+                  "type": "inlineCode",
+                  "value": ">"
                 }
               ]
             }
-          ]
+          ],
+          "correct": false
         },
         {
           "type": "listItem",
@@ -103,30 +153,16 @@
               "type": "paragraph",
               "children": [
                 {
-                  "type": "text",
-                  "value": "1-1-1-0"
+                  "type": "inlineCode",
+                  "value": ">>"
                 }
               ]
             }
-          ]
-        },
-        {
-          "type": "listItem",
-          "loose": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "1-2-1-2"
-                }
-              ]
-            }
-          ]
+          ],
+          "correct": false
         }
-      ]
+      ],
+      "answers": true
     }
   ]
 }
