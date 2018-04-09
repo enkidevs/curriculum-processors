@@ -20,7 +20,7 @@
           "children": [
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": "#-i ="
             },
             {
@@ -34,7 +34,7 @@
           "children": [
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": "#-r ="
             },
             {
@@ -48,7 +48,7 @@
           "children": [
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": "#-c ="
             },
             {
@@ -62,7 +62,7 @@
           "children": [
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": "#default ="
             },
             {

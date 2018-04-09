@@ -25,7 +25,7 @@ module.exports = function questionCode() {
                 chunk =>
                   chunk === '???'
                     ? u('questionGap', undefined, '???')
-                    : u('code', { lang: node.lang }, chunk)
+                    : u('questionCodeSegment', { lang: node.lang }, chunk)
               )
               .filter(node => Boolean(node.value)) // eliminate empty string nodes
               .reduce((lineChildren, curr, i) => {

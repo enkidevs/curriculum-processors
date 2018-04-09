@@ -36,7 +36,7 @@
           "children": [
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": "$ "
             },
             {
@@ -45,7 +45,7 @@
             },
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": " "
             },
             {
@@ -54,7 +54,7 @@
             },
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": " "
             },
             {
@@ -63,7 +63,7 @@
             },
             {
               "lang": "bash",
-              "type": "code",
+              "type": "questionCodeSegment",
               "value": " eth0"
             }
           ]
