@@ -13,16 +13,16 @@ The compiler works in the following way:
 
 1. Iterates over all `children` of the AST provided
     - looks at the `type` value of each top-most node
-    - if type is `"yaml"` => fires metadata compiler
-    - if type is `"headline"` => fires headline compiler
+    - if type is `"yaml"` => fires [metadata](#metadata) compiler
+    - if type is `"headline"` => fires [headline](#headline) compiler
     - if type is `"section"`, it looks at the `name` field of the node
       - if name is `"Content"` => returns `{ content: compileString(node) }`
       - if name is `"Game Content"` => returns `{ gameContent: compileString(node) }`
       - if name is `"Exercise"` => returns `{ exercise: compileString(node) }`
-      - if name is `"Practice"` => fires question compiler with "practice" argument
-      - if name is `"Revision"` => fires question compiler with "revision" argument
-      - if name is `"Quiz"` => fires quiz compiler
-      - if name is `"Footnotes"` => fires footnotes compiler
+      - if name is `"Practice"` => fires [question](#question) compiler with "practice" argument
+      - if name is `"Revision"` => fires [question](#question) compiler with "revision" argument
+      - if name is `"Quiz"` => fires [quiz](#quiz) compiler
+      - if name is `"Footnotes"` => fires [footnotes](#footnotes) compiler
       - otherwise throws an error
     - otherwise throws an error
 2. combines all JSON properties returned by each sub-compiler into a single object
