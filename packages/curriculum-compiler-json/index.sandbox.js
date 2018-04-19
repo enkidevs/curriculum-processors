@@ -1,6 +1,4 @@
 // Use this sandbox to play with the parser
-const parser = require('../../packages/curriculum-parser/index')
-
 const ast = {
   type: 'root',
   children: [
