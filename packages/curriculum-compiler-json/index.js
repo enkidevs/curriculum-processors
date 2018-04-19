@@ -53,10 +53,7 @@ function getCompiler (type) {
       throw new Error('Missing or invalid AST')
     }
     const json = ast.children.reduce((tempJson, node) => {
-      return {
-        ...tempJson,
-        ...compileSection(node)
-      }
+      return Object.assign({}, tempJson, compileSection(node))
     }, {})
     return json
   }
