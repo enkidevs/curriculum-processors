@@ -1,0 +1,2177 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "author: jfarmer\n\nlevels:\n\n  - beginner\n  - basic\n  - medium\n  - advanced\n\ntype: normal\n\ncategory: must-know\n\nlinks:\n  - '[Why is it safer to keep the tree balanced?](http://stackoverflow.com/questions/8015630/definition-of-a-balanced-tree){website}'\n\nparent: removing-keys-from-a-binary-search-tree\n",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 20,
+          "column": 4,
+          "offset": 307
+        },
+        "indent": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "data": {
+        "parsedValue": {
+          "author": "jfarmer",
+          "levels": [
+            "beginner",
+            "basic",
+            "medium",
+            "advanced"
+          ],
+          "type": "normal",
+          "category": "must-know",
+          "links": [
+            {
+              "name": "Why is it safer to keep the tree balanced?",
+              "url": "http://stackoverflow.com/questions/8015630/definition-of-a-balanced-tree",
+              "nature": "website"
+            }
+          ],
+          "parent": "removing-keys-from-a-binary-search-tree"
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "children": [
+        {
+          "type": "text",
+          "value": "Balanced vs. ",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 3,
+              "offset": 310
+            },
+            "end": {
+              "line": 21,
+              "column": 16,
+              "offset": 323
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "inlineCode",
+          "value": "Unbalanced",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 16,
+              "offset": 323
+            },
+            "end": {
+              "line": 21,
+              "column": 28,
+              "offset": 335
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "text",
+          "value": " Binary Trees",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 28,
+              "offset": 335
+            },
+            "end": {
+              "line": 21,
+              "column": 41,
+              "offset": 348
+            },
+            "indent": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "Content",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "A binary tree is called ",
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 1,
+                  "offset": 366
+                },
+                "end": {
+                  "line": 26,
+                  "column": 25,
+                  "offset": 390
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "balanced",
+                  "position": {
+                    "start": {
+                      "line": 26,
+                      "column": 26,
+                      "offset": 391
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 34,
+                      "offset": 399
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 25,
+                  "offset": 390
+                },
+                "end": {
+                  "line": 26,
+                  "column": 35,
+                  "offset": 400
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " if every leaf node is not more than a certain distance away from the root than any other leaf.  That is, if we take any two leaf nodes (including empty nodes), the distance between each node and the root is approximately the same.  In most cases \"approximately the same\" means the distance between the leaf and the root is not greater than 1, but the exact number can vary from application to application.",
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 35,
+                  "offset": 400
+                },
+                "end": {
+                  "line": 26,
+                  "column": 441,
+                  "offset": 806
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 366
+            },
+            "end": {
+              "line": 26,
+              "column": 441,
+              "offset": 806
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This distance constraint ensures that it takes approximately the same amount of time to reach any leaf node in a binary tree from the root. A linked list is a kind of maximally-unbalanced binary tree.",
+              "position": {
+                "start": {
+                  "line": 28,
+                  "column": 1,
+                  "offset": 808
+                },
+                "end": {
+                  "line": 28,
+                  "column": 201,
+                  "offset": 1008
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 28,
+              "column": 1,
+              "offset": 808
+            },
+            "end": {
+              "line": 28,
+              "column": 201,
+              "offset": 1008
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Consider the following unbalanced tree. The nodes that can be swapped to balance the tree are highlighted:",
+              "position": {
+                "start": {
+                  "line": 30,
+                  "column": 1,
+                  "offset": 1010
+                },
+                "end": {
+                  "line": 30,
+                  "column": 107,
+                  "offset": 1116
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 30,
+              "column": 1,
+              "offset": 1010
+            },
+            "end": {
+              "line": 30,
+              "column": 107,
+              "offset": 1116
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "%3Csvg%20width%3D%22100%25%22%20height%3D%22auto%22%20viewBox%3D%220%200%20700%20400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EArtboard%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M350%2095c19.329966%200%2035-15.6700338%2035-35%200-6.7781994-1.926799-13.1063707-5.262556-18.4666731C373.560339%2031.6072003%20362.551767%2025%20350%2025c-19.329966%200-35%2015.6700338-35%2035s15.670034%2035%2035%2035zM210%20195c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C233.560339%20131.6072%20222.551767%20125%20210%20125c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035zM100%20296c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C123.560339%20232.6072%20112.551767%20226%20100%20226c-19.3299662%200-35%2015.670034-35%2035s15.6700338%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M490%20195c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C513.560339%20131.6072%20502.551767%20125%20490%20125c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20fill%3D%22%23FFF%22%2F%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22465.996094%22%20y%3D%22174%22%3E10%3C%2Ftspan%3E%3C%2Ftext%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22197.998047%22%20y%3D%22177%22%3E3%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M600%20296c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C623.560339%20232.6072%20612.551767%20226%20600%20226c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20fill%3D%22%23FFF%22%2F%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22575.996094%22%20y%3D%22277%22%3E15%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M535%20375c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C558.560339%20311.6072%20547.551767%20305%20535%20305c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20fill%3D%22%23FFF%22%2F%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22510.996094%22%20y%3D%22356%22%3E13%3C%2Ftspan%3E%3C%2Ftext%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%2287.9980469%22%20y%3D%22277%22%3E1%3C%2Ftspan%3E%3C%2Ftext%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22337.998047%22%20y%3D%2276%22%3E8%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M325.305402%2085L232%20131.270754M376%2085l89.005263%2049.575516M125%20236.675909L185.724368%20186M516%20185l60.148477%2050.16054M561%20315.334131L575.702837%20285%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+              "alt": "unbalanced",
+              "position": {
+                "start": {
+                  "line": 32,
+                  "column": 1,
+                  "offset": 1118
+                },
+                "end": {
+                  "line": 32,
+                  "column": 3539,
+                  "offset": 4656
+                },
+                "indent": []
+              },
+              "svg": true
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 32,
+              "column": 1,
+              "offset": 1118
+            },
+            "end": {
+              "line": 32,
+              "column": 3539,
+              "offset": 4656
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "In order to balance the above tree, the ",
+              "position": {
+                "start": {
+                  "line": 34,
+                  "column": 1,
+                  "offset": 4658
+                },
+                "end": {
+                  "line": 34,
+                  "column": 41,
+                  "offset": 4698
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "10-15-13",
+              "position": {
+                "start": {
+                  "line": 34,
+                  "column": 41,
+                  "offset": 4698
+                },
+                "end": {
+                  "line": 34,
+                  "column": 51,
+                  "offset": 4708
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " subtree has to be \"rotated\":",
+              "position": {
+                "start": {
+                  "line": 34,
+                  "column": 51,
+                  "offset": 4708
+                },
+                "end": {
+                  "line": 34,
+                  "column": 80,
+                  "offset": 4737
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 34,
+              "column": 1,
+              "offset": 4658
+            },
+            "end": {
+              "line": 34,
+              "column": 80,
+              "offset": 4737
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "%3Csvg%20width%3D%22100%25%22%20height%3D%22auto%22%20viewBox%3D%220%200%20700%20300%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EArtboard%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M350%2085c19.329966%200%2035-15.6700338%2035-35%200-6.7781994-1.926799-13.1063707-5.262556-18.4666731C373.560339%2021.6072003%20362.551767%2015%20350%2015c-19.329966%200-35%2015.6700338-35%2035s15.670034%2035%2035%2035zM210%20185c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C233.560339%20121.6072%20222.551767%20115%20210%20115c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035zM100%20286c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C123.560339%20222.6072%20112.551767%20216%20100%20216c-19.3299662%200-35%2015.670034-35%2035s15.6700338%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M490%20185c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C513.560339%20121.6072%20502.551767%20115%20490%20115c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20fill%3D%22%23FFF%22%2F%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22465.996094%22%20y%3D%22164%22%3E13%3C%2Ftspan%3E%3C%2Ftext%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22197.998047%22%20y%3D%22167%22%3E3%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M600%20286c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C623.560339%20222.6072%20612.551767%20216%20600%20216c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20fill%3D%22%23FFF%22%2F%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22575.996094%22%20y%3D%22267%22%3E15%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M380%20285c19.329966%200%2035-15.670034%2035-35%200-6.778199-1.926799-13.106371-5.262556-18.466673C403.560339%20221.6072%20392.551767%20215%20380%20215c-19.329966%200-35%2015.670034-35%2035s15.670034%2035%2035%2035z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20fill%3D%22%23FFF%22%2F%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22355.996094%22%20y%3D%22266%22%3E10%3C%2Ftspan%3E%3C%2Ftext%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%2287.9980469%22%20y%3D%22267%22%3E1%3C%2Ftspan%3E%3C%2Ftext%3E%3Ctext%20font-family%3D%22RobotoMono-Light%2C%20Roboto%20Mono%22%20font-size%3D%2240%22%20font-weight%3D%22300%22%20fill%3D%22currentColor%22%3E%3Ctspan%20x%3D%22337.998047%22%20y%3D%2266%22%3E8%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M325.305402%2075L232%20121.270754M376%2075l89.005263%2049.575516M125%20226.675909L185.724368%20176M516%20175l60.148477%2050.16054M405%20224.911949L464.957392%20175%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+              "alt": "balanced",
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 1,
+                  "offset": 4739
+                },
+                "end": {
+                  "line": 36,
+                  "column": 3537,
+                  "offset": 8275
+                },
+                "indent": []
+              },
+              "svg": true
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 36,
+              "column": 1,
+              "offset": 4739
+            },
+            "end": {
+              "line": 36,
+              "column": 3537,
+              "offset": 8275
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This is a problem for binary search trees (BSTs) because an ordered linked list is a BST and searching it is linear. Thus, a BST has log-time searching ",
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 1,
+                  "offset": 8278
+                },
+                "end": {
+                  "line": 39,
+                  "column": 153,
+                  "offset": 8430
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "on average",
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 154,
+                      "offset": 8431
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 164,
+                      "offset": 8441
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 153,
+                  "offset": 8430
+                },
+                "end": {
+                  "line": 39,
+                  "column": 165,
+                  "offset": 8442
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": ", but a linear-time worst case.",
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 165,
+                  "offset": 8442
+                },
+                "end": {
+                  "line": 39,
+                  "column": 196,
+                  "offset": 8473
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 1,
+              "offset": 8278
+            },
+            "end": {
+              "line": 39,
+              "column": 196,
+              "offset": 8473
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Solving this problem and guaranteeing that the tree remains more-or-less balanced is one of the main motivations behind more complex BST-like data structures, e.g. AVL trees",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 1,
+                  "offset": 8475
+                },
+                "end": {
+                  "line": 41,
+                  "column": 174,
+                  "offset": 8648
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "linkReference",
+              "identifier": "1",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1",
+                  "position": {
+                    "start": {
+                      "line": 41,
+                      "column": 175,
+                      "offset": 8649
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 176,
+                      "offset": 8650
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 174,
+                  "offset": 8648
+                },
+                "end": {
+                  "line": 41,
+                  "column": 177,
+                  "offset": 8651
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " and red-black trees",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 177,
+                  "offset": 8651
+                },
+                "end": {
+                  "line": 41,
+                  "column": 197,
+                  "offset": 8671
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "linkReference",
+              "identifier": "2",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2",
+                  "position": {
+                    "start": {
+                      "line": 41,
+                      "column": 198,
+                      "offset": 8672
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 199,
+                      "offset": 8673
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 197,
+                  "offset": 8671
+                },
+                "end": {
+                  "line": 41,
+                  "column": 200,
+                  "offset": 8674
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": ".",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 200,
+                  "offset": 8674
+                },
+                "end": {
+                  "line": 41,
+                  "column": 201,
+                  "offset": 8675
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 41,
+              "column": 1,
+              "offset": 8475
+            },
+            "end": {
+              "line": 41,
+              "column": 201,
+              "offset": 8675
+            },
+            "indent": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "Practice",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Blah blah blah",
+              "position": {
+                "start": {
+                  "line": 46,
+                  "column": 1,
+                  "offset": 8694
+                },
+                "end": {
+                  "line": 46,
+                  "column": 15,
+                  "offset": 8708
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 46,
+              "column": 1,
+              "offset": 8694
+            },
+            "end": {
+              "line": 46,
+              "column": 15,
+              "offset": 8708
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "questionCode",
+          "lang": "javascript",
+          "value": "Blah blah\n???",
+          "position": {
+            "start": {
+              "line": 48,
+              "column": 1,
+              "offset": 8710
+            },
+            "end": {
+              "line": 51,
+              "column": 4,
+              "offset": 8741
+            },
+            "indent": [
+              1,
+              1,
+              1
+            ]
+          },
+          "children": [
+            {
+              "type": "questionCodeLine",
+              "children": [
+                {
+                  "lang": "javascript",
+                  "type": "questionCodeSegment",
+                  "value": "Blah blah"
+                }
+              ]
+            },
+            {
+              "type": "questionCodeLine",
+              "children": [
+                {
+                  "type": "questionGap",
+                  "value": "???"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "abc",
+                      "position": {
+                        "start": {
+                          "line": 53,
+                          "column": 3,
+                          "offset": 8745
+                        },
+                        "end": {
+                          "line": 53,
+                          "column": 6,
+                          "offset": 8748
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 53,
+                      "column": 3,
+                      "offset": 8745
+                    },
+                    "end": {
+                      "line": 53,
+                      "column": 6,
+                      "offset": 8748
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 53,
+                  "column": 1,
+                  "offset": 8743
+                },
+                "end": {
+                  "line": 53,
+                  "column": 6,
+                  "offset": 8748
+                },
+                "indent": []
+              },
+              "correct": true
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "yoli",
+                      "position": {
+                        "start": {
+                          "line": 54,
+                          "column": 3,
+                          "offset": 8751
+                        },
+                        "end": {
+                          "line": 54,
+                          "column": 7,
+                          "offset": 8755
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 54,
+                      "column": 3,
+                      "offset": 8751
+                    },
+                    "end": {
+                      "line": 54,
+                      "column": 7,
+                      "offset": 8755
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 54,
+                  "column": 1,
+                  "offset": 8749
+                },
+                "end": {
+                  "line": 54,
+                  "column": 7,
+                  "offset": 8755
+                },
+                "indent": []
+              },
+              "correct": true
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "yes",
+                      "position": {
+                        "start": {
+                          "line": 55,
+                          "column": 3,
+                          "offset": 8758
+                        },
+                        "end": {
+                          "line": 55,
+                          "column": 6,
+                          "offset": 8761
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 55,
+                      "column": 3,
+                      "offset": 8758
+                    },
+                    "end": {
+                      "line": 55,
+                      "column": 6,
+                      "offset": 8761
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 55,
+                  "column": 1,
+                  "offset": 8756
+                },
+                "end": {
+                  "line": 55,
+                  "column": 6,
+                  "offset": 8761
+                },
+                "indent": []
+              },
+              "correct": false
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 53,
+              "column": 1,
+              "offset": 8743
+            },
+            "end": {
+              "line": 55,
+              "column": 6,
+              "offset": 8761
+            },
+            "indent": [
+              1,
+              1
+            ]
+          },
+          "answers": true
+        }
+      ],
+      "question": true
+    },
+    {
+      "type": "section",
+      "name": "Revision",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Which of the following data structures is a type of ",
+              "position": {
+                "start": {
+                  "line": 60,
+                  "column": 1,
+                  "offset": 8780
+                },
+                "end": {
+                  "line": 60,
+                  "column": 53,
+                  "offset": 8832
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "maximally-unbalanced",
+                  "position": {
+                    "start": {
+                      "line": 60,
+                      "column": 54,
+                      "offset": 8833
+                    },
+                    "end": {
+                      "line": 60,
+                      "column": 74,
+                      "offset": 8853
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 60,
+                  "column": 53,
+                  "offset": 8832
+                },
+                "end": {
+                  "line": 60,
+                  "column": 75,
+                  "offset": 8854
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " binary tree?",
+              "position": {
+                "start": {
+                  "line": 60,
+                  "column": 75,
+                  "offset": 8854
+                },
+                "end": {
+                  "line": 60,
+                  "column": 88,
+                  "offset": 8867
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 60,
+              "column": 1,
+              "offset": 8780
+            },
+            "end": {
+              "line": 60,
+              "column": 88,
+              "offset": 8867
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "questionGap",
+              "value": "???",
+              "position": {
+                "start": {
+                  "line": 62,
+                  "column": 1,
+                  "offset": 8869
+                },
+                "end": {
+                  "line": 62,
+                  "column": 4,
+                  "offset": 8872
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 62,
+              "column": 1,
+              "offset": 8869
+            },
+            "end": {
+              "line": 62,
+              "column": 4,
+              "offset": 8872
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Ordered linked list",
+                      "position": {
+                        "start": {
+                          "line": 64,
+                          "column": 3,
+                          "offset": 8876
+                        },
+                        "end": {
+                          "line": 64,
+                          "column": 22,
+                          "offset": 8895
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 64,
+                      "column": 3,
+                      "offset": 8876
+                    },
+                    "end": {
+                      "line": 64,
+                      "column": 22,
+                      "offset": 8895
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 64,
+                  "column": 1,
+                  "offset": 8874
+                },
+                "end": {
+                  "line": 64,
+                  "column": 22,
+                  "offset": 8895
+                },
+                "indent": []
+              },
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Ordered array",
+                      "position": {
+                        "start": {
+                          "line": 65,
+                          "column": 3,
+                          "offset": 8898
+                        },
+                        "end": {
+                          "line": 65,
+                          "column": 16,
+                          "offset": 8911
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 65,
+                      "column": 3,
+                      "offset": 8898
+                    },
+                    "end": {
+                      "line": 65,
+                      "column": 16,
+                      "offset": 8911
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 65,
+                  "column": 1,
+                  "offset": 8896
+                },
+                "end": {
+                  "line": 65,
+                  "column": 16,
+                  "offset": 8911
+                },
+                "indent": []
+              },
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Weighted graph",
+                      "position": {
+                        "start": {
+                          "line": 66,
+                          "column": 3,
+                          "offset": 8914
+                        },
+                        "end": {
+                          "line": 66,
+                          "column": 17,
+                          "offset": 8928
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 66,
+                      "column": 3,
+                      "offset": 8914
+                    },
+                    "end": {
+                      "line": 66,
+                      "column": 17,
+                      "offset": 8928
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 66,
+                  "column": 1,
+                  "offset": 8912
+                },
+                "end": {
+                  "line": 66,
+                  "column": 17,
+                  "offset": 8928
+                },
+                "indent": []
+              },
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Max-heap",
+                      "position": {
+                        "start": {
+                          "line": 67,
+                          "column": 3,
+                          "offset": 8931
+                        },
+                        "end": {
+                          "line": 67,
+                          "column": 11,
+                          "offset": 8939
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 67,
+                      "column": 3,
+                      "offset": 8931
+                    },
+                    "end": {
+                      "line": 67,
+                      "column": 11,
+                      "offset": 8939
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 67,
+                  "column": 1,
+                  "offset": 8929
+                },
+                "end": {
+                  "line": 67,
+                  "column": 11,
+                  "offset": 8939
+                },
+                "indent": []
+              },
+              "correct": false
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 64,
+              "column": 1,
+              "offset": 8874
+            },
+            "end": {
+              "line": 67,
+              "column": 11,
+              "offset": 8939
+            },
+            "indent": [
+              1,
+              1,
+              1
+            ]
+          },
+          "answers": true
+        }
+      ],
+      "question": true
+    },
+    {
+      "type": "section",
+      "name": "Quiz",
+      "children": [
+        {
+          "type": "questionHeadline",
+          "children": [
+            {
+              "type": "text",
+              "value": "what is the output of ",
+              "position": {
+                "start": {
+                  "line": 72,
+                  "column": 5,
+                  "offset": 8958
+                },
+                "end": {
+                  "line": 72,
+                  "column": 27,
+                  "offset": 8980
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "the",
+              "position": {
+                "start": {
+                  "line": 72,
+                  "column": 27,
+                  "offset": 8980
+                },
+                "end": {
+                  "line": 72,
+                  "column": 32,
+                  "offset": 8985
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " following script?",
+              "position": {
+                "start": {
+                  "line": 72,
+                  "column": 32,
+                  "offset": 8985
+                },
+                "end": {
+                  "line": 72,
+                  "column": 50,
+                  "offset": 9003
+                },
+                "indent": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "lang": "bash",
+          "value": "#!/bin/bash\na=1\n{ a=2 }\necho $a",
+          "position": {
+            "start": {
+              "line": 74,
+              "column": 1,
+              "offset": 9005
+            },
+            "end": {
+              "line": 79,
+              "column": 4,
+              "offset": 9048
+            },
+            "indent": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "There is a list here:",
+              "position": {
+                "start": {
+                  "line": 81,
+                  "column": 1,
+                  "offset": 9050
+                },
+                "end": {
+                  "line": 81,
+                  "column": 22,
+                  "offset": 9071
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 81,
+              "column": 1,
+              "offset": 9050
+            },
+            "end": {
+              "line": 81,
+              "column": 22,
+              "offset": 9071
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "abc",
+                      "position": {
+                        "start": {
+                          "line": 82,
+                          "column": 3,
+                          "offset": 9074
+                        },
+                        "end": {
+                          "line": 82,
+                          "column": 6,
+                          "offset": 9077
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 82,
+                      "column": 3,
+                      "offset": 9074
+                    },
+                    "end": {
+                      "line": 82,
+                      "column": 6,
+                      "offset": 9077
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 82,
+                  "column": 1,
+                  "offset": 9072
+                },
+                "end": {
+                  "line": 82,
+                  "column": 6,
+                  "offset": 9077
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "def",
+                      "position": {
+                        "start": {
+                          "line": 83,
+                          "column": 3,
+                          "offset": 9080
+                        },
+                        "end": {
+                          "line": 83,
+                          "column": 6,
+                          "offset": 9083
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 83,
+                      "column": 3,
+                      "offset": 9080
+                    },
+                    "end": {
+                      "line": 83,
+                      "column": 6,
+                      "offset": 9083
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 83,
+                  "column": 1,
+                  "offset": 9078
+                },
+                "end": {
+                  "line": 83,
+                  "column": 6,
+                  "offset": 9083
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "abcd",
+                      "position": {
+                        "start": {
+                          "line": 84,
+                          "column": 3,
+                          "offset": 9086
+                        },
+                        "end": {
+                          "line": 84,
+                          "column": 7,
+                          "offset": 9090
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 84,
+                      "column": 3,
+                      "offset": 9086
+                    },
+                    "end": {
+                      "line": 84,
+                      "column": 7,
+                      "offset": 9090
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 84,
+                  "column": 1,
+                  "offset": 9084
+                },
+                "end": {
+                  "line": 84,
+                  "column": 7,
+                  "offset": 9090
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 82,
+              "column": 1,
+              "offset": 9072
+            },
+            "end": {
+              "line": 84,
+              "column": 7,
+              "offset": 9090
+            },
+            "indent": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\"Error: unexpected end of file\"",
+                      "position": {
+                        "start": {
+                          "line": 86,
+                          "column": 3,
+                          "offset": 9094
+                        },
+                        "end": {
+                          "line": 86,
+                          "column": 34,
+                          "offset": 9125
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 86,
+                      "column": 3,
+                      "offset": 9094
+                    },
+                    "end": {
+                      "line": 86,
+                      "column": 34,
+                      "offset": 9125
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 86,
+                  "column": 1,
+                  "offset": 9092
+                },
+                "end": {
+                  "line": 86,
+                  "column": 34,
+                  "offset": 9125
+                },
+                "indent": []
+              },
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "1",
+                      "position": {
+                        "start": {
+                          "line": 87,
+                          "column": 3,
+                          "offset": 9128
+                        },
+                        "end": {
+                          "line": 87,
+                          "column": 6,
+                          "offset": 9131
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 87,
+                      "column": 3,
+                      "offset": 9128
+                    },
+                    "end": {
+                      "line": 87,
+                      "column": 6,
+                      "offset": 9131
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 87,
+                  "column": 1,
+                  "offset": 9126
+                },
+                "end": {
+                  "line": 87,
+                  "column": 6,
+                  "offset": 9131
+                },
+                "indent": []
+              },
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2",
+                      "position": {
+                        "start": {
+                          "line": 88,
+                          "column": 3,
+                          "offset": 9134
+                        },
+                        "end": {
+                          "line": 88,
+                          "column": 4,
+                          "offset": 9135
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 88,
+                      "column": 3,
+                      "offset": 9134
+                    },
+                    "end": {
+                      "line": 88,
+                      "column": 4,
+                      "offset": 9135
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 88,
+                  "column": 1,
+                  "offset": 9132
+                },
+                "end": {
+                  "line": 88,
+                  "column": 4,
+                  "offset": 9135
+                },
+                "indent": []
+              },
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$a",
+                      "position": {
+                        "start": {
+                          "line": 89,
+                          "column": 3,
+                          "offset": 9138
+                        },
+                        "end": {
+                          "line": 89,
+                          "column": 5,
+                          "offset": 9140
+                        },
+                        "indent": []
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 89,
+                      "column": 3,
+                      "offset": 9138
+                    },
+                    "end": {
+                      "line": 89,
+                      "column": 5,
+                      "offset": 9140
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 89,
+                  "column": 1,
+                  "offset": 9136
+                },
+                "end": {
+                  "line": 89,
+                  "column": 5,
+                  "offset": 9140
+                },
+                "indent": []
+              },
+              "correct": false
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 86,
+              "column": 1,
+              "offset": 9092
+            },
+            "end": {
+              "line": 89,
+              "column": 5,
+              "offset": 9140
+            },
+            "indent": [
+              1,
+              1,
+              1
+            ]
+          },
+          "answers": true
+        }
+      ],
+      "question": true
+    },
+    {
+      "type": "section",
+      "name": "Footnotes",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "linkReference",
+              "identifier": "1: avl tree",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1: AVL tree",
+                  "position": {
+                    "start": {
+                      "line": 94,
+                      "column": 2,
+                      "offset": 9161
+                    },
+                    "end": {
+                      "line": 94,
+                      "column": 13,
+                      "offset": 9172
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 94,
+                  "column": 1,
+                  "offset": 9160
+                },
+                "end": {
+                  "line": 94,
+                  "column": 14,
+                  "offset": 9173
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": "\nSelf-balancing binary search tree, in which the height of the two child subtrees of any node differ by at most one.",
+              "position": {
+                "start": {
+                  "line": 94,
+                  "column": 14,
+                  "offset": 9173
+                },
+                "end": {
+                  "line": 95,
+                  "column": 116,
+                  "offset": 9289
+                },
+                "indent": [
+                  1
+                ]
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 94,
+              "column": 1,
+              "offset": 9160
+            },
+            "end": {
+              "line": 95,
+              "column": 116,
+              "offset": 9289
+            },
+            "indent": [
+              1
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "linkReference",
+              "identifier": "2: red-black tree",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2: Red-Black tree",
+                  "position": {
+                    "start": {
+                      "line": 97,
+                      "column": 2,
+                      "offset": 9292
+                    },
+                    "end": {
+                      "line": 97,
+                      "column": 19,
+                      "offset": 9309
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 97,
+                  "column": 1,
+                  "offset": 9291
+                },
+                "end": {
+                  "line": 97,
+                  "column": 20,
+                  "offset": 9310
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": "\nSelf-balancing binary search tree, in which nodes store an additional bit of data: whether the node is black or red. All of the tree's leaves must be black and, in case of a node being red, its two children must be black.",
+              "position": {
+                "start": {
+                  "line": 97,
+                  "column": 20,
+                  "offset": 9310
+                },
+                "end": {
+                  "line": 98,
+                  "column": 222,
+                  "offset": 9532
+                },
+                "indent": [
+                  1
+                ]
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 97,
+              "column": 1,
+              "offset": 9291
+            },
+            "end": {
+              "line": 98,
+              "column": 222,
+              "offset": 9532
+            },
+            "indent": [
+              1
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "linkReference",
+              "identifier": "3: blah blah",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3: Blah blah",
+                  "position": {
+                    "start": {
+                      "line": 100,
+                      "column": 2,
+                      "offset": 9535
+                    },
+                    "end": {
+                      "line": 100,
+                      "column": 14,
+                      "offset": 9547
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 100,
+                  "column": 1,
+                  "offset": 9534
+                },
+                "end": {
+                  "line": 100,
+                  "column": 15,
+                  "offset": 9548
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": "\nThis is the third footnote",
+              "position": {
+                "start": {
+                  "line": 100,
+                  "column": 15,
+                  "offset": 9548
+                },
+                "end": {
+                  "line": 101,
+                  "column": 27,
+                  "offset": 9575
+                },
+                "indent": [
+                  1
+                ]
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 100,
+              "column": 1,
+              "offset": 9534
+            },
+            "end": {
+              "line": 101,
+              "column": 27,
+              "offset": 9575
+            },
+            "indent": [
+              1
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "with code:",
+              "position": {
+                "start": {
+                  "line": 103,
+                  "column": 1,
+                  "offset": 9577
+                },
+                "end": {
+                  "line": 103,
+                  "column": 11,
+                  "offset": 9587
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 103,
+              "column": 1,
+              "offset": 9577
+            },
+            "end": {
+              "line": 103,
+              "column": 11,
+              "offset": 9587
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "code",
+          "lang": "javascript",
+          "value": "var x = 10",
+          "position": {
+            "start": {
+              "line": 104,
+              "column": 1,
+              "offset": 9588
+            },
+            "end": {
+              "line": 106,
+              "column": 4,
+              "offset": 9616
+            },
+            "indent": [
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 107,
+      "column": 1,
+      "offset": 9617
+    }
+  }
+}

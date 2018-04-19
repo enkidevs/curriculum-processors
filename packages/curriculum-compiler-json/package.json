@@ -1,0 +1,37 @@
+{
+  "name": "curriculum-compiler-json",
+  "version": "1.0.0",
+  "description": "Compile Enki Curriculum AST to JSON object",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --notify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkidevs/curriculum-processors.git"
+  },
+  "keywords": [
+    "enki",
+    "curriculum",
+    "compiler",
+    "json"
+  ],
+  "author": "loopiezlol <loopiezlol@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enkidevs/curriculum-processors/issues"
+  },
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
+  "dependencies": {
+    "@enkidevs/curriculum-compiler-string": "^2.0.1",
+    "@enkidevs/curriculum-helpers": "^1.6.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "jest-in-case": "^1.0.2",
+    "jsonfile": "^4.0.0"
+  },
+  "jest": {
+    "testRegex": "/.*__tests__/.*\\.test.js$"
+  }
+}

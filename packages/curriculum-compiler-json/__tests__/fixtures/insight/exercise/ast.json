@@ -1,0 +1,562 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "author: SebaRaba\n\nlevels:\n  - beginner\n  - basic\n  - medium\n\ntags:\n  - introduction\n  - workout\n\ntype: exercise\n\nlinkType: sqlfiddle\n\nlink: http://sqlfiddle.com/#!9/d5ccaa\n\nstandards:\n  sql.define-columns.1: 1000\n  sql.define-columns.2: 1000\n\nlinks:\n  - '[mysql modify columns documentation](https://dev.mysql.com/doc/refman/5.7/en/alter-table.html){website}'\n  - '[blog post on mysql define tables](https://www.w3schools.com/sql/sql_alter.asp){website}'\n  - '[video tutorial on alter table](https://youtu.be/vDr2DZeU5mY?t=50s){video}'\n",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 4,
+          "offset": 544
+        },
+        "indent": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "data": {
+        "parsedValue": {
+          "author": "SebaRaba",
+          "levels": [
+            "beginner",
+            "basic",
+            "medium"
+          ],
+          "tags": [
+            "introduction",
+            "workout"
+          ],
+          "type": "exercise",
+          "linkType": "sqlfiddle",
+          "link": "http://sqlfiddle.com/#!9/d5ccaa",
+          "standards": {
+            "sql.define-columns.1": 1000,
+            "sql.define-columns.2": 1000
+          },
+          "links": [
+            {
+              "name": "mysql modify columns documentation",
+              "url": "https://dev.mysql.com/doc/refman/5.7/en/alter-table.html",
+              "nature": "website"
+            },
+            {
+              "name": "blog post on mysql define tables",
+              "url": "https://www.w3schools.com/sql/sql_alter.asp",
+              "nature": "website"
+            },
+            {
+              "name": "video tutorial on alter table",
+              "url": "https://youtu.be/vDr2DZeU5mY?t=50s",
+              "nature": "video"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "children": [
+        {
+          "type": "text",
+          "value": "SQL Practice Aggregate Average",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 3,
+              "offset": 547
+            },
+            "end": {
+              "line": 29,
+              "column": 33,
+              "offset": 577
+            },
+            "indent": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "Exercise",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Follow the link to SQLFiddle and examine the ",
+              "position": {
+                "start": {
+                  "line": 34,
+                  "column": 1,
+                  "offset": 604
+                },
+                "end": {
+                  "line": 34,
+                  "column": 46,
+                  "offset": 649
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "CREATE",
+              "position": {
+                "start": {
+                  "line": 34,
+                  "column": 46,
+                  "offset": 649
+                },
+                "end": {
+                  "line": 34,
+                  "column": 54,
+                  "offset": 657
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " statements in the lefthand window.",
+              "position": {
+                "start": {
+                  "line": 34,
+                  "column": 54,
+                  "offset": 657
+                },
+                "end": {
+                  "line": 34,
+                  "column": 89,
+                  "offset": 692
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 34,
+              "column": 1,
+              "offset": 604
+            },
+            "end": {
+              "line": 34,
+              "column": 89,
+              "offset": 692
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Consider the ",
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 1,
+                  "offset": 694
+                },
+                "end": {
+                  "line": 36,
+                  "column": 14,
+                  "offset": 707
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "item_pictures",
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 14,
+                  "offset": 707
+                },
+                "end": {
+                  "line": 36,
+                  "column": 29,
+                  "offset": 722
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " table. It turns out the maxiumum length of the ",
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 29,
+                  "offset": 722
+                },
+                "end": {
+                  "line": 36,
+                  "column": 77,
+                  "offset": 770
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "URL",
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 77,
+                  "offset": 770
+                },
+                "end": {
+                  "line": 36,
+                  "column": 82,
+                  "offset": 775
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " field is much too short to hold mosts urls.",
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 82,
+                  "offset": 775
+                },
+                "end": {
+                  "line": 36,
+                  "column": 126,
+                  "offset": 819
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 36,
+              "column": 1,
+              "offset": 694
+            },
+            "end": {
+              "line": 36,
+              "column": 126,
+              "offset": 819
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Unfortunately, the schema is already in production, so re-creating the database is not an option.",
+              "position": {
+                "start": {
+                  "line": 38,
+                  "column": 1,
+                  "offset": 821
+                },
+                "end": {
+                  "line": 38,
+                  "column": 98,
+                  "offset": 918
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 38,
+              "column": 1,
+              "offset": 821
+            },
+            "end": {
+              "line": 38,
+              "column": 98,
+              "offset": 918
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Write a statement to modify the ",
+              "position": {
+                "start": {
+                  "line": 40,
+                  "column": 1,
+                  "offset": 920
+                },
+                "end": {
+                  "line": 40,
+                  "column": 33,
+                  "offset": 952
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "item_pictures",
+              "position": {
+                "start": {
+                  "line": 40,
+                  "column": 33,
+                  "offset": 952
+                },
+                "end": {
+                  "line": 40,
+                  "column": 48,
+                  "offset": 967
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " table to adapt to the problem presented.",
+              "position": {
+                "start": {
+                  "line": 40,
+                  "column": 48,
+                  "offset": 967
+                },
+                "end": {
+                  "line": 40,
+                  "column": 89,
+                  "offset": 1008
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "break",
+              "position": {
+                "start": {
+                  "line": 40,
+                  "column": 89,
+                  "offset": 1008
+                },
+                "end": {
+                  "line": 41,
+                  "column": 1,
+                  "offset": 1011
+                },
+                "indent": [
+                  1
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "value": "Don't directly edit the ",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 1,
+                  "offset": 1011
+                },
+                "end": {
+                  "line": 41,
+                  "column": 25,
+                  "offset": 1035
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "CREATE",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 25,
+                  "offset": 1035
+                },
+                "end": {
+                  "line": 41,
+                  "column": 33,
+                  "offset": 1043
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": " statements; instead, write a new statement to alter (",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 33,
+                  "offset": 1043
+                },
+                "end": {
+                  "line": 41,
+                  "column": 87,
+                  "offset": 1097
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "hint",
+                  "position": {
+                    "start": {
+                      "line": 41,
+                      "column": 88,
+                      "offset": 1098
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 92,
+                      "offset": 1102
+                    },
+                    "indent": []
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 87,
+                  "offset": 1097
+                },
+                "end": {
+                  "line": 41,
+                  "column": 93,
+                  "offset": 1103
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": ") the table.",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 93,
+                  "offset": 1103
+                },
+                "end": {
+                  "line": 41,
+                  "column": 105,
+                  "offset": 1115
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 40,
+              "column": 1,
+              "offset": 920
+            },
+            "end": {
+              "line": 41,
+              "column": 105,
+              "offset": 1115
+            },
+            "indent": [
+              1
+            ]
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "To submit, run your SQL and then add the link from SQLFiddle to your submission.  ",
+              "position": {
+                "start": {
+                  "line": 43,
+                  "column": 1,
+                  "offset": 1119
+                },
+                "end": {
+                  "line": 43,
+                  "column": 83,
+                  "offset": 1201
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 1119
+            },
+            "end": {
+              "line": 43,
+              "column": 83,
+              "offset": 1201
+            },
+            "indent": []
+          }
+        }
+      ]
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 44,
+      "column": 1,
+      "offset": 1202
+    }
+  }
+}
