@@ -18,13 +18,16 @@ function getAnswersFromNode (node) {
   const answersASTList = node.children.find(
     child => child.type === 'list' && child.answers
   )
-  if (!answersASTList) {
-    throw new Error('No answers in question node')
+  if (!answersASTList || !answersASTList.children) {
+    throw new Error('No valid answer list in question node')
   }
-  return compileNodeToInsightMarkdown({ children: [answersASTList] })
-    .split('\n')
-    .filter(Boolean)
-    .map(i => i.substring(1).trim())
+
+  let tempCorrectIndex = 0
+  return answersASTList.children.map(answerNode => ({
+    text: compileNodeToInsightMarkdown(answerNode).replace('\n', ''),
+    correct: answerNode.correct,
+    correctIndex: answerNode.correct ? tempCorrectIndex++ : null
+  }))
 }
 
 module.exports = {
