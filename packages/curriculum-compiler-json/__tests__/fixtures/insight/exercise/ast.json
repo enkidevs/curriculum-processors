@@ -1,0 +1,236 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "author: catalin\n\nlevels:\n  - beginner\n\ntags:\n  - introduction\n\ntype: exercise\n\nlinkType: sqlfiddle\n\nlink: http://sqlfiddle.com/#!9/352b0f1/1\n\nanswer: /heal-ball/\n\nstandards:\n  sql.read-single-table.0: 1000\n\nlinks:\n  - '[Enki](https:/enki.com){website}'\n",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 24,
+          "column": 4,
+          "offset": 261
+        },
+        "indent": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "data": {
+        "parsedValue": {
+          "author": "catalin",
+          "levels": [
+            "beginner"
+          ],
+          "tags": [
+            "introduction"
+          ],
+          "type": "exercise",
+          "linkType": "sqlfiddle",
+          "link": "http://sqlfiddle.com/#!9/352b0f1/1",
+          "answer": "/heal-ball/",
+          "standards": {
+            "sql.read-single-table.0": 1000
+          },
+          "links": [
+            {
+              "name": "Enki",
+              "url": "https:/enki.com",
+              "nature": "website"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "children": [
+        {
+          "type": "text",
+          "value": "Sample exercise",
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 3,
+              "offset": 264
+            },
+            "end": {
+              "line": 25,
+              "column": 18,
+              "offset": 279
+            },
+            "indent": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "name": "Exercise",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Sample exercise ",
+              "position": {
+                "start": {
+                  "line": 30,
+                  "column": 1,
+                  "offset": 306
+                },
+                "end": {
+                  "line": 30,
+                  "column": 17,
+                  "offset": 322
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "body",
+              "position": {
+                "start": {
+                  "line": 30,
+                  "column": 17,
+                  "offset": 322
+                },
+                "end": {
+                  "line": 30,
+                  "column": 23,
+                  "offset": 328
+                },
+                "indent": []
+              }
+            },
+            {
+              "type": "text",
+              "value": ":",
+              "position": {
+                "start": {
+                  "line": 30,
+                  "column": 23,
+                  "offset": 328
+                },
+                "end": {
+                  "line": 30,
+                  "column": 24,
+                  "offset": 329
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 30,
+              "column": 1,
+              "offset": 306
+            },
+            "end": {
+              "line": 30,
+              "column": 24,
+              "offset": 329
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Code:",
+              "position": {
+                "start": {
+                  "line": 32,
+                  "column": 1,
+                  "offset": 331
+                },
+                "end": {
+                  "line": 32,
+                  "column": 6,
+                  "offset": 336
+                },
+                "indent": []
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 32,
+              "column": 1,
+              "offset": 331
+            },
+            "end": {
+              "line": 32,
+              "column": 6,
+              "offset": 336
+            },
+            "indent": []
+          }
+        },
+        {
+          "type": "code",
+          "lang": null,
+          "value": "var x = 10",
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 337
+            },
+            "end": {
+              "line": 35,
+              "column": 4,
+              "offset": 355
+            },
+            "indent": [
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 36,
+      "column": 1,
+      "offset": 356
+    }
+  }
+}

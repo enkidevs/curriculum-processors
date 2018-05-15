@@ -337,7 +337,7 @@
                   ]
                 }
               ],
-              "correct": false
+              "correct": true
             },
             {
               "type": "listItem",

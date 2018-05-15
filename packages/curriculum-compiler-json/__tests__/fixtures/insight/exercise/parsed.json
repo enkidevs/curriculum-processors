@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "author": "catalin",
+    "levels": [
+      "beginner"
+    ],
+    "tags": [
+      "introduction"
+    ],
+    "type": "exercise",
+    "linkType": "sqlfiddle",
+    "link": "http://sqlfiddle.com/#!9/352b0f1/1",
+    "answer": "/heal-ball/",
+    "standards": {
+      "sql.read-single-table.0": 1000
+    },
+    "links": [
+      {
+        "name": "Enki",
+        "url": "https:/enki.com",
+        "nature": "website"
+      }
+    ]
+  },
+  "headline": "Sample exercise",
+  "exercise": "Sample exercise `body`:\n\nCode:\n\n    var x = 10\n"
+}
