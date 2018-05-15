@@ -1,3 +1,4 @@
+const unistBuilder = require('unist-builder')
 const { getCompiler } = require('@enkidevs/curriculum-compiler-string')
 const { contentTypes } = require('@enkidevs/curriculum-helpers')
 
@@ -8,10 +9,7 @@ function compileNodeToInsightMarkdown (node) {
   if (!node || !node.children) {
     throw new Error('Cannot compile invalid node')
   }
-  return getInsightCompiler().compileSync({
-    type: 'root',
-    children: node.children
-  })
+  return getInsightCompiler().compileSync(unistBuilder('root', node.children))
 }
 
 function getAnswersFromNode (node) {
