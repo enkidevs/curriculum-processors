@@ -1,3 +1,4 @@
+/* eslint-env jest */
 const compactAst = require('../lib/compact-ast')
 
 describe('Compact AST', () => {
