@@ -4,6 +4,8 @@
 
 - [@enkidevs/curriculum-compiler-string](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-compiler-string)
   - Compile parsed curriculum AST into a string
+- [@enkidevs/curriculum-compiler-json](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-compiler-json)
+  - Compile parsed curriculum AST into a more user-friendly JSON
 - [@enkidevs/curriculum-parser](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser)
   - Parse curriculum markdown strings into ASTs
 - [@enkidevs/curriculum-helpers](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-helpers)
