@@ -12,7 +12,7 @@ module.exports = function headline() {
           .use(markdown)
           .stringify({
             type: 'root',
-            children: headline.children
+            children: headline.children,
           })
         return `# ${content}`
       }

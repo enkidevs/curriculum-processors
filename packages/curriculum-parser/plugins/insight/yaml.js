@@ -1,17 +1,17 @@
 const map = require('unist-util-map')
 const jsYaml = require('js-yaml')
 
-module.exports = function yaml () {
+module.exports = function yaml() {
   return transform
 
-  function transform (ast) {
-    return map(ast, function (node) {
+  function transform(ast) {
+    return map(ast, function(node) {
       if (node.type == 'yaml') {
         const parsedValue = jsYaml.safeLoad(node.value, 'utf8')
         const newNode = Object.assign({}, node, {
           data: {
-            parsedValue
-          }
+            parsedValue,
+          },
         })
         const { links } = parsedValue
         if (Array.isArray(links)) {
@@ -29,7 +29,7 @@ module.exports = function yaml () {
 const mdUrlRegEx = /\[(.*)\]\((.*)\)/
 const mdUrlRegExWithType = /\[(.*)\]\((.*)\)\{(.*)\}/
 
-function getMarkdownLink (link) {
+function getMarkdownLink(link) {
   let result
   if (mdUrlRegExWithType.test(link)) {
     result = mdUrlRegExWithType.exec(link)
@@ -43,12 +43,12 @@ function getMarkdownLink (link) {
   return {
     nature: 'website',
     name: getDomainFromURL(link),
-    url: link
+    url: link,
   }
 }
 
 // http://stackoverflow.com/questions/8498592/extract-root-domain-name-from-string
-function getDomainFromURL (url) {
+function getDomainFromURL(url) {
   if (url) {
     let domain
     // find & remove protocol (http, ftp, etc.) and get domain

@@ -1,11 +1,11 @@
 const visit = require('unist-util-visit')
 
-module.exports = function headline () {
+module.exports = function headline() {
   let headlineNodeCount = 0
 
   return transform
 
-  function transform (ast) {
+  function transform(ast) {
     visit(ast, 'headline', validateHeadline)
     if (headlineNodeCount !== 1) {
       throw new Error(
@@ -14,7 +14,7 @@ module.exports = function headline () {
     }
   }
 
-  function validateHeadline (node) {
+  function validateHeadline(node) {
     headlineNodeCount += 1
   }
 }

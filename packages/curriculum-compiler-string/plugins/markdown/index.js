@@ -8,7 +8,7 @@ module.exports = [
       emphasis: '*',
       listItemIndent: 1,
       rule: '-',
-      ruleSpaces: false
-    }
-  ]
+      ruleSpaces: false,
+    },
+  ],
 ]

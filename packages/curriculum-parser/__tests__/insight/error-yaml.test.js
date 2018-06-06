@@ -5,8 +5,17 @@ const { getParser } = require('../../index')
 
 describe('Fail insight yaml parsing', () => {
   describe('Fail for insights with missing yaml configuration', () => {
-
-    const text = fs.readFileSync(path.join(__dirname, '../', 'fixtures', 'insight', 'error', 'missing-yaml.md'), 'utf8')
+    const text = fs.readFileSync(
+      path.join(
+        __dirname,
+        '../',
+        'fixtures',
+        'insight',
+        'error',
+        'missing-yaml.md'
+      ),
+      'utf8'
+    )
     let parser
     beforeEach(() => {
       parser = getParser(contentTypes.INSIGHT)

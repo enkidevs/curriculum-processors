@@ -38,7 +38,7 @@ module.exports = function questionCode() {
                 return lineChildren
               }, [])
           )
-        )
+        ),
       })
     }
     return node

@@ -1,4 +1,4 @@
 module.exports = {
   PRACTICE: 'practice',
-  REVISION: 'revision'
+  REVISION: 'revision',
 }
