@@ -3,9 +3,6 @@
   "version": "2.1.1",
   "description": "Compiles Enki Curriculum AST into a markdown string",
   "main": "index.js",
-  "scripts": {
-    "test": "jest --notify"
-  },
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "repository": {
     "type": "git",
@@ -33,11 +30,6 @@
     "js-yaml": "^3.11.0",
     "remark-stringify": "^5.0.0",
     "unified": "^6.1.6"
-  },
-  "devDependencies": {
-    "jest": "^22.4.2",
-    "jest-in-case": "^1.0.2",
-    "jsonfile": "^4.0.0"
   },
   "jest": {
     "testRegex": "/.*__tests__/.*\\.test.js$"

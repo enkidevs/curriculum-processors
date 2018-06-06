@@ -3,9 +3,6 @@
   "version": "2.1.1",
   "description": "Parses Enki Curriculum markdown into an AST",
   "main": "index.js",
-  "scripts": {
-    "test": "jest --notify"
-  },
   "keywords": [
     "enki",
     "curriculum",
@@ -29,11 +26,6 @@
     "url": "https://github.com/enkidevs/curriculum-processors/issues"
   },
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
-  "devDependencies": {
-    "jest": "^22.4.2",
-    "jest-in-case": "^1.0.2",
-    "jsonfile": "^4.0.0"
-  },
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^2.1.1",
     "decode-uri-component": "^0.2.0",
