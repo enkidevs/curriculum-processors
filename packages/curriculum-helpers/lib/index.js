@@ -7,5 +7,5 @@ module.exports = {
   contentTypes,
   compactAst,
   sectionNames,
-  questionTypes
+  questionTypes,
 }

@@ -2,8 +2,7 @@
 const parser = require('./index')
 const { compactAst } = require('../curriculum-helpers')
 
-const ast = parser.getParser('insight')
-  .parseSync(`---
+const ast = parser.getParser('insight').parseSync(`---
 author: jfarmer
 
 levels:

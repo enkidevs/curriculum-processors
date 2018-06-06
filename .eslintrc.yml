@@ -3,3 +3,22 @@ parserOptions:
   ecmaVersion: 2018
 env:
   node: true
+extends:
+- plugin:import/errors
+- plugin:import/warnings
+- plugin:node/recommended
+- prettier
+plugins:
+- import
+- jest
+- node
+- prettier
+rules:
+  node/no-unsupported-features:
+    - error
+    - version: 8
+  node/no-extraneous-require:
+    - error
+    - allowModules:
+      - jest-in-case
+      - jsonfile

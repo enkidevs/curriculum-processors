@@ -35,10 +35,10 @@ function getCompiler(type) {
 
   return {
     compile,
-    compileSync
+    compileSync,
   }
 }
 
 module.exports = {
-  getCompiler
+  getCompiler,
 }

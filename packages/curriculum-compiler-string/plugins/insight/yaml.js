@@ -1,12 +1,12 @@
 const jsYaml = require('js-yaml')
 
-module.exports = function yaml () {
+module.exports = function yaml() {
   const { Compiler } = this
 
   if (Compiler) {
     const { visitors } = Compiler.prototype
     if (visitors) {
-      visitors.yaml = function (node) {
+      visitors.yaml = function(node) {
         if (node.data && node.data.parsedValue) {
           const { links } = node.data.parsedValue
           if (Array.isArray(links)) {

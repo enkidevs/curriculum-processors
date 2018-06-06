@@ -4,17 +4,18 @@ const ast = {
   children: [
     {
       type: 'yaml',
-      value: "author: catalin\n\nlevels:\n  - basic\n  - medium\n  - advanced\n\ntype: normal\n\ncategory: must-know\n\nstandards:\n  sql.use-dql.0: 10\n  sql.use-ddl.1: 1000\n\ntags:\n  - introduction\n  - workout\n\nstub: false\n\nlinks:\n  - '[EnkiCool](https://enki.com){website}'\n",
+      value:
+        "author: catalin\n\nlevels:\n  - basic\n  - medium\n  - advanced\n\ntype: normal\n\ncategory: must-know\n\nstandards:\n  sql.use-dql.0: 10\n  sql.use-ddl.1: 1000\n\ntags:\n  - introduction\n  - workout\n\nstub: false\n\nlinks:\n  - '[EnkiCool](https://enki.com){website}'\n",
       position: {
         start: {
           line: 1,
           column: 1,
-          offset: 0
+          offset: 0,
         },
         end: {
           line: 26,
           column: 4,
-          offset: 257
+          offset: 257,
         },
         indent: [
           1,
@@ -41,8 +42,8 @@ const ast = {
           1,
           1,
           1,
-          1
-        ]
+          1,
+        ],
       },
       data: {
         parsedValue: {
@@ -52,7 +53,7 @@ const ast = {
           category: 'must-know',
           standards: {
             'sql.use-dql.0': 10,
-            'sql.use-ddl.1': 1000
+            'sql.use-ddl.1': 1000,
           },
           tags: ['introduction', 'workout'],
           stub: false,
@@ -60,11 +61,11 @@ const ast = {
             {
               name: 'EnkiCool',
               url: 'https://enki.com',
-              nature: 'website'
-            }
-          ]
-        }
-      }
+              nature: 'website',
+            },
+          ],
+        },
+      },
     },
     {
       type: 'headline',
@@ -76,15 +77,15 @@ const ast = {
             start: {
               line: 27,
               column: 3,
-              offset: 260
+              offset: 260,
             },
             end: {
               line: 27,
               column: 21,
-              offset: 278
+              offset: 278,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'inlineCode',
@@ -93,15 +94,15 @@ const ast = {
             start: {
               line: 27,
               column: 21,
-              offset: 278
+              offset: 278,
             },
             end: {
               line: 27,
               column: 27,
-              offset: 284
+              offset: 284,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'text',
@@ -110,17 +111,17 @@ const ast = {
             start: {
               line: 27,
               column: 27,
-              offset: 284
+              offset: 284,
             },
             end: {
               line: 27,
               column: 34,
-              offset: 291
+              offset: 291,
             },
-            indent: []
-          }
-        }
-      ]
+            indent: [],
+          },
+        },
+      ],
     },
     {
       type: 'section',
@@ -136,15 +137,15 @@ const ast = {
                 start: {
                   line: 32,
                   column: 1,
-                  offset: 309
+                  offset: 309,
                 },
                 end: {
                   line: 32,
                   column: 28,
-                  offset: 336
+                  offset: 336,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'linkReference',
@@ -158,45 +159,45 @@ const ast = {
                     start: {
                       line: 32,
                       column: 29,
-                      offset: 337
+                      offset: 337,
                     },
                     end: {
                       line: 32,
                       column: 30,
-                      offset: 338
+                      offset: 338,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 32,
                   column: 28,
-                  offset: 336
+                  offset: 336,
                 },
                 end: {
                   line: 32,
                   column: 31,
-                  offset: 339
+                  offset: 339,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 32,
               column: 1,
-              offset: 309
+              offset: 309,
             },
             end: {
               line: 32,
               column: 31,
-              offset: 339
+              offset: 339,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'paragraph',
@@ -208,15 +209,15 @@ const ast = {
                 start: {
                   line: 34,
                   column: 1,
-                  offset: 341
+                  offset: 341,
                 },
                 end: {
                   line: 34,
                   column: 22,
-                  offset: 362
+                  offset: 362,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'linkReference',
@@ -230,30 +231,30 @@ const ast = {
                     start: {
                       line: 34,
                       column: 23,
-                      offset: 363
+                      offset: 363,
                     },
                     end: {
                       line: 34,
                       column: 24,
-                      offset: 364
+                      offset: 364,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 34,
                   column: 22,
-                  offset: 362
+                  offset: 362,
                 },
                 end: {
                   line: 34,
                   column: 25,
-                  offset: 365
+                  offset: 365,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'text',
@@ -262,30 +263,30 @@ const ast = {
                 start: {
                   line: 34,
                   column: 25,
-                  offset: 365
+                  offset: 365,
                 },
                 end: {
                   line: 34,
                   column: 26,
-                  offset: 366
+                  offset: 366,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 34,
               column: 1,
-              offset: 341
+              offset: 341,
             },
             end: {
               line: 34,
               column: 26,
-              offset: 366
+              offset: 366,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'list',
@@ -308,45 +309,45 @@ const ast = {
                         start: {
                           line: 36,
                           column: 3,
-                          offset: 370
+                          offset: 370,
                         },
                         end: {
                           line: 36,
                           column: 11,
-                          offset: 378
+                          offset: 378,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 36,
                       column: 3,
-                      offset: 370
+                      offset: 370,
                     },
                     end: {
                       line: 36,
                       column: 11,
-                      offset: 378
+                      offset: 378,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 36,
                   column: 1,
-                  offset: 368
+                  offset: 368,
                 },
                 end: {
                   line: 36,
                   column: 11,
-                  offset: 378
+                  offset: 378,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'listItem',
@@ -363,15 +364,15 @@ const ast = {
                         start: {
                           line: 37,
                           column: 3,
-                          offset: 381
+                          offset: 381,
                         },
                         end: {
                           line: 37,
                           column: 8,
-                          offset: 386
+                          offset: 386,
                         },
-                        indent: []
-                      }
+                        indent: [],
+                      },
                     },
                     {
                       type: 'inlineCode',
@@ -380,60 +381,60 @@ const ast = {
                         start: {
                           line: 37,
                           column: 8,
-                          offset: 386
+                          offset: 386,
                         },
                         end: {
                           line: 37,
                           column: 13,
-                          offset: 391
+                          offset: 391,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 37,
                       column: 3,
-                      offset: 381
+                      offset: 381,
                     },
                     end: {
                       line: 37,
                       column: 13,
-                      offset: 391
+                      offset: 391,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 37,
                   column: 1,
-                  offset: 379
+                  offset: 379,
                 },
                 end: {
                   line: 37,
                   column: 13,
-                  offset: 391
+                  offset: 391,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 36,
               column: 1,
-              offset: 368
+              offset: 368,
             },
             end: {
               line: 37,
               column: 13,
-              offset: 391
+              offset: 391,
             },
-            indent: [1]
-          }
+            indent: [1],
+          },
         },
         {
           type: 'paragraph',
@@ -445,15 +446,15 @@ const ast = {
                 start: {
                   line: 39,
                   column: 1,
-                  offset: 393
+                  offset: 393,
                 },
                 end: {
                   line: 39,
                   column: 12,
-                  offset: 404
+                  offset: 404,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'linkReference',
@@ -467,30 +468,30 @@ const ast = {
                     start: {
                       line: 39,
                       column: 13,
-                      offset: 405
+                      offset: 405,
                     },
                     end: {
                       line: 39,
                       column: 14,
-                      offset: 406
+                      offset: 406,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 39,
                   column: 12,
-                  offset: 404
+                  offset: 404,
                 },
                 end: {
                   line: 39,
                   column: 15,
-                  offset: 407
+                  offset: 407,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'text',
@@ -499,30 +500,30 @@ const ast = {
                 start: {
                   line: 39,
                   column: 15,
-                  offset: 407
+                  offset: 407,
                 },
                 end: {
                   line: 39,
                   column: 16,
-                  offset: 408
+                  offset: 408,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 39,
               column: 1,
-              offset: 393
+              offset: 393,
             },
             end: {
               line: 39,
               column: 16,
-              offset: 408
+              offset: 408,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'code',
@@ -532,17 +533,17 @@ const ast = {
             start: {
               line: 40,
               column: 1,
-              offset: 409
+              offset: 409,
             },
             end: {
               line: 42,
               column: 4,
-              offset: 453
+              offset: 453,
             },
-            indent: [1, 1]
-          }
-        }
-      ]
+            indent: [1, 1],
+          },
+        },
+      ],
     },
     {
       type: 'section',
@@ -558,30 +559,30 @@ const ast = {
                 start: {
                   line: 47,
                   column: 1,
-                  offset: 472
+                  offset: 472,
                 },
                 end: {
                   line: 47,
                   column: 40,
-                  offset: 511
+                  offset: 511,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 47,
               column: 1,
-              offset: 472
+              offset: 472,
             },
             end: {
               line: 47,
               column: 40,
-              offset: 511
+              offset: 511,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'paragraph',
@@ -593,30 +594,30 @@ const ast = {
                 start: {
                   line: 49,
                   column: 1,
-                  offset: 513
+                  offset: 513,
                 },
                 end: {
                   line: 49,
                   column: 4,
-                  offset: 516
+                  offset: 516,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 49,
               column: 1,
-              offset: 513
+              offset: 513,
             },
             end: {
               line: 49,
               column: 4,
-              offset: 516
+              offset: 516,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'list',
@@ -639,46 +640,46 @@ const ast = {
                         start: {
                           line: 51,
                           column: 3,
-                          offset: 520
+                          offset: 520,
                         },
                         end: {
                           line: 51,
                           column: 10,
-                          offset: 527
+                          offset: 527,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 51,
                       column: 3,
-                      offset: 520
+                      offset: 520,
                     },
                     end: {
                       line: 51,
                       column: 10,
-                      offset: 527
+                      offset: 527,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 51,
                   column: 1,
-                  offset: 518
+                  offset: 518,
                 },
                 end: {
                   line: 51,
                   column: 10,
-                  offset: 527
+                  offset: 527,
                 },
-                indent: []
+                indent: [],
               },
-              correct: true
+              correct: true,
             },
             {
               type: 'listItem',
@@ -695,46 +696,46 @@ const ast = {
                         start: {
                           line: 52,
                           column: 3,
-                          offset: 530
+                          offset: 530,
                         },
                         end: {
                           line: 52,
                           column: 12,
-                          offset: 539
+                          offset: 539,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 52,
                       column: 3,
-                      offset: 530
+                      offset: 530,
                     },
                     end: {
                       line: 52,
                       column: 12,
-                      offset: 539
+                      offset: 539,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 52,
                   column: 1,
-                  offset: 528
+                  offset: 528,
                 },
                 end: {
                   line: 52,
                   column: 12,
-                  offset: 539
+                  offset: 539,
                 },
-                indent: []
+                indent: [],
               },
-              correct: true
+              correct: true,
             },
             {
               type: 'listItem',
@@ -751,65 +752,65 @@ const ast = {
                         start: {
                           line: 53,
                           column: 3,
-                          offset: 542
+                          offset: 542,
                         },
                         end: {
                           line: 53,
                           column: 15,
-                          offset: 554
+                          offset: 554,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 53,
                       column: 3,
-                      offset: 542
+                      offset: 542,
                     },
                     end: {
                       line: 53,
                       column: 15,
-                      offset: 554
+                      offset: 554,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 53,
                   column: 1,
-                  offset: 540
+                  offset: 540,
                 },
                 end: {
                   line: 53,
                   column: 15,
-                  offset: 554
+                  offset: 554,
                 },
-                indent: []
+                indent: [],
               },
-              correct: true
-            }
+              correct: true,
+            },
           ],
           position: {
             start: {
               line: 51,
               column: 1,
-              offset: 518
+              offset: 518,
             },
             end: {
               line: 53,
               column: 15,
-              offset: 554
+              offset: 554,
             },
-            indent: [1, 1]
+            indent: [1, 1],
           },
-          answers: true
-        }
+          answers: true,
+        },
       ],
-      question: true
+      question: true,
     },
     {
       type: 'section',
@@ -825,30 +826,30 @@ const ast = {
                 start: {
                   line: 58,
                   column: 1,
-                  offset: 573
+                  offset: 573,
                 },
                 end: {
                   line: 58,
                   column: 41,
-                  offset: 613
+                  offset: 613,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 58,
               column: 1,
-              offset: 573
+              offset: 573,
             },
             end: {
               line: 58,
               column: 41,
-              offset: 613
+              offset: 613,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'paragraph',
@@ -860,30 +861,30 @@ const ast = {
                 start: {
                   line: 60,
                   column: 1,
-                  offset: 615
+                  offset: 615,
                 },
                 end: {
                   line: 60,
                   column: 4,
-                  offset: 618
+                  offset: 618,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 60,
               column: 1,
-              offset: 615
+              offset: 615,
             },
             end: {
               line: 60,
               column: 4,
-              offset: 618
+              offset: 618,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'paragraph',
@@ -895,30 +896,30 @@ const ast = {
                 start: {
                   line: 62,
                   column: 1,
-                  offset: 620
+                  offset: 620,
                 },
                 end: {
                   line: 62,
                   column: 4,
-                  offset: 623
+                  offset: 623,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 62,
               column: 1,
-              offset: 620
+              offset: 620,
             },
             end: {
               line: 62,
               column: 4,
-              offset: 623
+              offset: 623,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'list',
@@ -941,46 +942,46 @@ const ast = {
                         start: {
                           line: 64,
                           column: 3,
-                          offset: 627
+                          offset: 627,
                         },
                         end: {
                           line: 64,
                           column: 10,
-                          offset: 634
+                          offset: 634,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 64,
                       column: 3,
-                      offset: 627
+                      offset: 627,
                     },
                     end: {
                       line: 64,
                       column: 10,
-                      offset: 634
+                      offset: 634,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 64,
                   column: 1,
-                  offset: 625
+                  offset: 625,
                 },
                 end: {
                   line: 64,
                   column: 10,
-                  offset: 634
+                  offset: 634,
                 },
-                indent: []
+                indent: [],
               },
-              correct: true
+              correct: true,
             },
             {
               type: 'listItem',
@@ -997,46 +998,46 @@ const ast = {
                         start: {
                           line: 65,
                           column: 3,
-                          offset: 637
+                          offset: 637,
                         },
                         end: {
                           line: 65,
                           column: 15,
-                          offset: 649
+                          offset: 649,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 65,
                       column: 3,
-                      offset: 637
+                      offset: 637,
                     },
                     end: {
                       line: 65,
                       column: 15,
-                      offset: 649
+                      offset: 649,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 65,
                   column: 1,
-                  offset: 635
+                  offset: 635,
                 },
                 end: {
                   line: 65,
                   column: 15,
-                  offset: 649
+                  offset: 649,
                 },
-                indent: []
+                indent: [],
               },
-              correct: false
+              correct: false,
             },
             {
               type: 'listItem',
@@ -1053,46 +1054,46 @@ const ast = {
                         start: {
                           line: 66,
                           column: 3,
-                          offset: 652
+                          offset: 652,
                         },
                         end: {
                           line: 66,
                           column: 10,
-                          offset: 659
+                          offset: 659,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 66,
                       column: 3,
-                      offset: 652
+                      offset: 652,
                     },
                     end: {
                       line: 66,
                       column: 10,
-                      offset: 659
+                      offset: 659,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 66,
                   column: 1,
-                  offset: 650
+                  offset: 650,
                 },
                 end: {
                   line: 66,
                   column: 10,
-                  offset: 659
+                  offset: 659,
                 },
-                indent: []
+                indent: [],
               },
-              correct: false
+              correct: false,
             },
             {
               type: 'listItem',
@@ -1109,65 +1110,65 @@ const ast = {
                         start: {
                           line: 67,
                           column: 3,
-                          offset: 662
+                          offset: 662,
                         },
                         end: {
                           line: 67,
                           column: 15,
-                          offset: 674
+                          offset: 674,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 67,
                       column: 3,
-                      offset: 662
+                      offset: 662,
                     },
                     end: {
                       line: 67,
                       column: 15,
-                      offset: 674
+                      offset: 674,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 67,
                   column: 1,
-                  offset: 660
+                  offset: 660,
                 },
                 end: {
                   line: 67,
                   column: 15,
-                  offset: 674
+                  offset: 674,
                 },
-                indent: []
+                indent: [],
               },
-              correct: false
-            }
+              correct: false,
+            },
           ],
           position: {
             start: {
               line: 64,
               column: 1,
-              offset: 625
+              offset: 625,
             },
             end: {
               line: 67,
               column: 15,
-              offset: 674
+              offset: 674,
             },
-            indent: [1, 1, 1]
+            indent: [1, 1, 1],
           },
-          answers: true
-        }
+          answers: true,
+        },
       ],
-      question: true
+      question: true,
     },
     {
       type: 'section',
@@ -1183,17 +1184,17 @@ const ast = {
                 start: {
                   line: 72,
                   column: 5,
-                  offset: 693
+                  offset: 693,
                 },
                 end: {
                   line: 72,
                   column: 15,
-                  offset: 703
+                  offset: 703,
                 },
-                indent: []
-              }
-            }
-          ]
+                indent: [],
+              },
+            },
+          ],
         },
         {
           type: 'paragraph',
@@ -1205,30 +1206,30 @@ const ast = {
                 start: {
                   line: 74,
                   column: 1,
-                  offset: 705
+                  offset: 705,
                 },
                 end: {
                   line: 74,
                   column: 21,
-                  offset: 725
+                  offset: 725,
                 },
-                indent: []
-              }
-            }
+                indent: [],
+              },
+            },
           ],
           position: {
             start: {
               line: 74,
               column: 1,
-              offset: 705
+              offset: 705,
             },
             end: {
               line: 74,
               column: 21,
-              offset: 725
+              offset: 725,
             },
-            indent: []
-          }
+            indent: [],
+          },
         },
         {
           type: 'list',
@@ -1251,46 +1252,46 @@ const ast = {
                         start: {
                           line: 76,
                           column: 3,
-                          offset: 729
+                          offset: 729,
                         },
                         end: {
                           line: 76,
                           column: 10,
-                          offset: 736
+                          offset: 736,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 76,
                       column: 3,
-                      offset: 729
+                      offset: 729,
                     },
                     end: {
                       line: 76,
                       column: 10,
-                      offset: 736
+                      offset: 736,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 76,
                   column: 1,
-                  offset: 727
+                  offset: 727,
                 },
                 end: {
                   line: 76,
                   column: 10,
-                  offset: 736
+                  offset: 736,
                 },
-                indent: []
+                indent: [],
               },
-              correct: true
+              correct: true,
             },
             {
               type: 'listItem',
@@ -1310,61 +1311,61 @@ const ast = {
                             start: {
                               line: 77,
                               column: 4,
-                              offset: 740
+                              offset: 740,
                             },
                             end: {
                               line: 77,
                               column: 13,
-                              offset: 749
+                              offset: 749,
                             },
-                            indent: []
-                          }
-                        }
+                            indent: [],
+                          },
+                        },
                       ],
                       position: {
                         start: {
                           line: 77,
                           column: 3,
-                          offset: 739
+                          offset: 739,
                         },
                         end: {
                           line: 77,
                           column: 14,
-                          offset: 750
+                          offset: 750,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 77,
                       column: 3,
-                      offset: 739
+                      offset: 739,
                     },
                     end: {
                       line: 77,
                       column: 14,
-                      offset: 750
+                      offset: 750,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 77,
                   column: 1,
-                  offset: 737
+                  offset: 737,
                 },
                 end: {
                   line: 77,
                   column: 14,
-                  offset: 750
+                  offset: 750,
                 },
-                indent: []
+                indent: [],
               },
-              correct: false
+              correct: false,
             },
             {
               type: 'listItem',
@@ -1381,15 +1382,15 @@ const ast = {
                         start: {
                           line: 78,
                           column: 3,
-                          offset: 753
+                          offset: 753,
                         },
                         end: {
                           line: 78,
                           column: 9,
-                          offset: 759
+                          offset: 759,
                         },
-                        indent: []
-                      }
+                        indent: [],
+                      },
                     },
                     {
                       type: 'inlineCode',
@@ -1398,46 +1399,46 @@ const ast = {
                         start: {
                           line: 78,
                           column: 9,
-                          offset: 759
+                          offset: 759,
                         },
                         end: {
                           line: 78,
                           column: 17,
-                          offset: 767
+                          offset: 767,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 78,
                       column: 3,
-                      offset: 753
+                      offset: 753,
                     },
                     end: {
                       line: 78,
                       column: 17,
-                      offset: 767
+                      offset: 767,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 78,
                   column: 1,
-                  offset: 751
+                  offset: 751,
                 },
                 end: {
                   line: 78,
                   column: 17,
-                  offset: 767
+                  offset: 767,
                 },
-                indent: []
+                indent: [],
               },
-              correct: false
+              correct: false,
             },
             {
               type: 'listItem',
@@ -1454,65 +1455,65 @@ const ast = {
                         start: {
                           line: 79,
                           column: 3,
-                          offset: 770
+                          offset: 770,
                         },
                         end: {
                           line: 79,
                           column: 7,
-                          offset: 774
+                          offset: 774,
                         },
-                        indent: []
-                      }
-                    }
+                        indent: [],
+                      },
+                    },
                   ],
                   position: {
                     start: {
                       line: 79,
                       column: 3,
-                      offset: 770
+                      offset: 770,
                     },
                     end: {
                       line: 79,
                       column: 7,
-                      offset: 774
+                      offset: 774,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 79,
                   column: 1,
-                  offset: 768
+                  offset: 768,
                 },
                 end: {
                   line: 79,
                   column: 7,
-                  offset: 774
+                  offset: 774,
                 },
-                indent: []
+                indent: [],
               },
-              correct: false
-            }
+              correct: false,
+            },
           ],
           position: {
             start: {
               line: 76,
               column: 1,
-              offset: 727
+              offset: 727,
             },
             end: {
               line: 79,
               column: 7,
-              offset: 774
+              offset: 774,
             },
-            indent: [1, 1, 1]
+            indent: [1, 1, 1],
           },
-          answers: true
-        }
+          answers: true,
+        },
       ],
-      question: true
+      question: true,
     },
     {
       type: 'section',
@@ -1533,30 +1534,30 @@ const ast = {
                     start: {
                       line: 84,
                       column: 2,
-                      offset: 795
+                      offset: 795,
                     },
                     end: {
                       line: 84,
                       column: 14,
-                      offset: 807
+                      offset: 807,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 84,
                   column: 1,
-                  offset: 794
+                  offset: 794,
                 },
                 end: {
                   line: 84,
                   column: 15,
-                  offset: 808
+                  offset: 808,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'text',
@@ -1565,30 +1566,30 @@ const ast = {
                 start: {
                   line: 84,
                   column: 15,
-                  offset: 808
+                  offset: 808,
                 },
                 end: {
                   line: 85,
                   column: 19,
-                  offset: 827
+                  offset: 827,
                 },
-                indent: [1]
-              }
-            }
+                indent: [1],
+              },
+            },
           ],
           position: {
             start: {
               line: 84,
               column: 1,
-              offset: 794
+              offset: 794,
             },
             end: {
               line: 85,
               column: 19,
-              offset: 827
+              offset: 827,
             },
-            indent: [1]
-          }
+            indent: [1],
+          },
         },
         {
           type: 'paragraph',
@@ -1605,30 +1606,30 @@ const ast = {
                     start: {
                       line: 87,
                       column: 2,
-                      offset: 830
+                      offset: 830,
                     },
                     end: {
                       line: 87,
                       column: 9,
-                      offset: 837
+                      offset: 837,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 87,
                   column: 1,
-                  offset: 829
+                  offset: 829,
                 },
                 end: {
                   line: 87,
                   column: 10,
-                  offset: 838
+                  offset: 838,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'text',
@@ -1637,30 +1638,30 @@ const ast = {
                 start: {
                   line: 87,
                   column: 10,
-                  offset: 838
+                  offset: 838,
                 },
                 end: {
                   line: 88,
                   column: 12,
-                  offset: 850
+                  offset: 850,
                 },
-                indent: [1]
-              }
-            }
+                indent: [1],
+              },
+            },
           ],
           position: {
             start: {
               line: 87,
               column: 1,
-              offset: 829
+              offset: 829,
             },
             end: {
               line: 88,
               column: 12,
-              offset: 850
+              offset: 850,
             },
-            indent: [1]
-          }
+            indent: [1],
+          },
         },
         {
           type: 'paragraph',
@@ -1677,30 +1678,30 @@ const ast = {
                     start: {
                       line: 90,
                       column: 2,
-                      offset: 853
+                      offset: 853,
                     },
                     end: {
                       line: 90,
                       column: 9,
-                      offset: 860
+                      offset: 860,
                     },
-                    indent: []
-                  }
-                }
+                    indent: [],
+                  },
+                },
               ],
               position: {
                 start: {
                   line: 90,
                   column: 1,
-                  offset: 852
+                  offset: 852,
                 },
                 end: {
                   line: 90,
                   column: 10,
-                  offset: 861
+                  offset: 861,
                 },
-                indent: []
-              }
+                indent: [],
+              },
             },
             {
               type: 'text',
@@ -1709,30 +1710,30 @@ const ast = {
                 start: {
                   line: 90,
                   column: 10,
-                  offset: 861
+                  offset: 861,
                 },
                 end: {
                   line: 91,
                   column: 12,
-                  offset: 873
+                  offset: 873,
                 },
-                indent: [1]
-              }
-            }
+                indent: [1],
+              },
+            },
           ],
           position: {
             start: {
               line: 90,
               column: 1,
-              offset: 852
+              offset: 852,
             },
             end: {
               line: 91,
               column: 12,
-              offset: 873
+              offset: 873,
             },
-            indent: [1]
-          }
+            indent: [1],
+          },
         },
         {
           type: 'code',
@@ -1742,31 +1743,31 @@ const ast = {
             start: {
               line: 92,
               column: 1,
-              offset: 874
+              offset: 874,
             },
             end: {
               line: 94,
               column: 4,
-              offset: 902
+              offset: 902,
             },
-            indent: [1, 1]
-          }
-        }
-      ]
-    }
+            indent: [1, 1],
+          },
+        },
+      ],
+    },
   ],
   position: {
     start: {
       line: 1,
       column: 1,
-      offset: 0
+      offset: 0,
     },
     end: {
       line: 95,
       column: 1,
-      offset: 903
-    }
-  }
+      offset: 903,
+    },
+  },
 }
 
 const { getCompiler } = require('./index')

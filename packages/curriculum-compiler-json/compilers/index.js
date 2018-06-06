@@ -11,5 +11,5 @@ module.exports = {
   quiz,
   question,
   footnotes,
-  helpers
+  helpers,
 }

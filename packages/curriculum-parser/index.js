@@ -39,12 +39,12 @@ function getParser(type) {
 
   return {
     parse,
-    parseSync
+    parseSync,
   }
 }
 
 module.exports = {
   getParser,
   getProcessor,
-  plugins
+  plugins,
 }

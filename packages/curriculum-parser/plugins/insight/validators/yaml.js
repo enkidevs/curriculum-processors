@@ -1,11 +1,11 @@
 const visit = require('unist-util-visit')
 
-module.exports = function yaml () {
+module.exports = function yaml() {
   let yamlNodeCount = 0
 
   return transform
 
-  function transform (ast) {
+  function transform(ast) {
     visit(ast, 'yaml', validateYaml)
     if (yamlNodeCount !== 1) {
       throw new Error(
@@ -14,7 +14,7 @@ module.exports = function yaml () {
     }
   }
 
-  function validateYaml (node) {
+  function validateYaml(node) {
     yamlNodeCount += 1
   }
 }

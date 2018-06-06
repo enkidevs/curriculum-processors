@@ -7,7 +7,7 @@ module.exports = function questionCode() {
   if (Compiler) {
     const { visitors } = Compiler.prototype
     if (visitors) {
-      visitors.questionCode = visitors.code;
+      visitors.questionCode = visitors.code
     }
   }
 }

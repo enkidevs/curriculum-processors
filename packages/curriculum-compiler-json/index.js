@@ -15,28 +15,28 @@ const nodeTypeMap = {
       throw new Error(`Cannot compile section node with name ${node.name}`)
     }
     return compiler(node)
-  }
+  },
 }
 
 const nodeSectionMap = {
   [sectionNames.CONTENT]: node => ({
-    content: compileNodeToInsightMarkdown(node)
+    content: compileNodeToInsightMarkdown(node),
   }),
   [sectionNames.GAME_CONTENT]: node => ({
-    gameContent: compileNodeToInsightMarkdown(node)
+    gameContent: compileNodeToInsightMarkdown(node),
   }),
   [sectionNames.EXERCISE]: node => ({
-    exercise: compileNodeToInsightMarkdown(node)
+    exercise: compileNodeToInsightMarkdown(node),
   }),
   [sectionNames.PRACTICE]: node =>
     compilers.question(node, questionTypes.PRACTICE),
   [sectionNames.REVISION]: node =>
     compilers.question(node, questionTypes.REVISION),
   [sectionNames.QUIZ]: node => compilers.quiz(node),
-  [sectionNames.FOOTNOTES]: node => compilers.footnotes(node)
+  [sectionNames.FOOTNOTES]: node => compilers.footnotes(node),
 }
 
-function compileSection (node) {
+function compileSection(node) {
   if (!node || !node.type) {
     throw new Error('Invalid node with no type')
   }
@@ -47,8 +47,8 @@ function compileSection (node) {
   return compiler(node)
 }
 
-function getCompiler (type) {
-  function compileSync (ast) {
+function getCompiler(type) {
+  function compileSync(ast) {
     if (!ast || !ast.children) {
       throw new Error('Missing or invalid AST')
     }
@@ -59,10 +59,10 @@ function getCompiler (type) {
   }
 
   return {
-    compileSync
+    compileSync,
   }
 }
 
 module.exports = {
-  getCompiler
+  getCompiler,
 }

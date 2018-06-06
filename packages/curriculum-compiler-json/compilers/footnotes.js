@@ -1,17 +1,17 @@
 const { compileNodeToInsightMarkdown } = require('./helpers')
 
-module.exports = function footnotes (node) {
+module.exports = function footnotes(node) {
   const rawText = compileNodeToInsightMarkdown(node)
   const items = parseRawFootnotes(rawText)
   return {
     footnotes: {
       rawText,
-      items
-    }
+      items,
+    },
   }
 }
 
-function parseRawFootnotes (text) {
+function parseRawFootnotes(text) {
   const splitTextArray = text.split(/(\[.*:.*\])/gi).filter(Boolean)
   return splitTextArray.reduce((items, line, index, array) => {
     if (index % 2 === 1) {
@@ -29,7 +29,7 @@ function parseRawFootnotes (text) {
     return items.concat({
       number,
       name,
-      text: nextLine
+      text: nextLine,
     })
   }, [])
 }

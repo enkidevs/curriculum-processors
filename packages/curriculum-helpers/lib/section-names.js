@@ -5,5 +5,5 @@ module.exports = {
   PRACTICE: 'Practice',
   QUIZ: 'Quiz',
   GAME_CONTENT: 'Game Content',
-  EXERCISE: 'Exercise'
+  EXERCISE: 'Exercise',
 }

@@ -12,7 +12,7 @@ module.exports = function questionHeadline() {
           .use(markdown)
           .stringify({
             type: 'root',
-            children: questionHeadline.children
+            children: questionHeadline.children,
           })
         return `### ${content}`
       }

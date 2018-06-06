@@ -17,6 +17,6 @@ jestInCase(
   },
   ['exercise', 'sample'].map(dir => ({
     text: fs.readFileSync(fixturePath(dir, 'text.md'), 'utf8'),
-    ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json'))
+    ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))
 )

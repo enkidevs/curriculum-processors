@@ -1,4 +1,4 @@
-module.exports = function questionGap () {
+module.exports = function questionGap() {
   inlineTokenizer.locator = locator
 
   const { Parser } = this
@@ -9,11 +9,11 @@ module.exports = function questionGap () {
   inlineTokenizers.questionGap = inlineTokenizer
   inlineMethods.splice(0, 0, 'questionGap')
 
-  function locator (value, fromIndex) {
+  function locator(value, fromIndex) {
     return value.indexOf('???', fromIndex)
   }
 
-  function inlineTokenizer (eat, value, silent) {
+  function inlineTokenizer(eat, value, silent) {
     const match = /^\?{3}/.exec(value)
 
     if (silent) return silent
@@ -23,7 +23,7 @@ module.exports = function questionGap () {
 
     return eat(questionGap)({
       type: 'questionGap',
-      value: questionGap
+      value: questionGap,
     })
   }
 }

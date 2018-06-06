@@ -11,7 +11,7 @@ module.exports = function section() {
     if (visitors) {
       visitors.section = function(node) {
         const thematicBreak = {
-          type: 'thematicBreak'
+          type: 'thematicBreak',
         }
         const heading = {
           type: 'heading',
@@ -19,15 +19,15 @@ module.exports = function section() {
           children: [
             {
               type: 'text',
-              value: node.name
-            }
-          ]
+              value: node.name,
+            },
+          ],
         }
         return unified()
           .use([...markdown, ...question])
           .stringify({
             type: 'root',
-            children: [thematicBreak, heading, ...node.children]
+            children: [thematicBreak, heading, ...node.children],
           })
       }
     }

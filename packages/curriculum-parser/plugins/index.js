@@ -5,5 +5,5 @@ const question = require('./question')
 module.exports = {
   markdown,
   insight,
-  question
+  question,
 }

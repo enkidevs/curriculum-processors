@@ -11,5 +11,5 @@ module.exports = [
   headline,
   section,
   image,
-  ...validators
+  ...validators,
 ]
