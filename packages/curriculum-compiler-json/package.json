@@ -23,5 +23,8 @@
     "@enkidevs/curriculum-compiler-string": "^2.1.2",
     "@enkidevs/curriculum-helpers": "^2.1.2",
     "unist-builder": "^1.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
