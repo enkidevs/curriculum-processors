@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-compiler-json",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Compile Enki Curriculum AST to JSON object",
   "main": "index.js",
   "repository": {
