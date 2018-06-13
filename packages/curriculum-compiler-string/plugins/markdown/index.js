@@ -1,4 +1,4 @@
-const remarkStringify = require('remark-stringify')
+const remarkStringify = require('@teamenki/remark-stringify')
 
 module.exports = [
   [
@@ -9,6 +9,7 @@ module.exports = [
       listItemIndent: 1,
       rule: '-',
       ruleSpaces: false,
+      escape: false,
     },
   ],
 ]
