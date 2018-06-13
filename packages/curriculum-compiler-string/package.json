@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-compiler-string",
-  "version": "2.1.2",
+  "version": "2.1.4",
   "description": "Compiles Enki Curriculum AST into a markdown string",
   "main": "index.js",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
