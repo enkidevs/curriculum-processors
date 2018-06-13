@@ -1,3 +1,4 @@
+/* eslint-env jest */
 const path = require('path')
 const fs = require('fs')
 const jestInCase = require('jest-in-case')
