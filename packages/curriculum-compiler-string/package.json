@@ -27,8 +27,8 @@
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^2.1.2",
+    "@teamenki/remark-stringify": "^5.1.0",
     "js-yaml": "^3.11.0",
-    "remark-stringify": "^5.0.0",
     "unified": "^6.1.6"
   },
   "jest": {

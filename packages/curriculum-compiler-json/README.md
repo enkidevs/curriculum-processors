@@ -261,7 +261,7 @@ The final schema of a compiled JSON looks like:
     ]
   },
   "headline": "Sample title with `code` within",
-  "content": "This is a sample paragraph.[1]\n\nThis is a sample list[2]&#x3A;\n\n* item one\n* item `two`\n\nSample code[3]&#x3A;\n\n```javascript\nconsole.log('sample code')\n```\n",
+  "content": "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n* item one\n* item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
   "gameContent": "Sample game content\n",
   "exercise": "Sample exercise\n",
   "practice": {
