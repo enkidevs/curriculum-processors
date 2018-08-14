@@ -10,7 +10,7 @@
   - Compile parsed curriculum AST into a string
 - [@enkidevs/curriculum-helpers](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-helpers)
   - Helpers for processing the curriculum
-- [@enkidevs/curriculum-parser](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser)
+- [@enkidevs/curriculum-parser-markdown](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser-markdown)
   - Parse curriculum markdown strings into ASTs
 
 The text processing architecture of Enki curriculum is based on [`unifiedjs`](https://unifiedjs.github.io/), using its markdown interfaces via [`remarkjs`](https://remark.js.org/).
@@ -22,7 +22,7 @@ The process done on the curriculum by these packages can be summarized as:
 `parsing -> transforming -> compiling`
 
 
-The `curriculum-parser` and the `curriculum-compiler` folders have an `index.sandbox.js` file at their respective root levels who's purpose is to serve as a playground.
+The `curriculum-parser-markdown` and the `curriculum-compiler` folders have an `index.sandbox.js` file at their respective root levels who's purpose is to serve as a playground.
 
 Checkout the individual [packages](https://github.com/enkidevs/curriculum-processors/tree/master/packages) for more details.
 ## API
@@ -33,7 +33,7 @@ const {
 } = require('@enkidevs/curriculum-helpers')
 const {
   getParser
-} = require('@enkidevs/curriculum-parser')
+} = require('@enkidevs/curriculum-parser-markdown')
 const {
   getCompiler
 } = require('@enkidevs/curriculum-compiler-string')
