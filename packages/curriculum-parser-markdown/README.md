@@ -1,7 +1,7 @@
 # Enki Curriculum Parser
 
-[npm-badge]: https://img.shields.io/npm/v/@enkidevs/curriculum-parser.png?style=flat-square
-[npm]: https://www.npmjs.com/package/@enkidevs/curriculum-parser
+[npm-badge]: https://img.shields.io/npm/v/@enkidevs/curriculum-parser-markdown.png?style=flat-square
+[npm]: https://www.npmjs.com/package/@enkidevs/curriculum-parser-markdown
 
 Parses [Enki Curriculum](https://github.com/enkidevs/curriculum) markdown into an AST.
 
@@ -30,7 +30,7 @@ This spec contains examples from [this insight](https://github.com/enkidevs/curr
 
 ## Insight
 
-Insight follows the regular MDAST spec with some additional [plugins](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser/plugins/insight).
+Insight follows the regular MDAST spec with some additional [plugins](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser-markdown/plugins/insight).
 
 For information on the data (not AST structure) contained in an Insight, checkout the [Enki Curriculum Wiki](https://github.com/enkidevs/curriculum/wiki/Insight-Documentation).
 
@@ -63,7 +63,7 @@ Yields:
 }
 ```
 
-There can only be `1` [`Headline`](#headline) node per [`Insight`](#insight). This is checked by the [`headline`](https://github.com/enkidevs/curriculum-processors/blob/master/packages/curriculum-parser/plugins/insight/validators/headline.js) validator.
+There can only be `1` [`Headline`](#headline) node per [`Insight`](#insight). This is checked by the [`headline`](https://github.com/enkidevs/curriculum-processors/blob/master/packages/curriculum-parser-markdown/plugins/insight/validators/headline.js) validator.
 
 ### `Image`
 
@@ -213,7 +213,7 @@ Yields:
 }
 ```
 
-There can only be `1` [`YAML`](#yaml) metadata node per [`Insight`](#insight). This is checked by the [`yaml`](https://github.com/enkidevs/curriculum-processors/blob/master/packages/curriculum-parser/plugins/insight/validators/yaml.js) validator.
+There can only be `1` [`YAML`](#yaml) metadata node per [`Insight`](#insight). This is checked by the [`yaml`](https://github.com/enkidevs/curriculum-processors/blob/master/packages/curriculum-parser-markdown/plugins/insight/validators/yaml.js) validator.
 
 ## Question
 
@@ -413,7 +413,7 @@ const {
 } = require('@enkidevs/curriculum-helpers')
 const {
   getParser
-} = require('@enkidevs/curriculum-parser')
+} = require('@enkidevs/curriculum-parser-markdown')
 
 const ast = getParser(contentTypes.INSIGHT).parseSync(markdownString)
 ```
