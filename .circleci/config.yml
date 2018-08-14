@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/curriculum-processors
+
+    docker:
+      - image: circleci/node:8.10
+    steps:
+      - checkout
+      - run:
+          name: NPM Install
+          command: npm install
+      - run:
+          name: Lerna Bootstrap
+          command: npm run bootstrap
+      - run:
+          name: Lint
+          command: npm run lint --quiet
+      - run:
+          name: Tests
+          command: npm test
