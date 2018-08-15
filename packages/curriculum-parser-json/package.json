@@ -1,0 +1,38 @@
+{
+  "name": "@enkidevs/curriculum-parser-json",
+  "version": "3.0.1",
+  "description": "Parses Enki Curriculum JSON into an AST",
+  "main": "index.js",
+  "keywords": [
+    "enki",
+    "curriculum",
+    "parser",
+    "ast"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    "parsers"
+  ],
+  "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkidevs/curriculum-processors.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enkidevs/curriculum-processors/issues"
+  },
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
+  "dependencies": {
+    "@enkidevs/curriculum-helpers": "^2.1.2",
+    "@enkidevs/curriculum-parser-markdown": "^3.0.1",
+    "js-yaml": "^3.11.0",
+    "unist-builder": "^1.0.2"
+  },
+  "jest": {
+    "testRegex": "/.*__tests__/.*\\.test.js$"
+  }
+}

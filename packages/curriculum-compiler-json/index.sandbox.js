@@ -1774,4 +1774,4 @@ const ast = {
 const { getCompiler } = require('./index')
 const json = getCompiler('insight').compileSync(ast)
 
-console.log(json)
+console.log(JSON.stringify(json, null, 2))

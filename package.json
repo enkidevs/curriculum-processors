@@ -11,7 +11,8 @@
     "prebuild": "npm run clean && npm test && ",
     "publish-packages": "lerna publish",
     "test:watch": "jest --watchAll",
-    "test": "jest --coverage --notify"
+    "test": "jest --coverage --notify",
+    "test:regex": "npm test -- regexToMatchFile"
   },
   "keywords": [
     "enki",
