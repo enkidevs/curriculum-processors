@@ -15,7 +15,7 @@ jestInCase(
     const ast = await parser.parse(fixture.text)
     expect(JSON.parse(JSON.stringify(compactAst(ast)))).toEqual(fixture.ast)
   },
-  ['exercise', 'sample'].map(dir => ({
+  ['sample'].map(dir => ({
     text: fs.readFileSync(fixturePath(dir, 'text.md'), 'utf8'),
     ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))
