@@ -14,7 +14,7 @@ module.exports = function yaml() {
     }
   }
 
-  function validateYaml(node) {
+  function validateYaml() {
     yamlNodeCount += 1
   }
 }

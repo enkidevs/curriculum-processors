@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Use this sandbox to play with the parser
 const ast = {
   type: 'root',

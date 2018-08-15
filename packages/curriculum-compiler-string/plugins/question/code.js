@@ -1,6 +1,3 @@
-const unified = require('unified')
-const markdown = require('../markdown')
-
 module.exports = function questionCode() {
   const { Compiler } = this
 
