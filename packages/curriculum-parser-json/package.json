@@ -30,8 +30,7 @@
     "@enkidevs/curriculum-helpers": "^2.1.2",
     "@enkidevs/curriculum-parser-markdown": "^3.0.1",
     "js-yaml": "^3.11.0",
-    "unist-builder": "^1.0.2",
-    "unist-util-assert": "^1.0.2"
+    "unist-builder": "^1.0.2"
   },
   "jest": {
     "testRegex": "/.*__tests__/.*\\.test.js$"

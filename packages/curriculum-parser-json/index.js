@@ -2,23 +2,13 @@ const {
   getParser: getMarkdownParser,
 } = require('@enkidevs/curriculum-parser-markdown')
 const { sectionNames, contentTypes } = require('@enkidevs/curriculum-helpers')
-const unistBuilder = require('unist-builder')
-const unistAssert = require('unist-util-assert')
-const { safeDump } = require('js-yaml')
+const section = require('./section')
+const yaml = require('./yaml')
+const headline = require('./headline')
 
 function getParser(type) {
-  function parse(json) {
-    return Promise.resolve(parseSync(json))
-  }
-
-  function parseSync(json) {
-    switch (type) {
-      case contentTypes.EXERCISE:
-      case contentTypes.INSIGHT:
-        return insightParser(json)
-      default:
-        throw new Error(`Invalid parser type [${type}] requested`)
-    }
+  if (![contentTypes.INSIGHT, contentTypes.EXERCISE].includes(type)) {
+    throw new Error(`Unsupported parser type [${type}] requested`)
   }
 
   return {
@@ -27,102 +17,52 @@ function getParser(type) {
   }
 }
 
-function insightParser(json) {
-  return unistBuilder('root', buildChildren(json))
+async function parse(json) {
+  const children = await buildChildren(json)
+  return createAst(children)
 }
 
-function buildChildren(json) {
-  // these need to be in a specific order
-  // also ignoring 'Game Content' for now
-  const children = [
-    'Content',
-    'Practice',
-    'Revision',
-    'Quiz',
-    'Exercise',
-    'Footnotes',
-  ]
-
-  return [
-    parseYaml(json),
-    parseHeadline(json),
-    ...children
-      .map(sectionName => parseSection(sectionName, json))
-      .filter(section => {
-        try {
-          unistAssert(section) // remove undefined sections
-        } catch (err) {
-          return false
-        }
-        return true
-      }),
-  ]
+function parseSync(json) {
+  const children = buildChildrenSync(json)
+  return createAst(children)
 }
 
-function parseYaml(json) {
-  if (!json.metadata) {
-    throw new Error('Missing required [yaml] node')
-  }
-
-  // https://github.com/nodeca/js-yaml#safedump-object---options-
-  // note that some whitespace is NOT preserved by the default settings
-  const value = safeDump(json.metadata)
-
-  return unistBuilder('yaml', {
-    value,
-    data: {
-      parsedValue: json.metadata,
-    },
-  })
+function createAst(children) {
+  return unistBuilder('root', children)
 }
 
-function parseHeadline(json) {
-  if (!json.headline) {
-    throw new Error('Missing required [headline] node')
-  }
+const sectionNamesArray = Object.values(sectionNames).filter(
+  name => name !== 'Game Content'
+)
 
-  const headlineAST = getMarkdownParser(contentTypes.MARKDOWN).parseSync(
-    json.headline
+function buildChildrenSync(json) {
+  const sectionNamesToParse = sectionNamesArray.filter(sectionName =>
+    Boolean(json[sectionName])
   )
 
-  // remove unnecessarily nested paragraph node
-  if (headlineAST.children[0].type === 'paragraph') {
-    headlineAST.children = headlineAST.children[0].children
-  }
-
-  return unistBuilder('headline', headlineAST)
+  return [
+    yaml.parseSync(json),
+    headline.parseSync(json),
+    ...sectionNamesToParse.map(sectionName => {
+      const sectionParser = section[sectionName.toLowerCase()]
+      return sectionParser.parseSync(sectionName, json)
+    }),
+  ]
 }
 
-function parseSection(name, json) {
-  const sectionDataToParse = json[name.toLowerCase()]
-  let children
+async function buildChildren(json) {
+  const sectionNamesToParse = sectionNamesArray.filter(sectionName =>
+    Boolean(json[sectionName])
+  )
 
-  if (sectionDataToParse) {
-    switch (name) {
-      case sectionNames.PRACTICE:
-      case sectionNames.REVISION:
-      case sectionNames.QUIZ:
-        children = getMarkdownParser(contentTypes.QUESTION).parseSync(
-          sectionDataToParse.rawText
-        ).children
-
-        return { type: 'section', name, children, question: true }
-      case sectionNames.CONTENT:
-        children = getMarkdownParser(contentTypes.MARKDOWN).parseSync(
-          sectionDataToParse
-        ).children
-
-        return { type: 'section', name, children }
-      case sectionNames.FOOTNOTES:
-        children = getMarkdownParser(contentTypes.MARKDOWN).parseSync(
-          sectionDataToParse.rawText
-        ).children
-
-        return { type: 'section', name, children }
-      default:
-        return undefined
-    }
-  }
+  return Promise.all([
+    yaml.parse(json),
+    headline.parse(json),
+    ...sectionNamesToParse.map(sectionName => {
+      const sectionParser = section[sectionName.toLowerCase()]
+      return sectionParser.parse(sectionName, json)
+    }),
+  ])
 }
 
 module.exports = {
