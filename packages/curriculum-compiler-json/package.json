@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-compiler-json",
-  "version": "2.1.5",
+  "version": "2.2.0",
   "description": "Compile Enki Curriculum AST to JSON object",
   "main": "index.js",
   "repository": {
@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "dependencies": {
-    "@enkidevs/curriculum-compiler-string": "^2.1.5",
-    "@enkidevs/curriculum-helpers": "^2.1.2",
+    "@enkidevs/curriculum-compiler-string": "^2.1.6",
+    "@enkidevs/curriculum-helpers": "^2.1.3",
     "unist-builder": "^1.0.2"
   },
   "publishConfig": {
