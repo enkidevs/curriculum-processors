@@ -16,7 +16,7 @@
     "index.js",
     "parsers"
   ],
-  "author": "Sherif Abushadi <sherif@amgando.org>",
+  "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enkidevs/curriculum-processors.git"
