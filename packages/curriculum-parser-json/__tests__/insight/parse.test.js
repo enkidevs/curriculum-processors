@@ -8,7 +8,7 @@ const fixturePath = (dir, name) =>
   path.join(__dirname, '../', 'fixtures', 'insight', dir, name)
 
 jestInCase(
-  'Insight JSON to AST Parsing (Sync)',
+  'Insight JSON to AST Parsing (Async)',
   async fixture => {
     const parser = getParser(contentTypes.INSIGHT)
     const ast = await parser.parse(fixture.input)
