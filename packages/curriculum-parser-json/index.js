@@ -29,7 +29,7 @@ function createAst(children) {
 
 function getSectionNames(json) {
   return Object.values(sectionNames)
-    .filter(name => !['Game Content', 'Exercise'].includes(name))
+    .filter(name => !['Game Content'].includes(name))
     .map(sectionName => sectionName.toLowerCase())
     .filter(sectionName => Boolean(json[sectionName]))
 }

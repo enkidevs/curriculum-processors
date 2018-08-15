@@ -15,7 +15,7 @@ jestInCase(
     const str = await compiler.compile(fixture.ast)
     expect(str).toEqual(fixture.stringified)
   },
-  ['exercise', 'sample'].map(dir => ({
+  ['sample'].map(dir => ({
     stringified: fs.readFileSync(fixturePath(dir, 'stringified.md'), 'utf8'),
     ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))
