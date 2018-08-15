@@ -3,10 +3,8 @@ const unified = require('unified')
 const unistNode = require('unist-builder')
 const mdastToHast = require('mdast-util-to-hast')
 const map = require('unist-util-map')
-const filter = require('unist-util-filter')
 const remarkRehype = require('remark-rehype')
 const hastToHyperscript = require('hast-to-hyperscript')
-const identity = require('lodash.identity')
 
 const fallback = {
   QuestionCode: 'code',

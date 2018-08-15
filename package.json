@@ -5,6 +5,7 @@
     "build": "lerna run build",
     "check-branch": "./scripts/check-branch.sh",
     "clean": "lerna run clean",
+    "format": "prettier --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
     "lint": "eslint . --ignore-path .gitignore",
     "pre-commit-lint": "lint-staged",
     "prebuild": "npm run clean && npm test && ",
@@ -47,8 +48,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
-      "eslint --ignore-path .gitignore --quiet .",
+      "npm run format",
+      "npm run lint",
       "git add"
     ]
   },

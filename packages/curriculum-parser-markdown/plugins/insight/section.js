@@ -1,5 +1,3 @@
-const unified = require('unified')
-const visit = require('unist-util-visit')
 const { sectionNames } = require('@enkidevs/curriculum-helpers')
 
 module.exports = function section() {

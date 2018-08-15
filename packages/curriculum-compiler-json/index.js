@@ -1,4 +1,8 @@
-const { sectionNames, questionTypes } = require('@enkidevs/curriculum-helpers')
+const {
+  contentTypes,
+  sectionNames,
+  questionTypes,
+} = require('@enkidevs/curriculum-helpers')
 const compilers = require('./compilers')
 
 const { compileNodeToInsightMarkdown } = compilers.helpers
@@ -47,15 +51,25 @@ function compileSection(node) {
   return compiler(node)
 }
 
+function compileInsight(ast) {
+  if (!ast || !ast.children) {
+    throw new Error('Missing or invalid AST')
+  }
+  const json = ast.children.reduce((tempJson, node) => {
+    return Object.assign({}, tempJson, compileSection(node))
+  }, {})
+  return json
+}
+
 function getCompiler(type) {
-  function compileSync(ast) {
-    if (!ast || !ast.children) {
-      throw new Error('Missing or invalid AST')
+  let compileSync
+  switch (type) {
+    case contentTypes.INSIGHT: {
+      compileSync = compileInsight
+      break
     }
-    const json = ast.children.reduce((tempJson, node) => {
-      return Object.assign({}, tempJson, compileSection(node))
-    }, {})
-    return json
+    default:
+      throw Error(`Unsupported type "${type}"`)
   }
 
   return {

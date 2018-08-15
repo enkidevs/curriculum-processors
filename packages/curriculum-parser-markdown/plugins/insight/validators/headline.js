@@ -14,7 +14,7 @@ module.exports = function headline() {
     }
   }
 
-  function validateHeadline(node) {
+  function validateHeadline() {
     headlineNodeCount += 1
   }
 }

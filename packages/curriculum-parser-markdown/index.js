@@ -12,7 +12,7 @@ function getPlugins(type) {
     case contentTypes.QUESTION:
       return [...plugins.markdown, ...plugins.question]
     default:
-      throw `Invalid type ${type}`
+      throw `Unsupported type ${type}`
   }
 }
 

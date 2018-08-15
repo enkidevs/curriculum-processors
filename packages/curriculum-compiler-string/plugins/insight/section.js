@@ -1,5 +1,4 @@
 const unified = require('unified')
-const { contentTypes } = require('@enkidevs/curriculum-helpers')
 const markdown = require('../markdown')
 const question = require('../question')
 

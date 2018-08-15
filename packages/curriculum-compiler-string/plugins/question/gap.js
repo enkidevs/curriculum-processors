@@ -4,7 +4,7 @@ module.exports = function questionGap() {
   if (Compiler) {
     const { visitors } = Compiler.prototype
     if (visitors) {
-      visitors.questionGap = function(node) {
+      visitors.questionGap = function() {
         return '???'
       }
     }
