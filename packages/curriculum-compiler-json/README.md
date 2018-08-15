@@ -18,7 +18,6 @@ The compiler works in the following way:
     - if type is `"section"`, it looks at the `name` field of the node
       - if name is `"Content"` => returns `{ content: compileString(node) }`
       - if name is `"Game Content"` => returns `{ gameContent: compileString(node) }`
-      - if name is `"Exercise"` => returns `{ exercise: compileString(node) }`
       - if name is `"Practice"` => fires [question](#question) compiler with "practice" argument
       - if name is `"Revision"` => fires [question](#question) compiler with "revision" argument
       - if name is `"Quiz"` => fires [quiz](#quiz) compiler
@@ -263,7 +262,6 @@ The final schema of a compiled JSON looks like:
   "headline": "Sample title with `code` within",
   "content": "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n* item one\n* item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
   "gameContent": "Sample game content\n",
-  "exercise": "Sample exercise\n",
   "practice": {
     "rawText": "This is a sample question with one gap:\n\n???\n\n* correct\n* incorrect\n* not a chance\n",
     "question": "This is a sample question with one gap:\n\n???\n",

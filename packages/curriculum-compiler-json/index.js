@@ -29,9 +29,6 @@ const nodeSectionMap = {
   [sectionNames.GAME_CONTENT]: node => ({
     gameContent: compileNodeToInsightMarkdown(node),
   }),
-  [sectionNames.EXERCISE]: node => ({
-    exercise: compileNodeToInsightMarkdown(node),
-  }),
   [sectionNames.PRACTICE]: node =>
     compilers.question(node, questionTypes.PRACTICE),
   [sectionNames.REVISION]: node =>
