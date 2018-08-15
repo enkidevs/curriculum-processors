@@ -1,5 +1,10 @@
 # Enki Curriculum Processors
 
+Note: The language used here follows this pattern:
+
+- an `X parser` transforms content *from* format X *to* an AST (abstract syntax tree)
+- an `X compiler` transforms content *from* an AST *to* format X
+
 [Enki curriculum](https://github.com/enkidevs/curriculum) processors are divided into packages:
 
 - [@enkidevs/curriculum-compiler-json](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-compiler-json)
@@ -10,8 +15,10 @@
   - Compile parsed curriculum AST into a string
 - [@enkidevs/curriculum-helpers](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-helpers)
   - Helpers for processing the curriculum
+- [@enkidevs/curriculum-parser-json](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser-json)
+  - Parse curriculum json into an AST
 - [@enkidevs/curriculum-parser-markdown](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-parser-markdown)
-  - Parse curriculum markdown strings into ASTs
+  - Parse curriculum markdown string into an AST
 
 The text processing architecture of Enki curriculum is based on [`unifiedjs`](https://unifiedjs.github.io/), using its markdown interfaces via [`remarkjs`](https://remark.js.org/).
 
