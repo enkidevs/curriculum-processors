@@ -1,0 +1,551 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "value":
+        "author: catalin\nlevels:\n  - basic\n  - medium\n  - advanced\ntype: normal\ncategory: must-know\nstandards:\n  sql.use-dql.0: 10\n  sql.use-ddl.1: 1000\ntags:\n  - introduction\n  - workout\nstub: false\nlinks:\n  - name: EnkiCool\n    url: 'https://enki.com'\n    nature: website\n",
+      "data": {
+        "parsedValue": {
+          "author": "catalin",
+          "levels": ["basic", "medium", "advanced"],
+          "type": "normal",
+          "category": "must-know",
+          "standards": {
+            "sql.use-dql.0": 10,
+            "sql.use-ddl.1": 1000
+          },
+          "tags": ["introduction", "workout"],
+          "stub": false,
+          "links": [
+            {
+              "name": "EnkiCool",
+              "url": "https://enki.com",
+              "nature": "website"
+            }
+          ]
+        }
+      },
+      "type": "yaml"
+    },
+    {
+      "type": "headline",
+      "children": [
+        {
+          "type": "text",
+          "value": "Sample title with "
+        },
+        {
+          "type": "inlineCode",
+          "value": "code"
+        },
+        {
+          "type": "text",
+          "value": " within"
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This is a sample paragraph."
+            },
+            {
+              "type": "linkReference",
+              "identifier": "1",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This is a sample list"
+            },
+            {
+              "type": "linkReference",
+              "identifier": "2",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ":"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "item one"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "item "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "two"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Sample code"
+            },
+            {
+              "type": "linkReference",
+              "identifier": "3",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ":"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "lang": "javascript",
+          "value": "console.log('sample code')"
+        }
+      ],
+      "content": true,
+      "type": "section"
+    },
+    {
+      "name": "footnotes",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "linkReference",
+              "identifier": "1: paragraph",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1: Paragraph"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\nSample explanation"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "linkReference",
+              "identifier": "2: list",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2: List"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\nSample list"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "linkReference",
+              "identifier": "3: code",
+              "referenceType": "shortcut",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3: Code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\nSample code"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "lang": "javascript",
+          "value": "var x = 10"
+        }
+      ],
+      "footnotes": true,
+      "type": "section"
+    },
+    {
+      "name": "revision",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This is a sample question with two gaps:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "questionGap",
+              "value": "???"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "questionGap",
+              "value": "???"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "correct"
+                    }
+                  ]
+                }
+              ],
+              "correct": true
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "also correct"
+                    }
+                  ]
+                }
+              ],
+              "correct": true
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "nah bro"
+                    }
+                  ]
+                }
+              ],
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "fam, just no"
+                    }
+                  ]
+                }
+              ],
+              "correct": false
+            }
+          ],
+          "answers": true
+        }
+      ],
+      "question": true,
+      "type": "section"
+    },
+    {
+      "name": "practice",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This is a sample question with one gap:"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "questionGap",
+              "value": "???"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "correct"
+                    }
+                  ]
+                }
+              ],
+              "correct": true
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "incorrect"
+                    }
+                  ]
+                }
+              ],
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "not a chance"
+                    }
+                  ]
+                }
+              ],
+              "correct": false
+            }
+          ],
+          "answers": true
+        }
+      ],
+      "question": true,
+      "type": "section"
+    },
+    {
+      "name": "quiz",
+      "children": [
+        {
+          "type": "questionHeadline",
+          "children": [
+            {
+              "type": "text",
+              "value": "Quiz title"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Sample quiz question"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "loose": false,
+          "children": [
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "correct"
+                    }
+                  ]
+                }
+              ],
+              "correct": true
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "emphasis",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "incorrect"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "not a "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "chance"
+                    }
+                  ]
+                }
+              ],
+              "correct": false
+            },
+            {
+              "type": "listItem",
+              "loose": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "nope"
+                    }
+                  ]
+                }
+              ],
+              "correct": false
+            }
+          ],
+          "answers": true
+        }
+      ],
+      "question": true,
+      "type": "section"
+    }
+  ]
+}

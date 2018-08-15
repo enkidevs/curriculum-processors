@@ -1,10 +1,6 @@
-const {
-  getParser: getMarkdownParser,
-} = require('@enkidevs/curriculum-parser-markdown')
 const { sectionNames, contentTypes } = require('@enkidevs/curriculum-helpers')
-const section = require('./section')
-const yaml = require('./yaml')
-const headline = require('./headline')
+const unistBuilder = require('unist-builder')
+const { headline, section, yaml } = require('./parsers')
 
 function getParser(type) {
   if (![contentTypes.INSIGHT, contentTypes.EXERCISE].includes(type)) {
@@ -31,38 +27,44 @@ function createAst(children) {
   return unistBuilder('root', children)
 }
 
-const sectionNamesArray = Object.values(sectionNames).filter(
-  name => name !== 'Game Content'
-)
+function getSectionNames(json) {
+  return Object.values(sectionNames)
+    .filter(name => !['Game Content', 'Exercise'].includes(name))
+    .map(sectionName => sectionName.toLowerCase())
+    .filter(sectionName => Boolean(json[sectionName]))
+}
 
 function buildChildrenSync(json) {
-  const sectionNamesToParse = sectionNamesArray.filter(sectionName =>
-    Boolean(json[sectionName])
-  )
-
   return [
     yaml.parseSync(json),
     headline.parseSync(json),
-    ...sectionNamesToParse.map(sectionName => {
-      const sectionParser = section[sectionName.toLowerCase()]
-      return sectionParser.parseSync(sectionName, json)
+    ...getSectionNames(json).map(sectionName => {
+      const sectionParser = getSectionParser(sectionName)
+      return sectionParser.parseSync(sectionName, json[sectionName])
     }),
   ]
 }
 
 async function buildChildren(json) {
-  const sectionNamesToParse = sectionNamesArray.filter(sectionName =>
-    Boolean(json[sectionName])
-  )
-
   return Promise.all([
     yaml.parse(json),
     headline.parse(json),
-    ...sectionNamesToParse.map(sectionName => {
-      const sectionParser = section[sectionName.toLowerCase()]
-      return sectionParser.parse(sectionName, json)
+    ...getSectionNames(json).map(sectionName => {
+      const sectionParser = getSectionParser(sectionName)
+      return sectionParser.parse(sectionName, json[sectionName])
     }),
   ])
+}
+
+function getSectionParser(name) {
+  switch (name) {
+    case sectionNames.PRACTICE.toLowerCase():
+    case sectionNames.REVISION.toLowerCase():
+    case sectionNames.QUIZ.toLowerCase():
+      return section.question
+    default:
+      return section[name]
+  }
 }
 
 module.exports = {

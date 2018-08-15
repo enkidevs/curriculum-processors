@@ -1,6 +1,7 @@
 const {
   getParser: getMarkdownParser,
 } = require('@enkidevs/curriculum-parser-markdown')
+const { contentTypes } = require('@enkidevs/curriculum-helpers')
 const unistBuilder = require('unist-builder')
 
 const questionToAstParser = getMarkdownParser(contentTypes.QUESTION)

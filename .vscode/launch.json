@@ -4,13 +4,13 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-
     {
       "type": "node",
       "request": "launch",
       "name": "Jest",
-      "program": "${workspaceRoot}/packages/curriculum-parser/node_modules/jest/bin/jest.js",
-      "cwd": "${workspaceRoot}/packages/curriculum-parser",
+      "program":
+        "${workspaceRoot}/packages/curriculum-parser-json/node_modules/jest/bin/jest.js",
+      "cwd": "${workspaceRoot}/packages/curriculum-parser-json",
       "runtimeArgs": ["--nolazy"],
       "env": {
         "NODE_ENV": "test"
@@ -21,7 +21,8 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/index.sandbox.js"
+      "program":
+        "${workspaceFolder}/packages/curriculum-parser-json/index.sandbox.js"
     }
   ]
 }
