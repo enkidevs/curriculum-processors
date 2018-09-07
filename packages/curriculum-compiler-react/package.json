@@ -2,9 +2,23 @@
   "name": "@enkidevs/curriculum-compiler-react",
   "version": "2.1.4",
   "description": "Compiles Enki Curriculum AST into a React tree",
-  "main": "index.js",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkidevs/curriculum-processors.git"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enkidevs/curriculum-processors/issues"
+  },
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "hast-to-hyperscript": "^4.0.0",
     "lodash.identity": "^3.0.0",
@@ -15,8 +29,5 @@
     "unist-builder": "^1.0.2",
     "unist-util-filter": "^0.2.1",
     "unist-util-map": "^1.0.3"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

@@ -1,29 +1,28 @@
 module.exports = function questionGap() {
-  inlineTokenizer.locator = locator
+  inlineTokenizer.locator = locator;
 
-  const { Parser } = this
+  const { Parser } = this;
 
   // Inject inlineTokenizer
-  const inlineTokenizers = Parser.prototype.inlineTokenizers
-  const inlineMethods = Parser.prototype.inlineMethods
-  inlineTokenizers.questionGap = inlineTokenizer
-  inlineMethods.splice(0, 0, 'questionGap')
+  const { inlineTokenizers, inlineMethods } = Parser.prototype;
+  inlineTokenizers.questionGap = inlineTokenizer;
+  inlineMethods.splice(0, 0, 'questionGap');
 
   function locator(value, fromIndex) {
-    return value.indexOf('???', fromIndex)
+    return value.indexOf('???', fromIndex);
   }
 
   function inlineTokenizer(eat, value, silent) {
-    const match = /^\?{3}/.exec(value)
+    const match = /^\?{3}/.exec(value);
 
-    if (silent) return silent
-    if (!match) return
+    if (silent) return silent;
+    if (!match) return undefined;
 
-    const [questionGap] = match
+    const [gap] = match;
 
-    return eat(questionGap)({
+    return eat(gap)({
       type: 'questionGap',
-      value: questionGap,
-    })
+      value: gap,
+    });
   }
-}
+};

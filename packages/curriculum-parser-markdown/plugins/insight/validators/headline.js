@@ -1,20 +1,20 @@
-const visit = require('unist-util-visit')
+const visit = require('unist-util-visit');
 
 module.exports = function headline() {
-  let headlineNodeCount = 0
+  let headlineNodeCount = 0;
 
-  return transform
+  return transform;
 
   function transform(ast) {
-    visit(ast, 'headline', validateHeadline)
+    visit(ast, 'headline', validateHeadline);
     if (headlineNodeCount !== 1) {
       throw new Error(
         `Must have exactly 1 headline but found ${headlineNodeCount} instead.`
-      )
+      );
     }
   }
 
   function validateHeadline() {
-    headlineNodeCount += 1
+    headlineNodeCount += 1;
   }
-}
+};

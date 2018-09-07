@@ -1,4 +1,4 @@
-const compactAst = require('../lib/compact-ast')
+const compactAst = require('../lib/compact-ast');
 
 describe('Compact AST', () => {
   test('should compact ast', () => {
@@ -352,7 +352,7 @@ describe('Compact AST', () => {
           offset: 312,
         },
       },
-    }
+    };
 
     expect(compactAst(ast)).toEqual({
       type: 'root',
@@ -458,6 +458,6 @@ describe('Compact AST', () => {
           ],
         },
       ],
-    })
-  })
-})
+    });
+  });
+});

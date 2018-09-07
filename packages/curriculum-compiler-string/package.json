@@ -2,8 +2,8 @@
   "name": "@enkidevs/curriculum-compiler-string",
   "version": "2.2.0",
   "description": "Compiles Enki Curriculum AST into a markdown string",
-  "main": "index.js",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enkidevs/curriculum-processors.git"
@@ -11,6 +11,10 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/enkidevs/curriculum-processors/issues"
+  },
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
+  "engines": {
+    "node": ">=8.10.0"
   },
   "keywords": [
     "enki",
@@ -24,7 +28,6 @@
     "index.js",
     "plugins"
   ],
-  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^2.2.0",
     "@enkidevs/remark-stringify": "^5.1.1",

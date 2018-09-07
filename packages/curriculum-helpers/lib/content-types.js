@@ -3,4 +3,4 @@ module.exports = {
   INSIGHT: 'insight',
   EXERCISE: 'exercise',
   QUESTION: 'question',
-}
+};

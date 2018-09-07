@@ -1,3 +1,3 @@
-const remarkParse = require('remark-parse')
+const remarkParse = require('remark-parse');
 
-module.exports = [remarkParse]
+module.exports = [remarkParse];

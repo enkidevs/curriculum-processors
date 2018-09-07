@@ -1,10 +1,10 @@
-const map = require('unist-util-map')
+const map = require('unist-util-map');
 
 module.exports = function headline() {
-  return transform
+  return transform;
 
   function transform(ast) {
-    return map(ast, parseHeadline)
+    return map(ast, parseHeadline);
   }
 
   function parseHeadline(node) {
@@ -12,8 +12,8 @@ module.exports = function headline() {
       return {
         type: 'headline',
         children: node.children,
-      }
+      };
     }
-    return node
+    return node;
   }
-}
+};

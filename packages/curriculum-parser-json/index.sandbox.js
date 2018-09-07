@@ -1,6 +1,6 @@
 /* eslint-disable */
 // Use this sandbox to play with the parser
-const { compactAst } = require('../curriculum-helpers')
+const { compactAst } = require('../curriculum-helpers');
 
 const json = {
   metadata: {
@@ -123,11 +123,11 @@ const json = {
       },
     ],
   },
-}
+};
 
-const { getParser } = require('./index')
-const parser = getParser('insight')
-;(async () => {
-  const ast = await parser.parse(json)
-  console.log(JSON.stringify(compactAst(ast), null, 2))
-})()
+const { getParser } = require('./index');
+const parser = getParser('insight');
+(async () => {
+  const ast = await parser.parse(json);
+  console.log(JSON.stringify(compactAst(ast), null, 2));
+})();

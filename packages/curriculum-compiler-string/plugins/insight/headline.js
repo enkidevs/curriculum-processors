@@ -1,21 +1,21 @@
-const unified = require('unified')
-const markdown = require('../markdown')
+const unified = require('unified');
+const markdown = require('../markdown');
 
 module.exports = function headline() {
-  const { Compiler } = this
+  const { Compiler } = this;
 
   if (Compiler) {
-    const { visitors } = Compiler.prototype
+    const { visitors } = Compiler.prototype;
     if (visitors) {
-      visitors.headline = function(headline) {
+      visitors.headline = function visitHeadline(h) {
         const content = unified()
           .use(markdown)
           .stringify({
             type: 'root',
-            children: headline.children,
-          })
-        return `# ${content}`
-      }
+            children: h.children,
+          });
+        return `# ${content}`;
+      };
     }
   }
-}
+};

@@ -1,16 +1,16 @@
-const React = require('react')
-const unified = require('unified')
-const unistNode = require('unist-builder')
-const mdastToHast = require('mdast-util-to-hast')
-const map = require('unist-util-map')
-const remarkRehype = require('remark-rehype')
-const hastToHyperscript = require('hast-to-hyperscript')
+const React = require('react');
+const unified = require('unified');
+const unistNode = require('unist-builder');
+const mdastToHast = require('mdast-util-to-hast');
+const map = require('unist-util-map');
+const remarkRehype = require('remark-rehype');
+const hastToHyperscript = require('hast-to-hyperscript');
 
 const fallback = {
   QuestionCode: 'code',
-}
+};
 
-const { assign } = Object
+const { assign } = Object;
 
 module.exports.getCompiler = function getCompiler(type, components = {}) {
   function compileSync(ast) {
@@ -19,23 +19,23 @@ module.exports.getCompiler = function getCompiler(type, components = {}) {
       .use(questionGap)
       .use(questionCode)
       .use(questionAnswers)
-      .use(remarkRehype)
+      .use(remarkRehype);
 
-    const hast = processor.runSync(ast)
-    return hastToHyperscript(h, hast, 'enki-')
+    const hast = processor.runSync(ast);
+    return hastToHyperscript(h, hast, 'enki-');
   }
   return {
     compileSync,
-  }
+  };
 
   function h(name, props, children) {
-    const component = components[name] || fallback[name] || name
-    return React.createElement(component, props, children)
+    const component = components[name] || fallback[name] || name;
+    return React.createElement(component, props, children);
   }
-}
+};
 
 function questionHeadline() {
-  return transform
+  return transform;
 
   function transform(ast) {
     return map(ast, node => {
@@ -45,15 +45,15 @@ function questionHeadline() {
             hName: 'QuestionHeadline',
             hChildren: node.children.map(mdastToHast),
           },
-        })
+        });
       }
-      return node
-    })
+      return node;
+    });
   }
 }
 
 function questionCode() {
-  return transform
+  return transform;
 
   function transform(ast) {
     return map(ast, node => {
@@ -65,11 +65,11 @@ function questionCode() {
               ? node.children.map(questionCodeLine)
               : [],
           },
-        })
+        });
       }
 
-      return node
-    })
+      return node;
+    });
   }
 
   function questionCodeLine(line) {
@@ -82,7 +82,7 @@ function questionCode() {
             : [],
         },
       })
-    )
+    );
   }
 
   function questionCodeSegmentOrGap(node) {
@@ -99,12 +99,12 @@ function questionCode() {
             }
           : {}
       )
-    )
+    );
   }
 }
 
 function questionGap() {
-  return transform
+  return transform;
 
   function transform(ast) {
     return map(ast, node => {
@@ -114,16 +114,16 @@ function questionGap() {
             hName: 'QuestionGap',
             hChildren: [unistNode('text', node.value)],
           },
-        })
+        });
       }
 
-      return node
-    })
+      return node;
+    });
   }
 }
 
 function questionAnswers() {
-  return transform
+  return transform;
 
   function transform(ast) {
     return map(ast, node => {
@@ -145,10 +145,10 @@ function questionAnswers() {
               )
             ),
           },
-        })
-        return answers
+        });
+        return answers;
       }
-      return node
-    })
+      return node;
+    });
   }
 }
