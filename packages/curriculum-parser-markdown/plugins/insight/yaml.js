@@ -1,66 +1,65 @@
-const map = require('unist-util-map')
-const jsYaml = require('js-yaml')
+const map = require('unist-util-map');
+const jsYaml = require('js-yaml');
 
 module.exports = function yaml() {
-  return transform
+  return transform;
 
   function transform(ast) {
-    return map(ast, function(node) {
-      if (node.type == 'yaml') {
-        const parsedValue = jsYaml.safeLoad(node.value, 'utf8')
+    return map(ast, node => {
+      if (node.type === 'yaml') {
+        const parsedValue = jsYaml.safeLoad(node.value, 'utf8');
         const newNode = Object.assign({}, node, {
           data: {
             parsedValue,
           },
-        })
-        const { links } = parsedValue
+        });
+        const { links } = parsedValue;
         if (Array.isArray(links)) {
-          newNode.data.parsedValue.links = links.map(getMarkdownLink)
+          newNode.data.parsedValue.links = links.map(getMarkdownLink);
         }
-        return newNode
-      } else {
-        return node
+        return newNode;
       }
-    })
+      return node;
+    });
   }
-}
+};
 
 // https://github.com/chjj/marked/blob/master/lib/marked.js#L455 (slightly hacked with {type})
-const mdUrlRegEx = /\[(.*)\]\((.*)\)/
-const mdUrlRegExWithType = /\[(.*)\]\((.*)\)\{(.*)\}/
+const mdUrlRegEx = /\[(.*)\]\((.*)\)/;
+const mdUrlRegExWithType = /\[(.*)\]\((.*)\)\{(.*)\}/;
 
 function getMarkdownLink(link) {
-  let result
+  let result;
   if (mdUrlRegExWithType.test(link)) {
-    result = mdUrlRegExWithType.exec(link)
-    return { name: result[1], url: result[2], nature: result[3] }
+    result = mdUrlRegExWithType.exec(link);
+    return { name: result[1], url: result[2], nature: result[3] };
   }
   if (mdUrlRegEx.test(link)) {
-    result = mdUrlRegEx.exec(link)
-    return { name: result[1], url: result[2], nature: 'website' }
+    result = mdUrlRegEx.exec(link);
+    return { name: result[1], url: result[2], nature: 'website' };
   }
   return {
     nature: 'website',
     name: getDomainFromURL(link),
     url: link,
-  }
+  };
 }
 
 // http://stackoverflow.com/questions/8498592/extract-root-domain-name-from-string
 function getDomainFromURL(url) {
   if (url) {
-    let domain
+    let domain;
     // find & remove protocol (http, ftp, etc.) and get domain
     if (url.indexOf('://') > -1) {
-      domain = url.split('/')[2]
+      domain = url.split('/')[2];
     } else {
-      domain = url.split('/')[0]
+      domain = url.split('/');
     }
 
     // find & remove port number
-    domain = domain.split(':')[0]
+    domain = domain.split(':');
 
-    return domain
+    return domain;
   }
-  return null
+  return null;
 }

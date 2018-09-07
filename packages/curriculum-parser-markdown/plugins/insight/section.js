@@ -1,14 +1,16 @@
-const { sectionNames } = require('@enkidevs/curriculum-helpers')
+const { sectionNames } = require('@enkidevs/curriculum-helpers');
 
 module.exports = function section() {
-  return transform
+  return transform;
 
   function transform(ast) {
-    const newAstChildren = []
-    let section, current, next
-    for (let astIndex = 0; astIndex < ast.children.length; astIndex++) {
-      current = ast.children[astIndex]
-      next = ast.children[astIndex + 1]
+    const newAstChildren = [];
+    let sec;
+    let current;
+    let next;
+    for (let astIndex = 0; astIndex < ast.children.length; astIndex += 1) {
+      current = ast.children[astIndex];
+      next = ast.children[astIndex + 1];
 
       if (
         !(
@@ -17,37 +19,38 @@ module.exports = function section() {
           (next || {}).depth === 2
         )
       ) {
-        if (section) {
-          section.children.push(current)
+        if (sec) {
+          sec.children.push(current);
         } else {
-          newAstChildren.push(current)
+          newAstChildren.push(current);
         }
-        continue
+        // eslint-disable-next-line no-continue
+        continue;
       }
 
-      section = {
+      sec = {
         type: 'section',
         name: next.children[0].value,
         children: [],
-      }
+      };
 
       if (
         [
           sectionNames.REVISION,
           sectionNames.PRACTICE,
           sectionNames.QUIZ,
-        ].includes(section.name)
+        ].includes(sec.name)
       ) {
-        section.question = true
+        sec.question = true;
       }
 
-      astIndex += 1 // skip the heading that was included in the section above
+      astIndex += 1; // skip the heading that was included in the section above
 
-      newAstChildren.push(section)
+      newAstChildren.push(sec);
     }
 
     return Object.assign({}, ast, {
       children: newAstChildren,
-    })
+    });
   }
-}
+};

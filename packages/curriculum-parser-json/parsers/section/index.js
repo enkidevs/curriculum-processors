@@ -1,5 +1,9 @@
+const content = require('./content');
+const footnotes = require('./footnotes');
+const question = require('./question');
+
 module.exports = {
-  content: require('./content'),
-  footnotes: require('./footnotes'),
-  question: require('./question'),
-}
+  content,
+  footnotes,
+  question,
+};

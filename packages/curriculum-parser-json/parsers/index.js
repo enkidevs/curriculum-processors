@@ -1,5 +1,9 @@
+const section = require('./section');
+const headline = require('./headline');
+const yaml = require('./yaml');
+
 module.exports = {
-  section: require('./section'),
-  headline: require('./headline'),
-  yaml: require('./yaml'),
-}
+  section,
+  headline,
+  yaml,
+};

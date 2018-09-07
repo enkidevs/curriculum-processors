@@ -1,6 +1,6 @@
 // Use this sandbox to play with the parser
-const parser = require('./index')
-const { compactAst } = require('../curriculum-helpers')
+const parser = require('./index');
+const { compactAst } = require('../curriculum-helpers');
 
 const ast = parser.getParser('insight').parseSync(`---
 author: jfarmer
@@ -82,6 +82,6 @@ Self-balancing binary search tree, in which the height of the two child subtrees
 
 [2: Red-Black tree]
 Self-balancing binary search tree, in which nodes store an additional bit of data: whether the node is black or red. All of the tree's leaves must be black and, in case of a node being red, its two children must be black.
-`)
+`);
 
-process.stdout.write(JSON.stringify(compactAst(ast), null, 2))
+process.stdout.write(JSON.stringify(compactAst(ast), null, 2));

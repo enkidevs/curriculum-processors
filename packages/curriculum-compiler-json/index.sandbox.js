@@ -1769,9 +1769,9 @@ const ast = {
       offset: 903,
     },
   },
-}
+};
 
-const { getCompiler } = require('./index')
-const json = getCompiler('insight').compileSync(ast)
+const { getCompiler } = require('./index');
+const json = getCompiler('insight').compileSync(ast);
 
-console.log(JSON.stringify(json, null, 2))
+console.log(JSON.stringify(json, null, 2));

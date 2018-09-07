@@ -1,5 +1,5 @@
 // Use this sandbox to play with the compiler
-const { getCompiler } = require('./index')
+const { getCompiler } = require('./index');
 
 const ast = {
   type: 'root',
@@ -168,8 +168,8 @@ const ast = {
       answers: true,
     },
   ],
-}
+};
 
-const x = getCompiler('insight').compileSync(ast)
+const x = getCompiler('insight').compileSync(ast);
 
-process.stdout.write(x)
+process.stdout.write(x);

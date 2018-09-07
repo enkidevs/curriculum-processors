@@ -1,14 +1,14 @@
-const map = require('unist-util-map')
-const visit = require('unist-util-visit')
+const map = require('unist-util-map');
+const visit = require('unist-util-visit');
 
 module.exports = function questionAnswers() {
-  return transform
+  return transform;
 
   function transform(ast) {
-    const temp = { questionGapCount: 0 }
-    ast = map(ast, parseQuestionAnswersList(temp))
-    ast = map(ast, parseQuestionAnswersListItems(temp))
-    return ast
+    const temp = { questionGapCount: 0 };
+    ast = map(ast, parseQuestionAnswersList(temp));
+    ast = map(ast, parseQuestionAnswersListItems(temp));
+    return ast;
   }
 
   function parseQuestionAnswersList(temp) {
@@ -21,13 +21,13 @@ module.exports = function questionAnswers() {
           (parent.type === 'section' && parent.question))
       ) {
         visit(parent, 'questionGap', () => {
-          temp.questionGapCount += 1
-        })
+          temp.questionGapCount += 1;
+        });
 
-        return Object.assign({}, node, { answers: true })
+        return Object.assign({}, node, { answers: true });
       }
-      return node
-    }
+      return node;
+    };
   }
 
   function parseQuestionAnswersListItems(temp) {
@@ -37,19 +37,19 @@ module.exports = function questionAnswers() {
         parent.type === 'list' &&
         parent.answers
       ) {
-        const correct = getCorrectAndUpdateCount(temp, index)
-        return Object.assign({}, node, { correct })
+        const correct = getCorrectAndUpdateCount(temp, index);
+        return Object.assign({}, node, { correct });
       }
-      return node
-    }
+      return node;
+    };
   }
 
   function getCorrectAndUpdateCount(temp, index) {
-    let correct = index === 0
+    let correct = index === 0;
     if (temp.questionGapCount > 0) {
-      correct = true
-      temp.questionGapCount -= 1
+      correct = true;
+      temp.questionGapCount -= 1;
     }
-    return correct
+    return correct;
   }
-}
+};

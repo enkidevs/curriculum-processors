@@ -1,23 +1,24 @@
-const jsYaml = require('js-yaml')
+const jsYaml = require('js-yaml');
 
 module.exports = function yaml() {
-  const { Compiler } = this
+  const { Compiler } = this;
 
   if (Compiler) {
-    const { visitors } = Compiler.prototype
+    const { visitors } = Compiler.prototype;
     if (visitors) {
-      visitors.yaml = function(node) {
+      visitors.yaml = function visitYaml(node) {
         if (node.data && node.data.parsedValue) {
-          const { links } = node.data.parsedValue
+          const { links } = node.data.parsedValue;
           if (Array.isArray(links)) {
             node.data.parsedValue.links = links.map(
               link => `[${link.name}](${link.url}){${link.nature}}`
-            )
+            );
           }
-          const yml = jsYaml.safeDump(node.data.parsedValue)
-          return `---\n${yml}---`
+          const yml = jsYaml.safeDump(node.data.parsedValue);
+          return `---\n${yml}---`;
         }
-      }
+        return undefined;
+      };
     }
   }
-}
+};

@@ -1,4 +1,4 @@
-const remarkStringify = require('@enkidevs/remark-stringify')
+const remarkStringify = require('@enkidevs/remark-stringify');
 
 module.exports = [
   [
@@ -12,4 +12,4 @@ module.exports = [
       escape: false,
     },
   ],
-]
+];
