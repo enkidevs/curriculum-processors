@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-helpers",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Helpers for parsing/transforming/compiling Enki Curriculum from and to different formats",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
