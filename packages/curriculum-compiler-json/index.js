@@ -5,11 +5,14 @@ const {
 } = require('@enkidevs/curriculum-helpers');
 const compilers = require('./compilers');
 
-const { compileNodeToInsightMarkdown } = compilers.helpers;
+const {
+  compileNodeToMarkdown,
+  compileNodeToInsightMarkdown,
+} = compilers.helpers;
 
 const nodeSectionMap = {
   [sectionNames.CONTENT]: node => ({
-    content: compileNodeToInsightMarkdown(node),
+    content: compileNodeToMarkdown(node),
   }),
   [sectionNames.GAME_CONTENT]: node => ({
     gameContent: compileNodeToInsightMarkdown(node),
