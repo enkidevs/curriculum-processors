@@ -1,8 +1,8 @@
-const { compileNodeToInsightMarkdown } = require('./helpers');
+const { compileNodeToMarkdown } = require('./helpers');
 
 module.exports = function headline(node) {
   return {
-    headline: compileNodeToInsightMarkdown(node)
+    headline: compileNodeToMarkdown(node)
       .split('\n')
       .join(''),
   };

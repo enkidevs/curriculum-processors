@@ -1,18 +1,19 @@
 const {
-  compileNodeToInsightMarkdown,
+  compileNodeToQuestionMarkdown,
   getAnswersFromNode,
+  compileNodeToMarkdown,
 } = require('./helpers');
 
 module.exports = function quiz(node) {
-  const rawText = compileNodeToInsightMarkdown(node);
-  const headline = compileNodeToInsightMarkdown(
+  const rawText = compileNodeToQuestionMarkdown(node);
+  const headline = compileNodeToMarkdown(
     node.children.find(child => child.type === 'questionHeadline')
   )
     .split('\n')
     .join('');
   const answers = getAnswersFromNode(node);
 
-  const question = compileNodeToInsightMarkdown({
+  const question = compileNodeToQuestionMarkdown({
     children: node.children.filter(
       child => child.type !== 'questionHeadline' && !child.answers
     ),

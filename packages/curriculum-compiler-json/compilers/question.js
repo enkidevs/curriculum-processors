@@ -1,5 +1,5 @@
 const {
-  compileNodeToInsightMarkdown,
+  compileNodeToQuestionMarkdown,
   getAnswersFromNode,
 } = require('./helpers');
 
@@ -7,9 +7,9 @@ module.exports = function question(node, type) {
   if (!node.question) {
     throw new Error(`Invalid question section ${node.name}`);
   }
-  const rawText = compileNodeToInsightMarkdown(node);
+  const rawText = compileNodeToQuestionMarkdown(node);
   const answers = getAnswersFromNode(node);
-  const q = compileNodeToInsightMarkdown({
+  const q = compileNodeToQuestionMarkdown({
     children: node.children.filter(
       child => child.type !== 'list' && !child.answers
     ),

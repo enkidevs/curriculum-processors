@@ -19,7 +19,8 @@
   "dependencies": {
     "@enkidevs/curriculum-compiler-string": "^2.2.1",
     "@enkidevs/curriculum-helpers": "^2.2.1",
-    "unist-builder": "^1.0.2"
+    "unist-builder": "^1.0.2",
+    "unist-util-assert": "^1.0.2"
   },
   "publishConfig": {
     "access": "public"

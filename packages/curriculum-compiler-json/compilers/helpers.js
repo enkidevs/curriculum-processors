@@ -1,16 +1,25 @@
 const unistBuilder = require('unist-builder');
+const unistAssert = require('unist-util-assert');
 const { getCompiler } = require('@enkidevs/curriculum-compiler-string');
 const { contentTypes } = require('@enkidevs/curriculum-helpers');
 
-function getInsightCompiler() {
-  return getCompiler(contentTypes.INSIGHT);
+const markdownCompiler = getCompiler(contentTypes.MARKDOWN);
+const insightCompiler = getCompiler(contentTypes.INSIGHT);
+const questionCompiler = getCompiler(contentTypes.QUESTION);
+
+function getAstCompiler(compiler) {
+  return function compileNode(node) {
+    if (!node.type) {
+      node.type = 'root';
+    }
+    unistAssert(node);
+    return compiler.compileSync(unistBuilder('root', node.children));
+  };
 }
-function compileNodeToInsightMarkdown(node) {
-  if (!node || !node.children) {
-    throw new Error('Cannot compile invalid node');
-  }
-  return getInsightCompiler().compileSync(unistBuilder('root', node.children));
-}
+
+const compileNodeToMarkdown = getAstCompiler(markdownCompiler);
+const compileNodeToInsightMarkdown = getAstCompiler(insightCompiler);
+const compileNodeToQuestionMarkdown = getAstCompiler(questionCompiler);
 
 function getAnswersFromNode(node) {
   const answersASTList = node.children.find(
@@ -22,7 +31,7 @@ function getAnswersFromNode(node) {
 
   let tempCorrectIndex = 0;
   return answersASTList.children.map(answerNode => ({
-    text: compileNodeToInsightMarkdown(answerNode).replace('\n', ''),
+    text: compileNodeToMarkdown(answerNode).replace('\n', ''),
     correct: answerNode.correct,
     // eslint-disable-next-line no-plusplus
     correctIndex: answerNode.correct ? tempCorrectIndex++ : null,
@@ -30,6 +39,8 @@ function getAnswersFromNode(node) {
 }
 
 module.exports = {
+  compileNodeToMarkdown,
+  compileNodeToQuestionMarkdown,
   compileNodeToInsightMarkdown,
   getAnswersFromNode,
 };

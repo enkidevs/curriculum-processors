@@ -1,7 +1,7 @@
-const { compileNodeToInsightMarkdown } = require('./helpers');
+const { compileNodeToMarkdown } = require('./helpers');
 
 module.exports = function footnotes(node) {
-  const rawText = compileNodeToInsightMarkdown(node);
+  const rawText = compileNodeToMarkdown(node);
   const items = parseRawFootnotes(rawText);
   return {
     footnotes: {
