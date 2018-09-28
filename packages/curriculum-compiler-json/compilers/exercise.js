@@ -1,8 +1,8 @@
-const { compileNodeToQuestionMarkdown } = require('./helpers');
+const { compileNodeToInsightMarkdown } = require('./helpers');
 
 module.exports = function exercise(node) {
-  const rawText = compileNodeToQuestionMarkdown(node);
-  const question = compileNodeToQuestionMarkdown({
+  const rawText = compileNodeToInsightMarkdown(node);
+  const question = compileNodeToInsightMarkdown({
     children: node.children.filter(
       child => child.type !== 'questionHeadline' && !child.answers
     ),
