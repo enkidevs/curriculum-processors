@@ -21,6 +21,7 @@ const nodeSectionMap = {
     compilers.question(node, questionTypes.PRACTICE),
   [sectionNames.REVISION]: node =>
     compilers.question(node, questionTypes.REVISION),
+  [sectionNames.EXERCISE]: node => compilers.exercise(node),
   [sectionNames.QUIZ]: node => compilers.quiz(node),
   [sectionNames.FOOTNOTES]: node => compilers.footnotes(node),
 };
@@ -65,6 +66,7 @@ function compileInsight(ast) {
 function getCompiler(type) {
   let compileSync;
   switch (type) {
+    case contentTypes.EXERCISE:
     case contentTypes.INSIGHT: {
       compileSync = compileInsight;
       break;

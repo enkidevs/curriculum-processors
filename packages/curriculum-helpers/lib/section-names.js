@@ -4,5 +4,6 @@ module.exports = {
   REVISION: 'Revision',
   PRACTICE: 'Practice',
   QUIZ: 'Quiz',
+  EXERCISE: 'Exercise',
   GAME_CONTENT: 'Game Content',
 };

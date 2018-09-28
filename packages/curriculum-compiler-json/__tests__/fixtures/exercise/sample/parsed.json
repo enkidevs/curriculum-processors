@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "author": "milesflo",
+    "levels": [
+      "beginner",
+      "basic"
+    ],
+    "type": "exercise",
+    "link": "https://www.codewars.com/kata/classy-classes",
+    "linkType": "codewars",
+    "standards": {
+      "javascript.execution-context.2": 1000,
+      "javascript.execution-context.3": 1000,
+      "javascript.execution-context.4": 1000
+    },
+    "links": [
+      {
+        "name": "MDN - this",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this",
+        "nature": "website"
+      }
+    ]
+  },
+  "headline": "JS Practice `this`",
+  "exercise": {
+    "rawText": "Explore the `this` operator in JavaScript with Constructor functions\n",
+    "question": "Explore the `this` operator in JavaScript with Constructor functions\n"
+  }
+}
