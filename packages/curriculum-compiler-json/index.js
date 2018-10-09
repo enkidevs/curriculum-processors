@@ -71,7 +71,10 @@ function compileQuestion(ast) {
   // Don't mutate parameter
   const questionAst = Object.assign({}, ast);
 
-  const heading = questionAst.children.find(node => node.type === 'heading');
+  const [heading] = questionAst.children.splice(
+    questionAst.children.findIndex(node => node.type === 'heading'),
+    1
+  );
 
   const name = heading.children[0].value;
 
