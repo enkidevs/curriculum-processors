@@ -29,7 +29,7 @@ The Insight/Exercise compiler works in the following way:
 
 The Question compiler does the following:
 1. Wrap incoming Question AST in a `"section"` node.
-2. Return the output of the (Question)[#Question] compiler
+2. Return the output of the [Question](#question) compiler
 
 ## Compilers
 
