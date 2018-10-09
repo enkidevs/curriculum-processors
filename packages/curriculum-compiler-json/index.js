@@ -29,6 +29,7 @@ const nodeSectionMap = {
 const nodeTypeMap = {
   yaml: node => compilers.metadata(node),
   headline: node => compilers.headline(node),
+  heading: node => compilers.heading(node),
   section: node => {
     if (!node.name) {
       throw new Error(`Invalid section node with no name`);
@@ -63,12 +64,38 @@ function compileInsight(ast) {
   return json;
 }
 
+function compileQuestion(ast) {
+  if (!ast || !ast.children) {
+    throw new Error('Missing or invalid AST');
+  }
+
+  // Don't mutate parameter
+  const questionAst = Object.assign({}, ast);
+
+  const heading = questionAst.children.find(node => node.type === 'heading');
+
+  const name = heading.children[0].value;
+
+  // Wrap question-type ast in section node data
+  questionAst.name = name;
+  questionAst.type = 'section';
+  questionAst.question = true;
+
+  const json = compilers.question(questionAst, name.toLowerCase());
+
+  return json;
+}
+
 function getCompiler(type) {
   let compileSync;
   switch (type) {
     case contentTypes.EXERCISE:
     case contentTypes.INSIGHT: {
       compileSync = compileInsight;
+      break;
+    }
+    case contentTypes.QUESTION: {
+      compileSync = compileQuestion;
       break;
     }
     default:

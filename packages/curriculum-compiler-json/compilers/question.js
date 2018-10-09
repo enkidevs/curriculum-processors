@@ -11,7 +11,8 @@ module.exports = function question(node, type) {
   const answers = getAnswersFromNode(node);
   const q = compileNodeToQuestionMarkdown({
     children: node.children.filter(
-      child => child.type !== 'list' && !child.answers
+      child =>
+        child.type !== 'heading' && child.type !== 'list' && !child.answers
     ),
   });
 

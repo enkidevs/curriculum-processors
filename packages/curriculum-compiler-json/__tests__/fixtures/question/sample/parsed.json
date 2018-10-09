@@ -1,0 +1,30 @@
+{
+  "revision": {
+    "rawText":
+      "## Revision\n\nWhich of the following data structures is a type of *maximally-unbalanced* binary tree?\n\n???\n\n* Ordered linked list\n* Ordered array\n* Weighted graph\n* Max-heap\n",
+    "question":
+      "Which of the following data structures is a type of *maximally-unbalanced* binary tree?\n\n???\n",
+    "answers": [
+      {
+        "text": "Ordered linked list",
+        "correct": true,
+        "correctIndex": 0
+      },
+      {
+        "text": "Ordered array",
+        "correct": false,
+        "correctIndex": null
+      },
+      {
+        "text": "Weighted graph",
+        "correct": false,
+        "correctIndex": null
+      },
+      {
+        "text": "Max-heap",
+        "correct": false,
+        "correctIndex": null
+      }
+    ]
+  }
+}
