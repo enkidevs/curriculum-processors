@@ -29,7 +29,6 @@ const nodeSectionMap = {
 const nodeTypeMap = {
   yaml: node => compilers.metadata(node),
   headline: node => compilers.headline(node),
-  heading: node => compilers.heading(node),
   section: node => {
     if (!node.name) {
       throw new Error(`Invalid section node with no name`);
