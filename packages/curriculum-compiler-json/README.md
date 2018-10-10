@@ -9,7 +9,7 @@ See [Enki curriculum processors](https://github.com/enkidevs/curriculum-processo
 
 ## How it works
 
-The compiler works in the following way:
+The Insight/Exercise compiler works in the following way:
 
 1. Iterates over all `children` of the AST provided
     - looks at the `type` value of each top-most node
@@ -26,6 +26,10 @@ The compiler works in the following way:
     - otherwise throws an error
 2. combines all JSON properties returned by each sub-compiler into a single object
 3. returns the final JSON object
+
+The Question compiler does the following:
+1. Wrap incoming Question AST in a `"section"` node.
+2. Return the output of the [Question](#question) compiler
 
 ## Compilers
 

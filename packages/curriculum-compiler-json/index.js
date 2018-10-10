@@ -63,12 +63,41 @@ function compileInsight(ast) {
   return json;
 }
 
+function compileQuestion(ast) {
+  if (!ast || !ast.children) {
+    throw new Error('Missing or invalid AST');
+  }
+
+  // Don't mutate parameter
+  const questionAst = Object.assign({}, ast);
+
+  const [heading] = questionAst.children.splice(
+    questionAst.children.findIndex(node => node.type === 'heading'),
+    1
+  );
+
+  const name = heading.children[0].value;
+
+  // Wrap question-type ast in section node data
+  questionAst.name = name;
+  questionAst.type = 'section';
+  questionAst.question = true;
+
+  const json = compilers.question(questionAst, name.toLowerCase());
+
+  return json;
+}
+
 function getCompiler(type) {
   let compileSync;
   switch (type) {
     case contentTypes.EXERCISE:
     case contentTypes.INSIGHT: {
       compileSync = compileInsight;
+      break;
+    }
+    case contentTypes.QUESTION: {
+      compileSync = compileQuestion;
       break;
     }
     default:

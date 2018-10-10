@@ -4,72 +4,127 @@ const ast = {
   type: 'root',
   children: [
     {
-      type: 'yaml',
-      value:
-        "author: milesflo\n\nlevels:\n\n  - beginner\n\n  - basic\n\ntype: exercise\n\nlink: https://www.codewars.com/kata/classy-classes\nlinkType: codewars\nstandards:\n\n  javascript.execution-context.2: 1000\n  javascript.execution-context.3: 1000\n  javascript.execution-context.4: 1000\n\nlinks:\n\n  - '[MDN - this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)'",
-      data: {
-        parsedValue: {
-          author: 'milesflo',
-          levels: ['beginner', 'basic'],
-          type: 'exercise',
-          link: 'https://www.codewars.com/kata/classy-classes',
-          linkType: 'codewars',
-          standards: {
-            'javascript.execution-context.2': 1000,
-            'javascript.execution-context.3': 1000,
-            'javascript.execution-context.4': 1000,
-          },
-          links: [
-            {
-              name: 'MDN - this',
-              url:
-                'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this',
-              nature: 'website',
-            },
-          ],
-        },
-      },
-    },
-    {
-      type: 'headline',
+      type: 'heading',
+      depth: 2,
       children: [
         {
           type: 'text',
-          value: 'JS Practice ',
-        },
-        {
-          type: 'inlineCode',
-          value: 'this',
+          value: 'Revision',
         },
       ],
     },
     {
-      type: 'section',
-      name: 'Exercise',
+      type: 'paragraph',
       children: [
         {
-          type: 'paragraph',
+          type: 'text',
+          value: 'Which of the following data structures is a type of ',
+        },
+        {
+          type: 'emphasis',
           children: [
             {
               type: 'text',
-              value: 'Explore the ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'this',
-            },
-            {
-              type: 'text',
-              value: ' operator in JavaScript with Constructor functions',
+              value: 'maximally-unbalanced',
             },
           ],
         },
+        {
+          type: 'text',
+          value: ' binary tree?',
+        },
       ],
+    },
+    {
+      type: 'paragraph',
+      children: [
+        {
+          type: 'questionGap',
+          value: '???',
+        },
+      ],
+    },
+    {
+      type: 'list',
+      ordered: false,
+      start: null,
+      loose: false,
+      children: [
+        {
+          type: 'listItem',
+          loose: false,
+          checked: null,
+          children: [
+            {
+              type: 'paragraph',
+              children: [
+                {
+                  type: 'text',
+                  value: 'Ordered linked list',
+                },
+              ],
+            },
+          ],
+          correct: true,
+        },
+        {
+          type: 'listItem',
+          loose: false,
+          checked: null,
+          children: [
+            {
+              type: 'paragraph',
+              children: [
+                {
+                  type: 'text',
+                  value: 'Ordered array',
+                },
+              ],
+            },
+          ],
+          correct: false,
+        },
+        {
+          type: 'listItem',
+          loose: false,
+          checked: null,
+          children: [
+            {
+              type: 'paragraph',
+              children: [
+                {
+                  type: 'text',
+                  value: 'Weighted graph',
+                },
+              ],
+            },
+          ],
+          correct: false,
+        },
+        {
+          type: 'listItem',
+          loose: false,
+          checked: null,
+          children: [
+            {
+              type: 'paragraph',
+              children: [
+                {
+                  type: 'text',
+                  value: 'Max-heap',
+                },
+              ],
+            },
+          ],
+          correct: false,
+        },
+      ],
+      answers: true,
     },
   ],
 };
 
 const { getCompiler } = require('./index');
-const json = getCompiler('exercise').compileSync(ast);
+const json = getCompiler('question').compileSync(ast);
 
 console.log(JSON.stringify(json, null, 2));
