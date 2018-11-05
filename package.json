@@ -50,13 +50,15 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "npm run check-branch",
-      "npm run format",
-      "npm run lint",
-      "npm run test",
-      "git add"
-    ]
+    "linters": {
+      "*.js": [
+        "npm run check-branch",
+        "npm run format",
+        "npm run lint",
+        "npm run test",
+        "git add"
+      ]
+    }
   },
   "jest": {
     "testRegex": "packages/.*/__tests__/.*\\.test.js$",
