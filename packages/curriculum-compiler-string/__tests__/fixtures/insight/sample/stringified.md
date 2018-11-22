@@ -1,16 +1,28 @@
 ---
 author: jfarmer
+
 levels:
+
   - beginner
+
   - basic
+
   - medium
+
   - advanced
+
 type: normal
+
 category: must-know
+
 links:
+
   - >-
+
     [Why is it safer to keep the tree
+
     balanced?](http://stackoverflow.com/questions/8015630/definition-of-a-balanced-tree){website}
+
 parent: removing-keys-from-a-binary-search-tree
 ---
 
