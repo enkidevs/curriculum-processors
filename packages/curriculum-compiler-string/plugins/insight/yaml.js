@@ -16,7 +16,8 @@ module.exports = function yaml() {
           }
           const yml = jsYaml
             .safeDump(node.data.parsedValue)
-            .trim().replace(/\n/g, '\n\n');
+            .trim()
+            .replace(/\n/g, '\n\n');
           return `---\n${yml}\n---`;
         }
         return undefined;
