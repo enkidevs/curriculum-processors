@@ -14,7 +14,9 @@ module.exports = function yaml() {
               link => `[${link.name}](${link.url}){${link.nature}}`
             );
           }
-          const yml = jsYaml.safeDump(node.data.parsedValue).trim().replace(/\n/g, '\n\n');
+          const yml = jsYaml
+            .safeDump(node.data.parsedValue)
+            .trim().replace(/\n/g, '\n\n');
           return `---\n${yml}\n---`;
         }
         return undefined;
