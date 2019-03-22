@@ -4,6 +4,11 @@
   "description": "Helpers for parsing/transforming/compiling Enki Curriculum from and to different formats",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
+  "scripts": {
+    "test:watch": "jest --watchAll",
+    "test": "jest --coverage --notify",
+    "test:regex": "npm test -- regexToMatchFile"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enkidevs/curriculum-processors.git"
@@ -24,13 +29,9 @@
     "lib"
   ],
   "dependencies": {
-    "unist-util-assert": "^1.0.1",
     "unist-util-map": "^1.0.3"
   },
   "devDependencies": {
-    "jest": "^22.4.2"
-  },
-  "jest": {
-    "testRegex": "/.*__tests__/.*\\.test.js$"
+    "jest": "^24.5.0"
   }
 }

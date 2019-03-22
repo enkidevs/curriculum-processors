@@ -24,9 +24,8 @@ function getParser(type) {
   function parse(md) {
     return new Promise((resolve, reject) => {
       const processor = getProcessor(type);
-      processor.run(
-        processor.parse(md),
-        (err, ast) => (err ? reject(err) : resolve(ast))
+      processor.run(processor.parse(md), (err, ast) =>
+        err ? reject(err) : resolve(ast)
       );
     });
   }

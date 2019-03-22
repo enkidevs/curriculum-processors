@@ -57,6 +57,7 @@
             {
               "type": "linkReference",
               "identifier": "1",
+              "label": "1",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -77,6 +78,7 @@
             {
               "type": "linkReference",
               "identifier": "2",
+              "label": "2",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -95,11 +97,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -115,7 +117,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -145,6 +147,7 @@
             {
               "type": "linkReference",
               "identifier": "3",
+              "label": "3",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -161,6 +164,7 @@
         },
         {
           "type": "code",
+          "meta": null,
           "lang": "javascript",
           "value": "console.log('sample code')"
         }
@@ -177,6 +181,7 @@
             {
               "type": "linkReference",
               "identifier": "1: paragraph",
+              "label": "1: Paragraph",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -197,6 +202,7 @@
             {
               "type": "linkReference",
               "identifier": "2: list",
+              "label": "2: List",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -217,6 +223,7 @@
             {
               "type": "linkReference",
               "identifier": "3: code",
+              "label": "3: Code",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -233,6 +240,7 @@
         },
         {
           "type": "code",
+          "meta": null,
           "lang": "javascript",
           "value": "var x = 10"
         }
@@ -274,11 +282,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -295,7 +303,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -312,7 +320,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -329,7 +337,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -376,11 +384,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -397,7 +405,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -414,7 +422,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -461,11 +469,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -482,7 +490,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -504,7 +512,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -525,7 +533,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {

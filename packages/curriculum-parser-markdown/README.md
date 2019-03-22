@@ -234,7 +234,7 @@ interface AnswersList <: Parent {
   type: "list";
   ordered: false;
   start: null;
-  loose: true | false;
+  spread: true | false;
   answers: true;
 }
 ```
@@ -255,12 +255,12 @@ Yields:
   "type": "list",
   "ordered": false,
   "start": null,
-  "loose": false,
+  "spread": false,
   "answers": true,
   "children": [
     {
       "type": "listItem",
-      "loose": false,
+      "spread": false,
       "checked": null,
       "correct": true,
       "children": [
@@ -277,7 +277,7 @@ Yields:
     },
     {
       "type": "listItem",
-      "loose": false,
+      "spread": false,
       "checked": null,
       "correct": false,
       "children": [
@@ -294,7 +294,7 @@ Yields:
     },
     {
       "type": "listItem",
-      "loose": false,
+      "spread": false,
       "checked": null,
       "correct": false,
       "children": [
@@ -311,7 +311,7 @@ Yields:
     },
     {
       "type": "listItem",
-      "loose": false,
+      "spread": false,
       "checked": null,
       "correct": false,
       "children": [
@@ -341,7 +341,7 @@ It is a direct child of [`AnswersList`](#answerslist) and does not contain a che
 ```idl
 interface AnswersListItem <: Parent {
   type: "listItem";
-  loose: true | false;
+  spread: true | false;
   checked: null;
   correct: true | false;
 }

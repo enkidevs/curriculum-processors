@@ -13,6 +13,7 @@
     {
       "type": "questionCode",
       "lang": "bash",
+      "meta": null,
       "value": "#-i =???\n#-r =???\n#-c =???\n#default =???",
       "children": [
         {
@@ -77,11 +78,11 @@
       "type": "list",
       "ordered": false,
       "start": null,
-      "loose": false,
+      "spread": false,
       "children": [
         {
           "type": "listItem",
-          "loose": false,
+          "spread": false,
           "checked": null,
           "children": [
             {
@@ -98,7 +99,7 @@
         },
         {
           "type": "listItem",
-          "loose": false,
+          "spread": false,
           "checked": null,
           "children": [
             {
@@ -115,7 +116,7 @@
         },
         {
           "type": "listItem",
-          "loose": false,
+          "spread": false,
           "checked": null,
           "children": [
             {
@@ -132,7 +133,7 @@
         },
         {
           "type": "listItem",
-          "loose": false,
+          "spread": false,
           "checked": null,
           "children": [
             {

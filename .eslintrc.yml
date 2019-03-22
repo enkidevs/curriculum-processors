@@ -1,9 +1,2 @@
 extends:
   - '@enkidevs/eslint-config-backend'
-rules:
-  import/no-extraneous-dependencies: off # because tests use 'jest-in-case' and 'jsonfile'
-  node/no-extraneous-require:
-    - error
-    - allowModules:
-        - jest-in-case
-        - jsonfile

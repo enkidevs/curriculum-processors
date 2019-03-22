@@ -4,6 +4,11 @@
   "description": "Compile Enki Curriculum AST to JSON object",
   "author": "loopiezlol <loopiezlol@gmail.com>",
   "main": "index.js",
+  "scripts": {
+    "test:watch": "jest --watchAll",
+    "test": "jest --coverage --notify",
+    "test:regex": "npm test -- regexToMatchFile"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enkidevs/curriculum-processors.git"
@@ -16,13 +21,22 @@
   "engines": {
     "node": ">=8.10.0"
   },
+  "files": [
+    "index.js",
+    "compilers"
+  ],
   "dependencies": {
     "@enkidevs/curriculum-compiler-string": "^2.2.1",
     "@enkidevs/curriculum-helpers": "^2.2.1",
-    "unist-builder": "^1.0.2",
-    "unist-util-assert": "^1.0.2"
+    "unist-builder": "^1.0.3",
+    "unist-util-assert": "^1.0.3"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "jest-in-case": "^1.0.2",
+    "jsonfile": "^5.0.0"
   }
 }

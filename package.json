@@ -2,17 +2,13 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build",
     "check-branch": "enkidevs-assert-restricted-branch",
     "clean": "lerna run clean",
     "format": "prettier --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
     "lint": "eslint . --ignore-path .gitignore",
     "pre-commit-lint": "lint-staged",
-    "prebuild": "npm run clean && npm test && ",
     "publish-packages": "lerna publish",
-    "test:watch": "jest --watchAll",
-    "test": "jest --coverage --notify",
-    "test:regex": "npm test -- regexToMatchFile"
+    "test": "lerna run test"
   },
   "keywords": [
     "enki",
@@ -34,15 +30,12 @@
   "dependencies": {},
   "devDependencies": {
     "@enkidevs/assert-restricted-branch": "^1.0.2",
-    "@enkidevs/eslint-config-backend": "^0.1.1",
-    "eslint": "^5.8.0",
+    "@enkidevs/eslint-config-backend": "^0.3.1",
+    "eslint": "^5.15.3",
     "husky": "^1.1.3",
-    "jest": "^23.1.0",
-    "jest-in-case": "^1.0.2",
-    "jsonfile": "^4.0.0",
-    "lerna": "^2.11.0",
-    "lint-staged": "^7.3.0",
-    "prettier": "1.13.4"
+    "lerna": "^3.13.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4"
   },
   "husky": {
     "hooks": {
@@ -59,16 +52,5 @@
         "git add"
       ]
     }
-  },
-  "jest": {
-    "testRegex": "packages/.*/__tests__/.*\\.test.js$",
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/dist/**",
-      "!**/__tests__/**",
-      "!**/node_modules/**",
-      "!**/vendor/**",
-      "!**/*sandbox.js"
-    ]
   }
 }
