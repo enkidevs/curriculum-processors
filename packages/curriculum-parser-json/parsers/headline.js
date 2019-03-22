@@ -24,6 +24,10 @@ function createHeadlineNode(headlineAST) {
     headlineAST.children = headlineAST.children[0].children;
   }
 
+  if (headlineAST.type !== 'headline') {
+    delete headlineAST.type;
+  }
+
   return unistBuilder('headline', headlineAST);
 }
 

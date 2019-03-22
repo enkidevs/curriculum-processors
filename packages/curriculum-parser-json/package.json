@@ -4,6 +4,11 @@
   "description": "Parses Enki Curriculum JSON into an AST",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
+  "scripts": {
+    "test:watch": "jest --watchAll",
+    "test": "jest --coverage --notify",
+    "test:regex": "npm test -- regexToMatchFile"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enkidevs/curriculum-processors.git"
@@ -32,10 +37,12 @@
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^2.2.1",
     "@enkidevs/curriculum-parser-markdown": "^3.1.1",
-    "js-yaml": "^3.11.0",
-    "unist-builder": "^1.0.2"
+    "js-yaml": "^3.13.0",
+    "unist-builder": "^1.0.3"
   },
-  "jest": {
-    "testRegex": "/.*__tests__/.*\\.test.js$"
+  "devDependencies": {
+    "jest": "^24.5.0",
+    "jest-in-case": "^1.0.2",
+    "jsonfile": "^5.0.0"
   }
 }

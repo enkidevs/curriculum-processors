@@ -13,6 +13,7 @@ module.exports = function footnotes(node) {
 
 function parseRawFootnotes(text) {
   const splitTextArray = text.split(/(\[.*:.*\])/gi).filter(Boolean);
+  // eslint-disable-next-line max-params
   return splitTextArray.reduce((items, line, index, array) => {
     if (index % 2 === 1) {
       return items;

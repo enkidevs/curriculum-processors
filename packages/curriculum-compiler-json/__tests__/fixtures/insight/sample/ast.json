@@ -3,7 +3,8 @@
   "children": [
     {
       "type": "yaml",
-      "value": "author: catalin\n\nlevels:\n  - basic\n  - medium\n  - advanced\n\ntype: normal\n\ncategory: must-know\n\nstandards:\n  sql.use-dql.0: 10\n  sql.use-ddl.1: 1000\n\ntags:\n  - introduction\n  - workout\n\nstub: false\n\nlinks:\n  - '[EnkiCool](https://enki.com){website}'\n",
+      "value":
+        "author: catalin\n\nlevels:\n  - basic\n  - medium\n  - advanced\n\ntype: normal\n\ncategory: must-know\n\nstandards:\n  sql.use-dql.0: 10\n  sql.use-ddl.1: 1000\n\ntags:\n  - introduction\n  - workout\n\nstub: false\n\nlinks:\n  - '[EnkiCool](https://enki.com){website}'\n",
       "position": {
         "start": {
           "line": 1,
@@ -46,21 +47,14 @@
       "data": {
         "parsedValue": {
           "author": "catalin",
-          "levels": [
-            "basic",
-            "medium",
-            "advanced"
-          ],
+          "levels": ["basic", "medium", "advanced"],
           "type": "normal",
           "category": "must-know",
           "standards": {
             "sql.use-dql.0": 10,
             "sql.use-ddl.1": 1000
           },
-          "tags": [
-            "introduction",
-            "workout"
-          ],
+          "tags": ["introduction", "workout"],
           "stub": false,
           "links": [
             {
@@ -155,6 +149,7 @@
             {
               "type": "linkReference",
               "identifier": "1",
+              "label": "1",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -227,6 +222,7 @@
             {
               "type": "linkReference",
               "identifier": "2",
+              "label": "2",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -297,11 +293,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -356,7 +352,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -438,9 +434,7 @@
               "column": 13,
               "offset": 391
             },
-            "indent": [
-              1
-            ]
+            "indent": [1]
           }
         },
         {
@@ -466,6 +460,7 @@
             {
               "type": "linkReference",
               "identifier": "3",
+              "label": "3",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -534,6 +529,7 @@
         },
         {
           "type": "code",
+          "meta": null,
           "lang": "javascript",
           "value": "console.log('sample code')",
           "position": {
@@ -547,10 +543,7 @@
               "column": 4,
               "offset": 453
             },
-            "indent": [
-              1,
-              1
-            ]
+            "indent": [1, 1]
           }
         }
       ]
@@ -633,11 +626,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -693,7 +686,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -749,7 +742,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -815,10 +808,7 @@
               "column": 15,
               "offset": 554
             },
-            "indent": [
-              1,
-              1
-            ]
+            "indent": [1, 1]
           },
           "answers": true
         }
@@ -938,11 +928,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -998,7 +988,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -1054,7 +1044,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -1110,7 +1100,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -1176,11 +1166,7 @@
               "column": 15,
               "offset": 674
             },
-            "indent": [
-              1,
-              1,
-              1
-            ]
+            "indent": [1, 1, 1]
           },
           "answers": true
         }
@@ -1252,11 +1238,11 @@
           "type": "list",
           "ordered": false,
           "start": null,
-          "loose": false,
+          "spread": false,
           "children": [
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -1312,7 +1298,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -1386,7 +1372,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -1459,7 +1445,7 @@
             },
             {
               "type": "listItem",
-              "loose": false,
+              "spread": false,
               "checked": null,
               "children": [
                 {
@@ -1525,11 +1511,7 @@
               "column": 7,
               "offset": 774
             },
-            "indent": [
-              1,
-              1,
-              1
-            ]
+            "indent": [1, 1, 1]
           },
           "answers": true
         }
@@ -1546,6 +1528,7 @@
             {
               "type": "linkReference",
               "identifier": "1: paragraph",
+              "label": "1: Paragraph",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -1594,9 +1577,7 @@
                   "column": 19,
                   "offset": 827
                 },
-                "indent": [
-                  1
-                ]
+                "indent": [1]
               }
             }
           ],
@@ -1611,9 +1592,7 @@
               "column": 19,
               "offset": 827
             },
-            "indent": [
-              1
-            ]
+            "indent": [1]
           }
         },
         {
@@ -1622,6 +1601,7 @@
             {
               "type": "linkReference",
               "identifier": "2: list",
+              "label": "2: List",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -1670,9 +1650,7 @@
                   "column": 12,
                   "offset": 850
                 },
-                "indent": [
-                  1
-                ]
+                "indent": [1]
               }
             }
           ],
@@ -1687,9 +1665,7 @@
               "column": 12,
               "offset": 850
             },
-            "indent": [
-              1
-            ]
+            "indent": [1]
           }
         },
         {
@@ -1698,6 +1674,7 @@
             {
               "type": "linkReference",
               "identifier": "3: code",
+              "label": "3: Code",
               "referenceType": "shortcut",
               "children": [
                 {
@@ -1746,9 +1723,7 @@
                   "column": 12,
                   "offset": 873
                 },
-                "indent": [
-                  1
-                ]
+                "indent": [1]
               }
             }
           ],
@@ -1763,13 +1738,12 @@
               "column": 12,
               "offset": 873
             },
-            "indent": [
-              1
-            ]
+            "indent": [1]
           }
         },
         {
           "type": "code",
+          "meta": null,
           "lang": "javascript",
           "value": "var x = 10",
           "position": {
@@ -1783,10 +1757,7 @@
               "column": 4,
               "offset": 902
             },
-            "indent": [
-              1,
-              1
-            ]
+            "indent": [1, 1]
           }
         }
       ]

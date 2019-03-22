@@ -1,3 +1,5 @@
+Build: [![CircleCI](https://circleci.com/gh/enkidevs/curriculum-processors.svg?style=svg)](https://circleci.com/gh/enkidevs/curriculum-processors)
+
 # Enki Curriculum Processors
 
 Note: The language used here follows this pattern:

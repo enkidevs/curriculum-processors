@@ -20,9 +20,8 @@ function getCompiler(type) {
   function compile(ast) {
     return new Promise((resolve, reject) => {
       const processor = unified().use(getPlugins(type));
-      processor.run(
-        ast,
-        (err, res) => (err ? reject(err) : resolve(processor.stringify(res)))
+      processor.run(ast, (err, res) =>
+        err ? reject(err) : resolve(processor.stringify(res))
       );
     });
   }
