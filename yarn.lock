@@ -27,17 +27,17 @@
   resolved "https://registry.yarnpkg.com/@enkidevs/assert-restricted-branch/-/assert-restricted-branch-1.0.2.tgz#8316dd5196fdd78a416660726c86e21fe76fcbcd"
 
 "@enkidevs/eslint-config-backend@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-backend/-/eslint-config-backend-0.3.1.tgz#39217ec108b5858821c575f6d2688f8ec19c5b75"
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-backend/-/eslint-config-backend-0.3.2.tgz#af9e3b46b566992ad0a588a344be04ef2244409d"
   dependencies:
-    "@enkidevs/eslint-config-base" "^0.3.1"
+    "@enkidevs/eslint-config-base" "^0.3.2"
     eslint-config-airbnb-base "^13.1.0"
     eslint-plugin-node "^8.0.1"
     eslint-plugin-security "^1.4.0"
 
-"@enkidevs/eslint-config-base@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-base/-/eslint-config-base-0.3.1.tgz#303de7628a12bedb6c6b2bd87c91daa6de1edb94"
+"@enkidevs/eslint-config-base@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-base/-/eslint-config-base-0.3.2.tgz#1aa242d83c1c328eaebe31b284ce8a44df1346b5"
   dependencies:
     eslint-config-prettier "^4.1.0"
     eslint-plugin-import "^2.16.0"
