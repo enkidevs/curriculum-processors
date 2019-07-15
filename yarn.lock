@@ -26,20 +26,20 @@
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@enkidevs/assert-restricted-branch/-/assert-restricted-branch-1.0.2.tgz#8316dd5196fdd78a416660726c86e21fe76fcbcd"
 
-"@enkidevs/eslint-config-backend@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-backend/-/eslint-config-backend-0.3.1.tgz#39217ec108b5858821c575f6d2688f8ec19c5b75"
+"@enkidevs/eslint-config-backend@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-backend/-/eslint-config-backend-1.1.0.tgz#74c5e30788fdc0c2cb659748a351f6780331d507"
   dependencies:
-    "@enkidevs/eslint-config-base" "^0.3.1"
+    "@enkidevs/eslint-config-base" "^1.1.0"
     eslint-config-airbnb-base "^13.1.0"
-    eslint-plugin-node "^8.0.1"
+    eslint-plugin-node "^9.1.0"
     eslint-plugin-security "^1.4.0"
 
-"@enkidevs/eslint-config-base@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-base/-/eslint-config-base-0.3.1.tgz#303de7628a12bedb6c6b2bd87c91daa6de1edb94"
+"@enkidevs/eslint-config-base@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@enkidevs/eslint-config-base/-/eslint-config-base-1.1.0.tgz#8c1a0b5dfb820dd6f335b10dd3bb5731910e0b47"
   dependencies:
-    eslint-config-prettier "^4.1.0"
+    eslint-config-prettier "^6.0.0"
     eslint-plugin-import "^2.16.0"
     eslint-plugin-jest "^22.3.0"
     eslint-plugin-prettier "^3.0.1"
@@ -1712,9 +1712,9 @@ eslint-config-airbnb-base@^13.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-prettier@^4.1.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.3.0.tgz#c55c1fcac8ce4518aeb77906984e134d9eb5a4f0"
+eslint-config-prettier@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.0.0.tgz#f429a53bde9fc7660e6353910fd996d6284d3c25"
   dependencies:
     get-stdin "^6.0.0"
 
@@ -1732,7 +1732,7 @@ eslint-module-utils@^2.4.0:
     debug "^2.6.8"
     pkg-dir "^2.0.0"
 
-eslint-plugin-es@^1.3.1:
+eslint-plugin-es@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-es/-/eslint-plugin-es-1.4.0.tgz#475f65bb20c993fc10e8c8fe77d1d60068072da6"
   dependencies:
@@ -1759,16 +1759,16 @@ eslint-plugin-jest@^22.3.0:
   version "22.6.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.6.4.tgz#2895b047dd82f90f43a58a25cf136220a21c9104"
 
-eslint-plugin-node@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-8.0.1.tgz#55ae3560022863d141fa7a11799532340a685964"
+eslint-plugin-node@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-9.1.0.tgz#f2fd88509a31ec69db6e9606d76dabc5adc1b91a"
   dependencies:
-    eslint-plugin-es "^1.3.1"
+    eslint-plugin-es "^1.4.0"
     eslint-utils "^1.3.1"
-    ignore "^5.0.2"
+    ignore "^5.1.1"
     minimatch "^3.0.4"
-    resolve "^1.8.1"
-    semver "^5.5.0"
+    resolve "^1.10.1"
+    semver "^6.1.0"
 
 eslint-plugin-prettier@^3.0.1:
   version "3.1.0"
@@ -2448,7 +2448,7 @@ ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
 
-ignore@^5.0.2:
+ignore@^5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.2.tgz#e28e584d43ad7e92f96995019cc43b9e1ac49558"
 
@@ -4197,9 +4197,15 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
-resolve@^1.10.0, resolve@^1.11.0, resolve@^1.5.0, resolve@^1.8.1:
+resolve@^1.10.0, resolve@^1.11.0, resolve@^1.5.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
+  dependencies:
+    path-parse "^1.0.6"
+
+resolve@^1.10.1:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.1.tgz#ea10d8110376982fef578df8fc30b9ac30a07a3e"
   dependencies:
     path-parse "^1.0.6"
 
@@ -4281,6 +4287,10 @@ semver-compare@^1.0.0:
 semver@^6.0.0:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.1.tgz#53f53da9b30b2103cd4f15eab3a18ecbcb210c9b"
+
+semver@^6.1.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-6.2.0.tgz#4d813d9590aaf8a9192693d6c85b9344de5901db"
 
 semver@~5.3.0:
   version "5.3.0"
