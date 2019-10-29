@@ -43,7 +43,7 @@
     "unified": "^8.4.1",
     "unist-builder": "^1.0.3",
     "unist-util-map": "^1.0.3",
-    "unist-util-visit": "^1.4.0"
+    "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
     "jest": "^24.5.0",
