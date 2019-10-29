@@ -1,4 +1,5 @@
-const yaml = require('./yaml');
 const headline = require('./headline');
+const section = require('./section');
+const yaml = require('./yaml');
 
-module.exports = [headline, yaml];
+module.exports = [yaml, headline, section];

@@ -24,7 +24,7 @@ module.exports = function questionAnswers() {
           temp.questionGapCount += 1;
         });
 
-        return Object.assign({}, node, { answers: true });
+        return { ...node, answers: true };
       }
       return node;
     };
@@ -38,7 +38,7 @@ module.exports = function questionAnswers() {
         parent.answers
       ) {
         const correct = getCorrectAndUpdateCount(temp, index);
-        return Object.assign({}, node, { correct });
+        return { ...node, correct };
       }
       return node;
     };

@@ -10,8 +10,6 @@ const fallback = {
   QuestionCode: 'code',
 };
 
-const { assign } = Object;
-
 module.exports.getCompiler = function getCompiler(type, components = {}) {
   function compileSync(ast) {
     const processor = unified()
@@ -40,12 +38,13 @@ function questionHeadline() {
   function transform(ast) {
     return map(ast, node => {
       if (node.type === 'questionHeadline') {
-        return assign({}, node, {
+        return {
+          ...node,
           data: {
             hName: 'QuestionHeadline',
             hChildren: node.children.map(mdastToHast),
           },
-        });
+        };
       }
       return node;
     });
@@ -58,14 +57,15 @@ function questionCode() {
   function transform(ast) {
     return map(ast, node => {
       if (node.type === 'questionCode') {
-        return assign({}, node, {
+        return {
+          ...node,
           data: {
             hName: 'QuestionCode',
             hChildren: Array.isArray(node.children)
               ? node.children.map(questionCodeLine)
               : [],
           },
-        });
+        };
       }
 
       return node;
@@ -73,33 +73,29 @@ function questionCode() {
   }
 
   function questionCodeLine(line) {
-    return mdastToHast(
-      assign({}, line, {
-        data: {
-          hName: 'QuestionCodeLine',
-          hChildren: Array.isArray(line.children)
-            ? line.children.map(questionCodeSegmentOrGap)
-            : [],
-        },
-      })
-    );
+    return mdastToHast({
+      ...line,
+      data: {
+        hName: 'QuestionCodeLine',
+        hChildren: Array.isArray(line.children)
+          ? line.children.map(questionCodeSegmentOrGap)
+          : [],
+      },
+    });
   }
 
   function questionCodeSegmentOrGap(node) {
-    return mdastToHast(
-      assign(
-        {},
-        node,
-        node.type === 'questionCodeSegment'
-          ? {
-              data: {
-                hName: 'QuestionCodeSegment',
-                hChildren: [unistNode('text', node.value)],
-              },
-            }
-          : {}
-      )
-    );
+    return mdastToHast({
+      ...node,
+      ...(node.type === 'questionCodeSegment'
+        ? {
+            data: {
+              hName: 'QuestionCodeSegment',
+              hChildren: [unistNode('text', node.value)],
+            },
+          }
+        : {}),
+    });
   }
 }
 
@@ -109,12 +105,13 @@ function questionGap() {
   function transform(ast) {
     return map(ast, node => {
       if (node.type === 'questionGap') {
-        return assign({}, node, {
+        return {
+          ...node,
           data: {
             hName: 'QuestionGap',
             hChildren: [unistNode('text', node.value)],
           },
-        });
+        };
       }
 
       return node;
@@ -128,24 +125,24 @@ function questionAnswers() {
   function transform(ast) {
     return map(ast, node => {
       if (node.type === 'list' && node.answers) {
-        const answers = assign({}, node, {
+        const answers = {
+          ...node,
           data: {
             hName: 'QuestionAnswers',
             hChildren: node.children.map(answer =>
-              mdastToHast(
-                assign({}, answer, {
-                  data: {
-                    hName: 'QuestionAnswer',
-                    hProperties: {
-                      correct: answer.correct,
-                    },
-                    hChildren: answer.children.map(mdastToHast),
+              mdastToHast({
+                ...answer,
+                data: {
+                  hName: 'QuestionAnswer',
+                  hProperties: {
+                    correct: answer.correct,
                   },
-                })
-              )
+                  hChildren: answer.children.map(mdastToHast),
+                },
+              })
             ),
           },
-        });
+        };
         return answers;
       }
       return node;
