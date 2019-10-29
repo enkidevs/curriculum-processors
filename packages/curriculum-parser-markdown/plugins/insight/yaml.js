@@ -8,11 +8,12 @@ module.exports = function yaml() {
     return map(ast, node => {
       if (node.type === 'yaml') {
         const parsedValue = jsYaml.safeLoad(node.value, 'utf8');
-        const newNode = Object.assign({}, node, {
+        const newNode = {
+          ...node,
           data: {
             parsedValue,
           },
-        });
+        };
         const { links } = parsedValue;
         if (Array.isArray(links)) {
           newNode.data.parsedValue.links = links.map(getMarkdownLink);

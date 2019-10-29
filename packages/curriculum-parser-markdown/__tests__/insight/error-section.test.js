@@ -3,8 +3,8 @@ const fs = require('fs');
 const { contentTypes } = require('@enkidevs/curriculum-helpers');
 const { getParser } = require('../../index');
 
-describe('Fail insight yaml parsing', () => {
-  describe('Fail for insights with missing yaml configuration', () => {
+describe('Fail insight section parsing', () => {
+  describe('Fail for insights with wrong section name', () => {
     const text = fs.readFileSync(
       path.join(
         __dirname,
@@ -12,7 +12,7 @@ describe('Fail insight yaml parsing', () => {
         'fixtures',
         'insight',
         'error',
-        'missing-yaml.md'
+        'invalid-section-name.md'
       ),
       'utf8'
     );
@@ -23,18 +23,16 @@ describe('Fail insight yaml parsing', () => {
       parser = getParser(contentTypes.INSIGHT);
     });
 
-    test('parseSync should throw on missing yaml', () => {
+    test('parseSync should throw on invalid section name', () => {
       expect(() => {
         parser.parseSync(text);
-      }).toThrow(
-        /Must have exactly 1 yaml configuration but found \d+ instead./
-      );
+      }).toThrow(/Section name "[\s\S]*" is invalid/);
     });
 
-    test('parse should throw on missing yaml', async () => {
+    test('parse should throw on invalid section name', async () => {
       expect.assertions(1);
       await expect(parser.parse(text)).rejects.toThrow(
-        /Must have exactly 1 yaml configuration but found \d+ instead./
+        /Section name "[\s\S]*" is invalid/
       );
     });
   });

@@ -49,8 +49,9 @@ module.exports = function section() {
       newAstChildren.push(sec);
     }
 
-    return Object.assign({}, ast, {
+    return {
+      ...ast,
       children: newAstChildren,
-    });
+    };
   }
 };

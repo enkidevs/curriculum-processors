@@ -57,7 +57,7 @@ function compileInsight(ast) {
     throw new Error('Missing or invalid AST');
   }
   const json = ast.children.reduce(
-    (tempJson, node) => Object.assign({}, tempJson, compileSection(node)),
+    (tempJson, node) => ({ ...tempJson, ...compileSection(node) }),
     {}
   );
   return json;
@@ -69,7 +69,7 @@ function compileQuestion(ast) {
   }
 
   // Don't mutate parameter
-  const questionAst = Object.assign({}, ast);
+  const questionAst = { ...ast };
 
   const [heading] = questionAst.children.splice(
     questionAst.children.findIndex(node => node.type === 'heading'),

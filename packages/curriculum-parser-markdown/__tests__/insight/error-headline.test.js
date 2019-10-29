@@ -16,7 +16,9 @@ describe('Fail insight headline parsing', () => {
       ),
       'utf8'
     );
+
     let parser;
+
     beforeEach(() => {
       parser = getParser(contentTypes.INSIGHT);
     });

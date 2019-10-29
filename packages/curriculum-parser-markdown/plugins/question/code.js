@@ -10,7 +10,8 @@ module.exports = function questionCode() {
 
   function parseCode(node) {
     if (node.type === 'code' && node.value.includes('???')) {
-      return Object.assign({}, node, {
+      return {
+        ...node,
         type: 'questionCode',
         children: node.value.split('\n').map(line =>
           u(
@@ -35,7 +36,7 @@ module.exports = function questionCode() {
               }, [])
           )
         ),
-      });
+      };
     }
     return node;
   }
