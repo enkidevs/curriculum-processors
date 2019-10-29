@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "hast-to-hyperscript": "^7.0.2",
-    "mdast-util-to-hast": "^4.0.0",
+    "mdast-util-to-hast": "^6.0.2",
     "react": "^16.8.5",
     "remark-rehype": "^5.0.0",
     "unified": "^8.4.1",
