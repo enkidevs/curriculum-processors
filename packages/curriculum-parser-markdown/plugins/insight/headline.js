@@ -1,19 +1,21 @@
-const map = require('unist-util-map');
+const visit = require('unist-util-visit');
 
 module.exports = function headline() {
   return transform;
 
   function transform(ast) {
-    return map(ast, parseHeadline);
+    visit(ast, isH1, parseHeadline);
+    return ast;
   }
 
-  function parseHeadline(node) {
-    if (node.type === 'heading' && node.depth === 1) {
-      return {
-        type: 'headline',
-        children: node.children,
-      };
-    }
-    return node;
+  function isH1(node) {
+    return node.type === 'heading' && node.depth === 1;
+  }
+
+  function parseHeadline(node, index, parent) {
+    parent.children[index] = {
+      type: 'headline',
+      children: node.children,
+    };
   }
 };

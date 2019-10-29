@@ -1,23 +1,20 @@
-const map = require('unist-util-map');
+const visit = require('unist-util-visit');
 const decode = require('decode-uri-component');
 
 module.exports = function image() {
   return transform;
 
   function transform(ast) {
-    return map(ast, parseImage);
+    visit(ast, 'image', parseImage);
+    return ast;
   }
 
   function parseImage(node) {
-    if (node.type === 'image') {
-      const decodedUrl = decode(node.url);
-      if (decodedUrl.startsWith('<svg')) {
-        return {
-          ...node,
-          svg: true,
-        };
-      }
+    const decodedUrl = decode(node.url);
+    if (decodedUrl.startsWith('<svg')) {
+      Object.assign(node, {
+        svg: true,
+      });
     }
-    return node;
   }
 };

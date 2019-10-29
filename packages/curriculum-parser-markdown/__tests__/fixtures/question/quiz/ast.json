@@ -20,6 +20,15 @@
       ]
     },
     {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "questionGap",
+          "value": "???"
+        }
+      ]
+    },
+    {
       "type": "list",
       "ordered": false,
       "start": null,
