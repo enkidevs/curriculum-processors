@@ -1,0 +1,8 @@
+What are the answers?
+
+```bash
+a = ???
+b = ???
+```
+
+* `1`

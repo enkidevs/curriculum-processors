@@ -2,8 +2,7 @@
   "type": "root",
   "children": [
     {
-      "value":
-        "author: catalin\nlevels:\n  - basic\n  - medium\n  - advanced\ntype: normal\ncategory: must-know\nstandards:\n  sql.use-dql.0: 10\n  sql.use-ddl.1: 1000\ntags:\n  - introduction\n  - workout\nstub: false\nlinks:\n  - name: EnkiCool\n    url: 'https://enki.com'\n    nature: website\n",
+      "value": "author: catalin\nlevels:\n  - basic\n  - medium\n  - advanced\ntype: normal\ncategory: must-know\nstandards:\n  sql.use-dql.0: 10\n  sql.use-ddl.1: 1000\ntags:\n  - introduction\n  - workout\nstub: false\nlinks:\n  - name: EnkiCool\n    url: 'https://enki.com'\n    nature: website\n",
       "data": {
         "parsedValue": {
           "author": "catalin",
@@ -462,6 +461,15 @@
             {
               "type": "text",
               "value": "Sample quiz question"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "questionGap",
+              "value": "???"
             }
           ]
         },

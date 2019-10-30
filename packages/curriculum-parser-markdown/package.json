@@ -42,7 +42,6 @@
     "remark-parse": "^7.0.1",
     "unified": "^8.4.1",
     "unist-builder": "^2.0.0",
-    "unist-util-map": "^1.0.3",
     "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
