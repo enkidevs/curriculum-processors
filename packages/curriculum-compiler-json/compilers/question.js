@@ -18,7 +18,7 @@ module.exports = function question(section, type) {
   return {
     [type]: {
       rawText,
-      q,
+      question: q,
       answers,
     },
   };
