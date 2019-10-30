@@ -3,14 +3,14 @@ const {
   getAnswersFromNode,
 } = require('./helpers');
 
-module.exports = function question(node, type) {
-  if (!node.question) {
-    throw new Error(`Invalid question section ${node.name}`);
+module.exports = function question(section, type) {
+  if (!section.question) {
+    throw new Error(`Invalid question section ${section.name}`);
   }
-  const rawText = compileNodeToQuestionMarkdown(node);
-  const answers = getAnswersFromNode(node);
+  const rawText = compileNodeToQuestionMarkdown(section);
+  const answers = getAnswersFromNode(section);
   const q = compileNodeToQuestionMarkdown({
-    children: node.children.filter(
+    children: section.children.filter(
       child => child.type !== 'list' && !child.answers
     ),
   });
@@ -18,7 +18,7 @@ module.exports = function question(node, type) {
   return {
     [type]: {
       rawText,
-      question: q,
+      q,
       answers,
     },
   };

@@ -4,18 +4,26 @@ const {
   compileNodeToMarkdown,
 } = require('./helpers');
 
-module.exports = function quiz(node) {
-  const rawText = compileNodeToQuestionMarkdown(node);
+module.exports = function quiz(section) {
+  if (!section.question) {
+    throw new Error(`Invalid question section ${section.name}`);
+  }
+  const rawText = compileNodeToQuestionMarkdown(section);
+
   const headline = compileNodeToMarkdown(
-    node.children.find(child => child.type === 'questionHeadline')
+    section.children.find(child => child.type === 'questionHeadline')
   )
     .split('\n')
     .join('');
-  const answers = getAnswersFromNode(node);
+
+  const answers = getAnswersFromNode(section);
 
   const question = compileNodeToQuestionMarkdown({
-    children: node.children.filter(
-      child => child.type !== 'questionHeadline' && !child.answers
+    children: section.children.filter(
+      child =>
+        child.type !== 'questionHeadline' &&
+        child.type !== 'list' &&
+        !child.answers
     ),
   });
 
