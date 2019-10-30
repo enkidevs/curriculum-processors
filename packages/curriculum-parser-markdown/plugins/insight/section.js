@@ -15,8 +15,8 @@ module.exports = function section() {
       if (
         !(
           current.type === 'thematicBreak' &&
-          (next || {}).type === 'heading' &&
-          (next || {}).depth === 2
+          (next || { type: '' }).type === 'heading' &&
+          (next || { depth: NaN }).depth === 2
         )
       ) {
         if (sec) {

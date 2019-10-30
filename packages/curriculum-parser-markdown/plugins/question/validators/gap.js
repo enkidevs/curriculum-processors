@@ -9,7 +9,10 @@ module.exports = function validateQuestionGap() {
   }
 
   function isQuestionSection(node) {
-    return (node.type === 'section' && node.question) || node.type === 'root';
+    return (
+      (node.type === 'section' && node.question) ||
+      (node.type === 'root' && node.children.some(child => child.answers))
+    );
   }
 
   function validate(section) {
