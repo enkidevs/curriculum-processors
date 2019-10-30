@@ -76,9 +76,9 @@ const json = {
   },
   quiz: {
     rawText:
-      '### Quiz title\n\n\nSample quiz question\n\n* correct\n* *incorrect*\n* not a `chance`\n* nope\n',
+      '### Quiz title\n\n\nSample quiz question\n\n???\n* correct\n* *incorrect*\n* not a `chance`\n* nope\n',
     headline: 'Quiz title',
-    question: 'Sample quiz question\n',
+    question: 'Sample quiz question',
     answers: [
       {
         text: 'correct',

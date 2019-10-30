@@ -19,11 +19,9 @@
     ]
   },
   "headline": "Sample title with `code` within",
-  "content":
-    "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n* item one\n* item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
+  "content": "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n* item one\n* item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
   "practice": {
-    "rawText":
-      "This is a sample question with one gap:\n\n???\n\n* correct\n* incorrect\n* not a chance\n",
+    "rawText": "This is a sample question with one gap:\n\n???\n\n* correct\n* incorrect\n* not a chance\n",
     "question": "This is a sample question with one gap:\n\n???\n",
     "answers": [
       {
@@ -44,8 +42,7 @@
     ]
   },
   "revision": {
-    "rawText":
-      "This is a sample question with two gaps:\n\n???\n\n???\n\n* correct\n* also correct\n* nah bro\n* fam, just no\n",
+    "rawText": "This is a sample question with two gaps:\n\n???\n\n???\n\n* correct\n* also correct\n* nah bro\n* fam, just no\n",
     "question": "This is a sample question with two gaps:\n\n???\n\n???\n",
     "answers": [
       {
@@ -71,10 +68,9 @@
     ]
   },
   "quiz": {
-    "rawText":
-      "### Quiz title\n\n\nSample quiz question\n\n* correct\n* *incorrect*\n* not a `chance`\n* nope\n",
+    "rawText": "### Quiz title\n\n\nSample quiz question\n\n???\n* correct\n* *incorrect*\n* not a `chance`\n* nope\n",
     "headline": "Quiz title",
-    "question": "Sample quiz question\n",
+    "question": "Sample quiz question",
     "answers": [
       {
         "text": "correct",
@@ -99,8 +95,7 @@
     ]
   },
   "footnotes": {
-    "rawText":
-      "[1: Paragraph]\nSample explanation\n\n[2: List]\nSample list\n\n[3: Code]\nSample code\n\n```javascript\nvar x = 10\n```\n",
+    "rawText": "[1: Paragraph]\nSample explanation\n\n[2: List]\nSample list\n\n[3: Code]\nSample code\n\n```javascript\nvar x = 10\n```\n",
     "items": [
       {
         "number": "1",
