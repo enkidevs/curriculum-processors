@@ -47,7 +47,6 @@
       "npm run check-branch",
       "npm run format",
       "npm run lint",
-      "npm run test",
       "git add"
     ]
   }
