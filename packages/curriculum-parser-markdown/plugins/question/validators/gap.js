@@ -23,6 +23,7 @@ module.exports = function validateQuestionGap() {
     });
 
     if (questionGapCount === 0) {
+      console.log(JSON.stringify(section));
       throw new Error(
         `${section.name} question does not have any question gaps.`
       );
