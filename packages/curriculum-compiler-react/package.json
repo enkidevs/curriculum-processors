@@ -29,6 +29,6 @@
     "remark-rehype": "^5.0.0",
     "unified": "^8.4.1",
     "unist-builder": "^2.0.0",
-    "unist-util-map": "^1.0.3"
+    "unist-util-map": "^2.0.0"
   }
 }
