@@ -29,7 +29,7 @@
     "@enkidevs/curriculum-compiler-string": "^4.0.0",
     "@enkidevs/curriculum-helpers": "^4.0.0",
     "unist-builder": "^2.0.0",
-    "unist-util-assert": "^1.0.3"
+    "unist-util-assert": "^2.0.0"
   },
   "publishConfig": {
     "access": "public"
