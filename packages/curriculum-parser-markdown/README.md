@@ -63,8 +63,6 @@ Yields:
 }
 ```
 
-There can only be `1` [`Headline`](#headline) node per [`Insight`](#insight). This is checked by the [`headline`](https://github.com/enkidevs/curriculum-processors/blob/master/packages/curriculum-parser-markdown/plugins/insight/validators/headline.js) validator.
-
 ### `Image`
 
 `Image` ([`UnistNode`](https://github.com/syntax-tree/unist#node)) inherits from [`MDASTImage`](https://github.com/syntax-tree/mdast/blob/master/readme.md#heading).
@@ -212,8 +210,6 @@ Yields:
     }
 }
 ```
-
-There can only be `1` [`YAML`](#yaml) metadata node per [`Insight`](#insight). This is checked by the [`yaml`](https://github.com/enkidevs/curriculum-processors/blob/master/packages/curriculum-parser-markdown/plugins/insight/validators/yaml.js) validator.
 
 ## Question
 

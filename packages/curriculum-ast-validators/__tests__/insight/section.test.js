@@ -1,7 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const { contentTypes } = require('@enkidevs/curriculum-helpers');
-const { getParser } = require('../../index');
+const { getParser } = require('@enkidevs/curriculum-parser-markdown');
+const { getValidator, getSafeValidator } = require('../../');
 
 describe('Fail insight section parsing', () => {
   describe('Fail for insights with wrong section name', () => {
@@ -11,7 +12,6 @@ describe('Fail insight section parsing', () => {
         '../',
         'fixtures',
         'insight',
-        'error',
         'invalid-section-name.md'
       ),
       'utf8'
@@ -23,17 +23,17 @@ describe('Fail insight section parsing', () => {
       parser = getParser(contentTypes.INSIGHT);
     });
 
-    test('parseSync should throw on invalid section name', () => {
+    test('validator should throw on invalid section name', () => {
       expect(() => {
-        parser.parseSync(text);
+        const ast = parser.parseSync(text);
+        getValidator(contentTypes.INSIGHT).section(ast);
       }).toThrow(/Section name "[\s\S]*" is invalid/);
     });
 
-    test('parse should throw on invalid section name', async () => {
-      expect.assertions(1);
-      await expect(parser.parse(text)).rejects.toThrow(
-        /Section name "[\s\S]*" is invalid/
-      );
+    test('safeValidator should return error on invalid section name', () => {
+      const ast = parser.parseSync(text);
+      const error = getSafeValidator(contentTypes.INSIGHT).section(ast);
+      expect(error.message).toMatch(/Section name "[\s\S]*" is invalid/);
     });
   });
 });

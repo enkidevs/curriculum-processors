@@ -1,2 +1,5 @@
 extends:
   - '@enkidevs/eslint-config-backend'
+rules:
+  no-param-reassign: 'off'
+  security/detect-non-literal-fs-filename: 'off' # because we use fs.readFileSync in tests
