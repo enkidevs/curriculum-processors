@@ -1,12 +1,7 @@
 const visit = require('unist-util-visit');
 
-module.exports = function validateQuestionAnswers() {
-  return transform;
-
-  function transform(ast) {
-    visit(ast, isQuestionSection, validate);
-    return ast;
-  }
+module.exports = function validateQuestionAnswers(ast) {
+  visit(ast, isQuestionSection, validate);
 
   function isQuestionSection(node) {
     return (

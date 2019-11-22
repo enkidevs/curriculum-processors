@@ -1,0 +1,47 @@
+{
+  "name": "curriculum-ast-validators",
+  "version": "1.0.0",
+  "description": "Validators for Enki Curriculum AST",
+  "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "test:watch": "jest --watchAll",
+    "test": "jest --coverage --notify",
+    "test:regex": "npm test -- regexToMatchFile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkidevs/curriculum-processors.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enkidevs/curriculum-processors/issues"
+  },
+  "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "keywords": [
+    "enki",
+    "curriculum",
+    "validate",
+    "ast"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    "insight",
+    "question"
+  ],
+  "dependencies": {
+    "@enkidevs/curriculum-helpers": "^4.0.0",
+    "js-yaml": "^3.13.1",
+    "unist-util-visit": "^2.0.0"
+  },
+  "devDependencies": {
+    "@enkidevs/curriculum-parser-markdown": "^5.1.0",
+    "jest": "^24.9.0"
+  }
+}
