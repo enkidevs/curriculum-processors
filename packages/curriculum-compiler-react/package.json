@@ -30,5 +30,6 @@
     "unified": "^8.4.1",
     "unist-builder": "^2.0.0",
     "unist-util-map": "^2.0.0"
-  }
+  },
+  "gitHead": "1192d1e5ba56a820ca3c042b316f03961b29dd8d"
 }

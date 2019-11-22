@@ -44,5 +44,6 @@
     "jest": "^24.5.0",
     "jest-in-case": "^1.0.2",
     "jsonfile": "^5.0.0"
-  }
+  },
+  "gitHead": "1192d1e5ba56a820ca3c042b316f03961b29dd8d"
 }
