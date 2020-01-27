@@ -41,7 +41,7 @@
     "unist-builder": "^2.0.0"
   },
   "devDependencies": {
-    "jest": "^24.5.0",
+    "jest": "^25.1.0",
     "jest-in-case": "^1.0.2",
     "jsonfile": "^5.0.0"
   },

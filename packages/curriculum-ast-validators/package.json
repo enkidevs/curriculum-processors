@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@enkidevs/curriculum-parser-markdown": "^6.0.2",
-    "jest": "^24.9.0"
+    "jest": "^25.1.0"
   },
   "gitHead": "a4ce08a6e24ea21b50daa67a1af518ff55fec34a"
 }
