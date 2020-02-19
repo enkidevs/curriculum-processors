@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-compiler-react",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Compiles Enki Curriculum AST into a React tree",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",

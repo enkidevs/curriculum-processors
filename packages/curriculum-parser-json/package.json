@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-parser-json",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "Parses Enki Curriculum JSON into an AST",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
@@ -35,8 +35,8 @@
     "parsers"
   ],
   "dependencies": {
-    "@enkidevs/curriculum-helpers": "^5.0.2",
-    "@enkidevs/curriculum-parser-markdown": "^6.0.2",
+    "@enkidevs/curriculum-helpers": "^5.0.3",
+    "@enkidevs/curriculum-parser-markdown": "^6.0.3",
     "js-yaml": "^3.13.0",
     "unist-builder": "^2.0.0"
   },
