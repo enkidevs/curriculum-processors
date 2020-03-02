@@ -42,7 +42,7 @@
   "devDependencies": {
     "jest": "^25.1.0",
     "jest-in-case": "^1.0.2",
-    "jsonfile": "^5.0.0"
+    "jsonfile": "^6.0.0"
   },
   "gitHead": "a4ce08a6e24ea21b50daa67a1af518ff55fec34a"
 }
