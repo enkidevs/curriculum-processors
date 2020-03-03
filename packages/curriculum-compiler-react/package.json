@@ -23,7 +23,7 @@
     "index.js"
   ],
   "dependencies": {
-    "hast-to-hyperscript": "^7.0.2",
+    "hast-to-hyperscript": "^8.0.0",
     "mdast-util-to-hast": "^8.0.0",
     "react": "^16.8.5",
     "remark-rehype": "^5.0.0",
