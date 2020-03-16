@@ -1,12 +1,7 @@
 /* eslint-disable no-console */
 const { contentTypes } = require('@enkidevs/curriculum-helpers');
 const { getParser } = require('@enkidevs/curriculum-parser-markdown');
-const {
-  getValidator,
-  getSafeValidator,
-  validate,
-  validateSafe,
-} = require('./');
+const { getValidator, getSafeValidator, validate, validateSafe } = require('.');
 
 const ast = getParser(contentTypes.INSIGHT).parseSync('# Missing YAML config');
 
