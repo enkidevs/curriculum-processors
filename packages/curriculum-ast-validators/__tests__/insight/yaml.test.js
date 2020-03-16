@@ -6,7 +6,7 @@ const {
   insightCategories,
 } = require('@enkidevs/curriculum-helpers');
 const { getParser } = require('@enkidevs/curriculum-parser-markdown');
-const { getValidator } = require('../../');
+const { getValidator } = require('../..');
 
 describe('Fail insight yaml parsing', () => {
   describe('Fail for insights with missing yaml configuration', () => {

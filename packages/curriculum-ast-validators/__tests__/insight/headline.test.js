@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const { contentTypes } = require('@enkidevs/curriculum-helpers');
 const { getParser } = require('@enkidevs/curriculum-parser-markdown');
-const { getValidator, getSafeValidator } = require('../../');
+const { getValidator, getSafeValidator } = require('../..');
 
 describe('Fail insight headline parsing', () => {
   describe('Fail for insights with missing headline', () => {

@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const { contentTypes } = require('@enkidevs/curriculum-helpers');
 const { getParser } = require('@enkidevs/curriculum-parser-markdown');
-const { getValidator } = require('../../');
+const { getValidator } = require('../..');
 
 describe('Fail insight question parsing', () => {
   describe('Fail for questions with invalid question answers', () => {
