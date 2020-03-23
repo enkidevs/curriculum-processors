@@ -10,12 +10,12 @@ const fixturePath = (dir, name) =>
 
 jestInCase(
   'Insight AST to String Compilation (Sync)',
-  fixture => {
+  (fixture) => {
     const compiler = getCompiler(contentTypes.INSIGHT);
     const str = compiler.compileSync(fixture.ast);
     expect(str).toEqual(fixture.stringified);
   },
-  ['sample'].map(dir => ({
+  ['sample'].map((dir) => ({
     stringified: fs.readFileSync(fixturePath(dir, 'stringified.md'), 'utf8'),
     ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))

@@ -29,16 +29,16 @@ function createAst(children) {
 
 function getSectionNames(json) {
   return Object.values(sectionNames)
-    .filter(name => !['Game Content'].includes(name))
-    .map(sectionName => sectionName.toLowerCase())
-    .filter(sectionName => Boolean(json[sectionName]));
+    .filter((name) => !['Game Content'].includes(name))
+    .map((sectionName) => sectionName.toLowerCase())
+    .filter((sectionName) => Boolean(json[sectionName]));
 }
 
 function buildChildrenSync(json) {
   return [
     yaml.parseSync(json),
     headline.parseSync(json),
-    ...getSectionNames(json).map(sectionName => {
+    ...getSectionNames(json).map((sectionName) => {
       const sectionParser = getSectionParser(sectionName);
       return sectionParser.parseSync(sectionName, json[sectionName]);
     }),
@@ -49,7 +49,7 @@ async function buildChildren(json) {
   return Promise.all([
     yaml.parse(json),
     headline.parse(json),
-    ...getSectionNames(json).map(sectionName => {
+    ...getSectionNames(json).map((sectionName) => {
       const sectionParser = getSectionParser(sectionName);
       return sectionParser.parse(sectionName, json[sectionName]);
     }),

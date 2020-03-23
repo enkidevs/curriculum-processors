@@ -16,18 +16,18 @@ module.exports = function questionCode() {
   function parseQuestionCode(node) {
     Object.assign(node, {
       type: 'questionCode',
-      children: node.value.split('\n').map(line =>
+      children: node.value.split('\n').map((line) =>
         u(
           'questionCodeLine',
           undefined,
           line
             .split(/(\?{3})/) // split using a group so we also capture ???
-            .map(chunk =>
+            .map((chunk) =>
               chunk === '???'
                 ? u('questionGap', undefined, '???')
                 : u('questionCodeSegment', { lang: node.lang }, chunk)
             )
-            .filter(n => Boolean(n.value)) // eliminate empty string nodes
+            .filter((n) => Boolean(n.value)) // eliminate empty string nodes
             .reduce((lineChildren, curr, i) => {
               const prev = lineChildren[i - 1];
               if (prev && prev.type === 'text' && prev.type === curr.type) {

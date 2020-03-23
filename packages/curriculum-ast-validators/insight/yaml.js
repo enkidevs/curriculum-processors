@@ -9,7 +9,7 @@ module.exports = function validateYaml(ast) {
   let yamlNodeCount = 0;
   let yamlNode;
 
-  visit(ast, 'yaml', node => {
+  visit(ast, 'yaml', (node) => {
     yamlNodeCount += 1;
     yamlNode = node;
   });
@@ -23,7 +23,7 @@ module.exports = function validateYaml(ast) {
   const parsedValue = jsYaml.safeLoad(yamlNode.value, 'utf8');
 
   const invalidAspects = parsedValue.aspects.filter(
-    aspect => !insightAspects.includes(aspect)
+    (aspect) => !insightAspects.includes(aspect)
   );
 
   if (invalidAspects.length > 0) {
@@ -36,8 +36,9 @@ module.exports = function validateYaml(ast) {
 
   if (!insightCategories.includes(parsedValue.category)) {
     throw new Error(
-      `Invalid insight category "${parsedValue.category ||
-        ''}". Must be one of "${insightCategories.join('", "')}"`
+      `Invalid insight category "${
+        parsedValue.category || ''
+      }". Must be one of "${insightCategories.join('", "')}"`
     );
   }
 };

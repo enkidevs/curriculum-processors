@@ -10,12 +10,12 @@ const fixturePath = (dir, name) =>
 
 jestInCase(
   'Question AST to String Compilation (Sync)',
-  fixture => {
+  (fixture) => {
     const compiler = getCompiler(contentTypes.QUESTION);
     const str = compiler.compileSync(fixture.ast);
     expect(str).toEqual(fixture.stringified);
   },
-  ['code', 'quiz'].map(dir => ({
+  ['code', 'quiz'].map((dir) => ({
     stringified: fs.readFileSync(fixturePath(dir, 'stringified.md'), 'utf8'),
     ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))

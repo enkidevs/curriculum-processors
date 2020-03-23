@@ -10,12 +10,12 @@ const fixturePath = (dir, name) =>
 
 jestInCase(
   'Insight Markdown to AST (Sync)',
-  fixture => {
+  (fixture) => {
     const parser = getParser(contentTypes.INSIGHT);
     const ast = parser.parseSync(fixture.text);
     expect(JSON.parse(JSON.stringify(compactAst(ast)))).toEqual(fixture.ast);
   },
-  ['sample'].map(dir => ({
+  ['sample'].map((dir) => ({
     text: fs.readFileSync(fixturePath(dir, 'text.md'), 'utf8'),
     ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))

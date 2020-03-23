@@ -36,7 +36,7 @@ function questionHeadline() {
   return transform;
 
   function transform(ast) {
-    return map(ast, node => {
+    return map(ast, (node) => {
       if (node.type === 'questionHeadline') {
         return {
           ...node,
@@ -55,7 +55,7 @@ function questionCode() {
   return transform;
 
   function transform(ast) {
-    return map(ast, node => {
+    return map(ast, (node) => {
       if (node.type === 'questionCode') {
         return {
           ...node,
@@ -103,7 +103,7 @@ function questionGap() {
   return transform;
 
   function transform(ast) {
-    return map(ast, node => {
+    return map(ast, (node) => {
       if (node.type === 'questionGap') {
         return {
           ...node,
@@ -123,13 +123,13 @@ function questionAnswers() {
   return transform;
 
   function transform(ast) {
-    return map(ast, node => {
+    return map(ast, (node) => {
       if (node.type === 'list' && node.answers) {
         const answers = {
           ...node,
           data: {
             hName: 'QuestionAnswers',
-            hChildren: node.children.map(answer =>
+            hChildren: node.children.map((answer) =>
               mdastToHast({
                 ...answer,
                 data: {

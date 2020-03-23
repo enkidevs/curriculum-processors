@@ -10,7 +10,7 @@ const fixturePath = (dir, name) =>
 
 jestInCase(
   'Question Markdown to AST (Sync)',
-  fixture => {
+  (fixture) => {
     const parser = getParser(contentTypes.QUESTION);
     const ast = parser.parseSync(fixture.text);
     expect(JSON.parse(JSON.stringify(compactAst(ast)))).toEqual(fixture.ast);
@@ -20,7 +20,7 @@ jestInCase(
     'code-with-multiple-horizontal-question-gaps',
     'code-with-multiple-vertical-question-gaps',
     'quiz',
-  ].map(dir => ({
+  ].map((dir) => ({
     text: fs.readFileSync(fixturePath(dir, 'text.md'), 'utf8'),
     ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))
