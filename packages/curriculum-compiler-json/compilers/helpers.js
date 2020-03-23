@@ -23,14 +23,14 @@ const compileNodeToQuestionMarkdown = getAstCompiler(questionCompiler);
 
 function getAnswersFromNode(node) {
   const answersASTList = node.children.find(
-    child => child.type === 'list' && child.answers
+    (child) => child.type === 'list' && child.answers
   );
   if (!answersASTList || !answersASTList.children) {
     throw new Error('No valid answer list in question node');
   }
 
   let tempCorrectIndex = 0;
-  return answersASTList.children.map(answerNode => ({
+  return answersASTList.children.map((answerNode) => ({
     text: compileNodeToMarkdown(answerNode).replace('\n', ''),
     correct: answerNode.correct,
     // eslint-disable-next-line no-plusplus

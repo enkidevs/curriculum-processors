@@ -47,32 +47,32 @@ const insightSafeValidator = Object.keys(insightValidator).reduce(
 );
 
 module.exports = {
-  validate: type => {
+  validate: (type) => {
     switch (type) {
       case contentTypes.INSIGHT:
-        return ast =>
-          Object.values(insightValidator).forEach(validator => {
+        return (ast) =>
+          Object.values(insightValidator).forEach((validator) => {
             if (typeof validator === 'function') {
               validator(ast);
             } else {
-              Object.values(validator).forEach(nestedValidator => {
+              Object.values(validator).forEach((nestedValidator) => {
                 nestedValidator(ast);
               });
             }
           });
       case contentTypes.QUESTION:
-        return ast =>
-          Object.values(questionValidator).forEach(validator => {
+        return (ast) =>
+          Object.values(questionValidator).forEach((validator) => {
             validator(ast);
           });
       default:
         throw Error(`Unsupported type ${type}`);
     }
   },
-  validateSafe: type => {
+  validateSafe: (type) => {
     switch (type) {
       case contentTypes.INSIGHT:
-        return ast =>
+        return (ast) =>
           Object.values(insightSafeValidator).reduce((errors, validator) => {
             if (typeof validator === 'function') {
               const error = validator(ast);
@@ -80,7 +80,7 @@ module.exports = {
                 errors.push(error);
               }
             } else {
-              Object.values(validator).forEach(nestedValidator => {
+              Object.values(validator).forEach((nestedValidator) => {
                 const error = nestedValidator(ast);
                 if (error) {
                   errors.push(error);
@@ -90,7 +90,7 @@ module.exports = {
             return errors;
           }, []);
       case contentTypes.QUESTION:
-        return ast =>
+        return (ast) =>
           Object.values(questionSafeValidator).reduce((errors, validator) => {
             const error = validator(ast);
             if (error) {
@@ -102,7 +102,7 @@ module.exports = {
         throw Error(`Unsupported type ${type}`);
     }
   },
-  getValidator: type => {
+  getValidator: (type) => {
     switch (type) {
       case contentTypes.INSIGHT:
         return insightValidator;
@@ -112,7 +112,7 @@ module.exports = {
         throw Error(`Unsupported type ${type}`);
     }
   },
-  getSafeValidator: type => {
+  getSafeValidator: (type) => {
     switch (type) {
       case contentTypes.INSIGHT:
         return insightSafeValidator;

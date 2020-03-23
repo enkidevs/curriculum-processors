@@ -12,7 +12,7 @@ console.error(`${error.message}\n\n`);
 
 // safely validate an entire insight
 const errors = validateSafe(contentTypes.INSIGHT)(ast);
-console.error(`[${errors.map(e => e.message)}]\n\n`);
+console.error(`[${errors.map((e) => e.message)}]\n\n`);
 // ["Must have exactly 1 yaml configuration but found 0 instead"]
 
 // strictly validate any insight property

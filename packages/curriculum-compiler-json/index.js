@@ -11,25 +11,25 @@ const {
 } = compilers.helpers;
 
 const nodeSectionMap = {
-  [sectionNames.CONTENT]: node => ({
+  [sectionNames.CONTENT]: (node) => ({
     content: compileNodeToMarkdown(node),
   }),
-  [sectionNames.GAME_CONTENT]: node => ({
+  [sectionNames.GAME_CONTENT]: (node) => ({
     gameContent: compileNodeToInsightMarkdown(node),
   }),
-  [sectionNames.PRACTICE]: node =>
+  [sectionNames.PRACTICE]: (node) =>
     compilers.question(node, questionTypes.PRACTICE),
-  [sectionNames.REVISION]: node =>
+  [sectionNames.REVISION]: (node) =>
     compilers.question(node, questionTypes.REVISION),
-  [sectionNames.EXERCISE]: node => compilers.exercise(node),
-  [sectionNames.QUIZ]: node => compilers.quiz(node),
-  [sectionNames.FOOTNOTES]: node => compilers.footnotes(node),
+  [sectionNames.EXERCISE]: (node) => compilers.exercise(node),
+  [sectionNames.QUIZ]: (node) => compilers.quiz(node),
+  [sectionNames.FOOTNOTES]: (node) => compilers.footnotes(node),
 };
 
 const nodeTypeMap = {
-  yaml: node => compilers.metadata(node),
-  headline: node => compilers.headline(node),
-  section: node => {
+  yaml: (node) => compilers.metadata(node),
+  headline: (node) => compilers.headline(node),
+  section: (node) => {
     if (!node.name) {
       throw new Error(`Invalid section node with no name`);
     }
@@ -72,7 +72,7 @@ function compileQuestion(ast) {
   const questionAst = { ...ast };
 
   const [heading] = questionAst.children.splice(
-    questionAst.children.findIndex(node => node.type === 'heading'),
+    questionAst.children.findIndex((node) => node.type === 'heading'),
     1
   );
 

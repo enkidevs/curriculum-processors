@@ -27,9 +27,7 @@ function getCompiler(type) {
   }
 
   function compileSync(ast) {
-    return unified()
-      .use(getPlugins(type))
-      .stringify(ast);
+    return unified().use(getPlugins(type)).stringify(ast);
   }
 
   return {

@@ -11,7 +11,7 @@ module.exports = function yaml() {
           const { links } = node.data.parsedValue;
           if (Array.isArray(links)) {
             node.data.parsedValue.links = links.map(
-              link => `[${link.name}](${link.url}){${link.nature}}`
+              (link) => `[${link.name}](${link.url}){${link.nature}}`
             );
           }
           const yml = jsYaml.safeDump(node.data.parsedValue);

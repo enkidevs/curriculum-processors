@@ -18,9 +18,6 @@
     "url": "https://github.com/enkidevs/curriculum-processors/issues"
   },
   "homepage": "https://github.com/enkidevs/curriculum-processors#readme",
-  "engines": {
-    "node": ">=8.10.0"
-  },
   "keywords": [
     "enki",
     "curriculum",

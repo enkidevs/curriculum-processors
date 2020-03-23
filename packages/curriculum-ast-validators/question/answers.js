@@ -6,13 +6,13 @@ module.exports = function validateQuestionAnswers(ast) {
   function isQuestionSection(node) {
     return (
       (node.type === 'section' && node.question) ||
-      (node.type === 'root' && node.children.some(child => child.answers))
+      (node.type === 'root' && node.children.some((child) => child.answers))
     );
   }
 
   function validate(section) {
     const answers = section.children.find(
-      child => child.type === 'list' && child.answers
+      (child) => child.type === 'list' && child.answers
     );
 
     if (!answers) {
@@ -24,7 +24,7 @@ module.exports = function validateQuestionAnswers(ast) {
     }
 
     const sectionChildrenWithoutAnswers = section.children.filter(
-      child => child !== answers
+      (child) => child !== answers
     );
 
     let questionGapCount = 0;
@@ -41,7 +41,7 @@ module.exports = function validateQuestionAnswers(ast) {
     );
 
     const correctAnswersCount = answers.children.filter(
-      listItem => listItem.correct
+      (listItem) => listItem.correct
     ).length;
 
     if (questionGapCount !== correctAnswersCount) {

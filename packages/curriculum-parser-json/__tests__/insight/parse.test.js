@@ -9,12 +9,12 @@ const fixturePath = (dir, name) =>
 
 jestInCase(
   'Insight JSON to AST Parsing (Async)',
-  async fixture => {
+  async (fixture) => {
     const parser = getParser(contentTypes.INSIGHT);
     const ast = await parser.parse(fixture.input);
     expect(JSON.parse(JSON.stringify(compactAst(ast)))).toEqual(fixture.ast);
   },
-  ['sample'].map(dir => ({
+  ['sample'].map((dir) => ({
     input: jsonfile.readFileSync(fixturePath(dir, 'input.json')),
     ast: jsonfile.readFileSync(fixturePath(dir, 'ast.json')),
   }))
