@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-parser-markdown",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Parses Enki Curriculum markdown into an AST",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
@@ -32,7 +32,7 @@
     "plugins"
   ],
   "dependencies": {
-    "@enkidevs/curriculum-helpers": "^7.0.0",
+    "@enkidevs/curriculum-helpers": "^7.0.1",
     "decode-uri-component": "^0.2.0",
     "js-yaml": "^3.13.0",
     "remark-frontmatter": "^2.0.0",
