@@ -1,10 +1,7 @@
 {
   "metadata": {
     "author": "milesflo",
-    "levels": [
-      "beginner",
-      "basic"
-    ],
+    "levels": ["beginner", "basic"],
     "type": "exercise",
     "link": "https://www.codewars.com/kata/classy-classes",
     "linkType": "codewars",
@@ -21,7 +18,9 @@
       }
     ]
   },
-  "headline": "JS Practice `this`",
+  "headline": {
+    "rawText": "JS Practice `this`"
+  },
   "exercise": {
     "rawText": "Explore the `this` operator in JavaScript with Constructor functions\n",
     "question": "Explore the `this` operator in JavaScript with Constructor functions\n"
