@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-parser-markdown",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "Parses Enki Curriculum markdown into an AST",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
