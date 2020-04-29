@@ -12,7 +12,9 @@ const {
 
 const nodeSectionMap = {
   [sectionNames.CONTENT]: (node) => ({
-    content: compileNodeToMarkdown(node),
+    content: {
+      rawText: compileNodeToMarkdown(node),
+    },
   }),
   [sectionNames.GAME_CONTENT]: (node) => ({
     gameContent: compileNodeToInsightMarkdown(node),
