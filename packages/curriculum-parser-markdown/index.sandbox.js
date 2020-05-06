@@ -34,11 +34,11 @@ aspects:
 ---
 ## Content
 
-The ledger, or better said "the transaction-based ledger", is a blockchain's *log of transactions*. As with any other ledger, the transacted object must be **uniquely identifiable**, under one form or another. Bitcoin, like most of the other blockchains, are gravitating around their only asset - the cryptocoin. Hence, the Bitcoin ledger will record bitcoin transactions.
+The ledger, or better said "the transaction-based ledger"[1], is a blockchain's *log of transactions*. As with any other ledger, the transacted object must be **uniquely identifiable**, under one form or another. Bitcoin, like most of the other blockchains, are gravitating around their only asset - the cryptocoin. Hence, the Bitcoin ledger will record bitcoin transactions.
              	
 Other types of ledgers include an account-based ledger, used by the [Ethereum blockchain](enki-glossary://ethereum), or a combination of the two, used by the QTUM blockchain.
              	
-### Why are most blockchains built around coins?[1]
+### Why are most blockchains built around coins?[2]
              	
 Digital coins are easier to track. We cannot necessarily link one coin to an actual person, but we can track their movement. Digital coins (similar to any other currency) are commonly accepted as a mean to evaluate services, items, shares, etc. and it is in developers interest to also release a token.
              	
@@ -65,7 +65,10 @@ Unlike physical ledgers, if a transaction ever took place, there is no way of hi
 ---
 ## Footnotes
 
-[1: Test Footnote]
+[1: First footnote]
+Try me out bro. What **not** and _test_
+
+[2: Test Footnote]
 This should get into:
 \`\`\`javascript
 the footnote[1]
@@ -81,9 +84,9 @@ Identify a valid blockchain operation from the list below:
 ???
              	
 * \`Append data\`
-* Modify data
-* Remove data
-* Update data
+* >
+* <
+* &
 
 ---
 ## Revision

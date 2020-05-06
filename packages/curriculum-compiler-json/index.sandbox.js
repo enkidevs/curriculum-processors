@@ -42,7 +42,23 @@ const ast = {
             {
               type: 'text',
               value:
-                'The ledger, or better said "the transaction-based ledger", is a blockchain\'s ',
+                'The ledger, or better said "the transaction-based ledger"',
+            },
+            {
+              type: 'linkReference',
+              identifier: '1',
+              label: '1',
+              referenceType: 'shortcut',
+              children: [
+                {
+                  type: 'text',
+                  value: '1',
+                },
+              ],
+            },
+            {
+              type: 'text',
+              value: ", is a blockchain's ",
             },
             {
               type: 'emphasis',
@@ -70,7 +86,7 @@ const ast = {
             {
               type: 'text',
               value:
-                ', under one form or another. Bitcoin, like most of the other blockchains, are gravitating around their only asset - the cryptocoin. Hence, the Bitcoin ledger will record bitcoin transactions.',
+                ', under one form or another. Bitcoin, random <, >, &amp; like most of the other blockchains, are gravitating around their only asset - the cryptocoin. Hence, the Bitcoin ledger will record bitcoin transactions.',
             },
           ],
         },
@@ -80,7 +96,26 @@ const ast = {
             {
               type: 'text',
               value:
-                'Other types of ledgers include an account-based ledger, used by the Ethereum blockchain, or a combination of the two, used by the QTUM blockchain.',
+                'Other types of ledgers include an account-based ledger, used by the ',
+            },
+            {
+              type: 'link',
+              title: null,
+              url: 'enki-glossary://ethereum',
+              children: [
+                {
+                  type: 'text',
+                  value: 'Ethereum blockchain',
+                },
+              ],
+              isInternal: true,
+              context: 'glossary',
+              path: ['ethereum'],
+            },
+            {
+              type: 'text',
+              value:
+                ', or a combination of the two, used by the QTUM blockchain.',
             },
           ],
         },
@@ -94,13 +129,13 @@ const ast = {
             },
             {
               type: 'linkReference',
-              identifier: '1',
-              label: '1',
+              identifier: '2',
+              label: '2',
               referenceType: 'shortcut',
               children: [
                 {
                   type: 'text',
-                  value: '1',
+                  value: '2',
                 },
               ],
             },
@@ -134,7 +169,6 @@ const ast = {
               url:
                 '%3Csvg%20width%3D%22100%25%22%20height%3D%22auto%22%20viewBox%3D%220%200%20320%20248%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EGroup%204%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Crect%20fill%3D%22%23FFF%22%20fill-rule%3D%22nonzero%22%20width%3D%22320%22%20height%3D%22248%22%20rx%3D%229%22%2F%3E%3Cg%20transform%3D%22translate%2828%2069%29%22%3E%3Ccircle%20stroke%3D%22%230058DE%22%20stroke-width%3D%225%22%20cx%3D%2238.5%22%20cy%3D%2238.5%22%20r%3D%2238.5%22%2F%3E%3Ctext%20font-family%3D%22Roboto-Bold%2C%20Roboto%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23000%22%3E%3Ctspan%20x%3D%2231%22%20y%3D%2229%22%3EX%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M19.599%2032.25h37.14%22%20stroke%3D%22%238CBAFF%22%20stroke-width%3D%22.5%22%20stroke-linecap%3D%22square%22%2F%3E%3Ctext%20font-family%3D%22Roboto-Light%2C%20Roboto%22%20font-size%3D%2214%22%20font-weight%3D%22300%22%3E%3Ctspan%20x%3D%2219.062%22%20y%3D%2248%22%20fill%3D%22%23000%22%3EHas%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2243.521%22%20y%3D%2248%22%20font-family%3D%22Roboto-Regular%2C%20Roboto%22%20font-weight%3D%22normal%22%20fill%3D%22%23000%22%3E%20%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2247.048%22%20y%3D%2248%22%20font-family%3D%22Roboto-Medium%2C%20Roboto%22%20font-weight%3D%22400%22%20fill%3D%22%23649AEB%22%3EA%3C%2Ftspan%3E%20%20%3Ctspan%20x%3D%2212%22%20y%3D%2261%22%20fill%3D%22%23000%22%3EWants%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2251.067%22%20y%3D%2261%22%20font-family%3D%22Roboto-Regular%2C%20Roboto%22%20font-weight%3D%22normal%22%20fill%3D%22%23000%22%3E%20%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2254.595%22%20y%3D%2261%22%20font-family%3D%22Roboto-Medium%2C%20Roboto%22%20font-weight%3D%22400%22%20fill%3D%22%236198EE%22%3EB%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28219%2021%29%22%3E%3Ccircle%20stroke%3D%22%230058DE%22%20stroke-width%3D%225%22%20cx%3D%2238.5%22%20cy%3D%2238.5%22%20r%3D%2238.5%22%2F%3E%3Ctext%20font-family%3D%22Roboto-Bold%2C%20Roboto%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23000%22%3E%3Ctspan%20x%3D%2231%22%20y%3D%2229%22%3EY%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M19.599%2032.25h37.14%22%20stroke%3D%22%238CBAFF%22%20stroke-width%3D%22.5%22%20stroke-linecap%3D%22square%22%2F%3E%3Ctext%20font-family%3D%22Roboto-Light%2C%20Roboto%22%20font-size%3D%2214%22%20font-weight%3D%22300%22%3E%3Ctspan%20x%3D%2219.458%22%20y%3D%2248%22%20fill%3D%22%23000%22%3EHas%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2243.917%22%20y%3D%2248%22%20font-family%3D%22Roboto-Regular%2C%20Roboto%22%20font-weight%3D%22normal%22%20fill%3D%22%23000%22%3E%20%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2247.444%22%20y%3D%2248%22%20font-family%3D%22Roboto-Medium%2C%20Roboto%22%20font-weight%3D%22400%22%20fill%3D%22%23649AEB%22%3EB%3C%2Ftspan%3E%20%20%3Ctspan%20x%3D%2212%22%20y%3D%2261%22%20fill%3D%22%23000%22%3EWants%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2251.067%22%20y%3D%2261%22%20font-family%3D%22Roboto-Regular%2C%20Roboto%22%20font-weight%3D%22normal%22%20fill%3D%22%23000%22%3E%20%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2254.595%22%20y%3D%2261%22%20font-family%3D%22Roboto-Medium%2C%20Roboto%22%20font-weight%3D%22400%22%20fill%3D%22%236198EE%22%3EC%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate%28142%20146%29%22%3E%3Ccircle%20stroke%3D%22%230058DE%22%20stroke-width%3D%225%22%20cx%3D%2238.5%22%20cy%3D%2238.5%22%20r%3D%2238.5%22%2F%3E%3Ctext%20font-family%3D%22Roboto-Bold%2C%20Roboto%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23000%22%3E%3Ctspan%20x%3D%2231%22%20y%3D%2229%22%3EZ%3C%2Ftspan%3E%3C%2Ftext%3E%3Cpath%20d%3D%22M19.599%2032.25h37.14%22%20stroke%3D%22%238CBAFF%22%20stroke-width%3D%22.5%22%20stroke-linecap%3D%22square%22%2F%3E%3Ctext%20font-family%3D%22Roboto-Light%2C%20Roboto%22%20font-size%3D%2214%22%20font-weight%3D%22300%22%3E%3Ctspan%20x%3D%2219.393%22%20y%3D%2248%22%20fill%3D%22%23000%22%3EHas%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2243.852%22%20y%3D%2248%22%20font-family%3D%22Roboto-Regular%2C%20Roboto%22%20font-weight%3D%22normal%22%20fill%3D%22%23000%22%3E%20%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2247.379%22%20y%3D%2248%22%20font-family%3D%22Roboto-Medium%2C%20Roboto%22%20font-weight%3D%22400%22%20fill%3D%22%23649AEB%22%3EC%3C%2Ftspan%3E%20%20%3Ctspan%20x%3D%2212%22%20y%3D%2261%22%20fill%3D%22%23000%22%3EWants%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2251.067%22%20y%3D%2261%22%20font-family%3D%22Roboto-Regular%2C%20Roboto%22%20font-weight%3D%22normal%22%20fill%3D%22%23000%22%3E%20%3C%2Ftspan%3E%20%3Ctspan%20x%3D%2254.595%22%20y%3D%2261%22%20font-family%3D%22Roboto-Medium%2C%20Roboto%22%20font-weight%3D%22400%22%20fill%3D%22%236198EE%22%3EA%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fg%3E%3Cpath%20d%3D%22M214.09%2069.338l-12.064-2.392%202.912%2010.608%209.151-8.216zM111.684%2098.175l92.664-25.437.675-.185-.37-1.35-.675.185-92.664%2025.437-.675.185.37%201.35.675-.185zM205.148%20146l10.832-5.825-8.993-6.335-1.839%2012.16zm30.78-44.903l-25.463%2036.14-.403.573%201.144.806.403-.572%2025.463-36.14.403-.573-1.144-.806-.403.572zM103.998%20136.151l5.898%2010.792%206.274-9.035-12.172-1.757zm36.901%2024.774l-28.1-19.515-.576-.399-.798%201.15.575.4%2028.1%2019.514.576.4.798-1.15-.575-.4z%22%20fill%3D%22%230058DE%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E',
               alt: 'barter cricle',
-              svg: true,
             },
           ],
         },
@@ -237,13 +271,56 @@ const ast = {
           children: [
             {
               type: 'linkReference',
-              identifier: '1: test footnote',
-              label: '1: Test Footnote',
+              identifier: '1: first footnote',
+              label: '1: First footnote',
               referenceType: 'shortcut',
               children: [
                 {
                   type: 'text',
-                  value: '1: Test Footnote',
+                  value: '1: First footnote',
+                },
+              ],
+            },
+            {
+              type: 'text',
+              value: '\nTry me out bro. What ',
+            },
+            {
+              type: 'strong',
+              children: [
+                {
+                  type: 'text',
+                  value: 'not',
+                },
+              ],
+            },
+            {
+              type: 'text',
+              value: ' and ',
+            },
+            {
+              type: 'emphasis',
+              children: [
+                {
+                  type: 'text',
+                  value: 'test',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          type: 'paragraph',
+          children: [
+            {
+              type: 'linkReference',
+              identifier: '2: test footnote',
+              label: '2: Test Footnote',
+              referenceType: 'shortcut',
+              children: [
+                {
+                  type: 'text',
+                  value: '2: Test Footnote',
                 },
               ],
             },
@@ -322,11 +399,23 @@ const ast = {
               checked: null,
               children: [
                 {
+                  type: 'blockquote',
+                  children: [],
+                },
+              ],
+              correct: false,
+            },
+            {
+              type: 'listItem',
+              spread: false,
+              checked: null,
+              children: [
+                {
                   type: 'paragraph',
                   children: [
                     {
                       type: 'text',
-                      value: 'Modify data',
+                      value: '<',
                     },
                   ],
                 },
@@ -343,24 +432,7 @@ const ast = {
                   children: [
                     {
                       type: 'text',
-                      value: 'Remove data',
-                    },
-                  ],
-                },
-              ],
-              correct: false,
-            },
-            {
-              type: 'listItem',
-              spread: false,
-              checked: null,
-              children: [
-                {
-                  type: 'paragraph',
-                  children: [
-                    {
-                      type: 'text',
-                      value: 'Update data',
+                      value: '&',
                     },
                   ],
                 },
