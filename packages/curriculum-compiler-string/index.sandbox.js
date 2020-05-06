@@ -5,167 +5,154 @@ const ast = {
   type: 'root',
   children: [
     {
-      type: 'paragraph',
+      type: 'yaml',
+      value:
+        "author: claremarie\n\nlevels:\n\n  - beginner\n\n  - basic\n\ntags:\n\n  - introduction\naspects:\n  - introduction\n\ntype: exercise\n\nlinkType: website\n\nlink: https://goo.gl/hghspF\n\nstandards:\n\n  python.native-types-operations.0: 1000\n  python.control-structures.1: 1000\n\nlinks:\n  - '[Control Structures in Python](http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html){website}'\n",
+      data: {
+        parsedValue: {
+          author: 'claremarie',
+          levels: ['beginner', 'basic'],
+          tags: ['introduction'],
+          aspects: ['introduction'],
+          type: 'exercise',
+          linkType: 'website',
+          link: 'https://goo.gl/hghspF',
+          standards: {
+            'python.native-types-operations.0': 1000,
+            'python.control-structures.1': 1000,
+          },
+          links: [
+            {
+              name: 'Control Structures in Python',
+              url:
+                'http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html',
+              nature: 'website',
+            },
+          ],
+        },
+      },
+    },
+    {
+      type: 'headline',
       children: [
         {
           type: 'text',
-          value: 'Print the lines which contain ',
-        },
-        {
-          type: 'inlineCode',
-          value: 'eth0',
-        },
-        {
-          type: 'text',
-          value: ' by pipelining ',
-        },
-        {
-          type: 'inlineCode',
-          value: 'ifconfig',
-        },
-        {
-          type: 'text',
-          value: ' ‘s output :',
+          value: 'Python Control Flow Exercise',
         },
       ],
     },
     {
-      type: 'questionCode',
-      lang: 'bash',
-      value: '$ ??? ??? ??? eth0',
+      type: 'section',
+      name: 'Exercise',
       children: [
         {
-          type: 'questionCodeLine',
+          type: 'paragraph',
           children: [
             {
-              lang: 'bash',
-              type: 'code',
-              value: '$ ',
+              type: 'text',
+              value: 'Click ',
             },
             {
-              type: 'questionGap',
-              value: '???',
+              type: 'emphasis',
+              children: [
+                {
+                  type: 'text',
+                  value: 'Launch Exercise',
+                },
+              ],
             },
             {
-              lang: 'bash',
-              type: 'code',
-              value: ' ',
+              type: 'text',
+              value: ' to open a Python Tutor page.',
+            },
+          ],
+        },
+        {
+          type: 'paragraph',
+          children: [
+            {
+              type: 'text',
+              value: 'This exercise introduces the ',
             },
             {
-              type: 'questionGap',
-              value: '???',
+              type: 'inlineCode',
+              value: 'elif',
             },
             {
-              lang: 'bash',
-              type: 'code',
-              value: ' ',
+              type: 'text',
+              value: ' keyword. In this construction, if the ',
             },
             {
-              type: 'questionGap',
-              value: '???',
+              type: 'inlineCode',
+              value: 'if',
             },
             {
-              lang: 'bash',
-              type: 'code',
-              value: ' eth0',
+              type: 'text',
+              value:
+                ' statement evaluates to false, the executor will next check the condition of the ',
+            },
+            {
+              type: 'inlineCode',
+              value: 'elif',
+            },
+            {
+              type: 'text',
+              value: ' statement. Any number of ',
+            },
+            {
+              type: 'inlineCode',
+              value: 'elif',
+            },
+            {
+              type: 'text',
+              value:
+                's can be chained together; the code block will continue to execute until a true condition is found. Once the code associated with the true condition is executed, the program will skip the rest of the ',
+            },
+            {
+              type: 'inlineCode',
+              value: 'if/else',
+            },
+            {
+              type: 'text',
+              value: ' block.',
+            },
+          ],
+        },
+        {
+          type: 'paragraph',
+          children: [
+            {
+              type: 'text',
+              value:
+                'After you have executed the Python Tutor code once (it should print ',
+            },
+            {
+              type: 'inlineCode',
+              value: 'elif!',
+            },
+            {
+              type: 'text',
+              value: '), change the value of ',
+            },
+            {
+              type: 'inlineCode',
+              value: 'x',
+            },
+            {
+              type: 'text',
+              value: ' so that the program prints ',
+            },
+            {
+              type: 'inlineCode',
+              value: 'else!',
+            },
+            {
+              type: 'text',
+              value: ' instead.',
             },
           ],
         },
       ],
-    },
-    {
-      type: 'list',
-      ordered: false,
-      start: null,
-      loose: false,
-      children: [
-        {
-          type: 'listItem',
-          loose: false,
-          checked: null,
-          children: [
-            {
-              type: 'paragraph',
-              children: [
-                {
-                  type: 'inlineCode',
-                  value: 'ifconfig',
-                },
-              ],
-            },
-          ],
-          correct: true,
-        },
-        {
-          type: 'listItem',
-          loose: false,
-          checked: null,
-          children: [
-            {
-              type: 'paragraph',
-              children: [
-                {
-                  type: 'inlineCode',
-                  value: '|',
-                },
-              ],
-            },
-          ],
-          correct: true,
-        },
-        {
-          type: 'listItem',
-          loose: false,
-          checked: null,
-          children: [
-            {
-              type: 'paragraph',
-              children: [
-                {
-                  type: 'inlineCode',
-                  value: 'grep',
-                },
-              ],
-            },
-          ],
-          correct: true,
-        },
-        {
-          type: 'listItem',
-          loose: false,
-          checked: null,
-          children: [
-            {
-              type: 'paragraph',
-              children: [
-                {
-                  type: 'inlineCode',
-                  value: '>',
-                },
-              ],
-            },
-          ],
-          correct: false,
-        },
-        {
-          type: 'listItem',
-          loose: false,
-          checked: null,
-          children: [
-            {
-              type: 'paragraph',
-              children: [
-                {
-                  type: 'inlineCode',
-                  value: '>>',
-                },
-              ],
-            },
-          ],
-          correct: false,
-        },
-      ],
-      answers: true,
     },
   ],
 };
