@@ -42,7 +42,7 @@
     "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
-    "jest": "^25.1.0",
+    "jest": "^26.0.1",
     "jest-in-case": "^1.0.2",
     "jsonfile": "^6.0.0"
   },
