@@ -5,6 +5,7 @@ const quiz = require('./quiz');
 const question = require('./question');
 const exercise = require('./exercise');
 const footnotes = require('./footnotes');
+const glossary = require('./glossary');
 const helpers = require('./helpers');
 
 module.exports = {
@@ -15,5 +16,6 @@ module.exports = {
   question,
   exercise,
   footnotes,
+  glossary,
   helpers,
 };

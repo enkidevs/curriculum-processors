@@ -47,10 +47,15 @@ function compileSection(node) {
   return compiler(node);
 }
 
-function compileInsight(ast) {
+function validateAst(ast) {
   if (!ast || !ast.children) {
     throw new Error('Missing or invalid AST');
   }
+}
+
+function compileInsight(ast) {
+  validateAst(ast);
+
   const json = ast.children.reduce(
     (tempJson, node) => ({ ...tempJson, ...compileSection(node) }),
     {}
@@ -58,10 +63,14 @@ function compileInsight(ast) {
   return json;
 }
 
+function compileGlossary(ast) {
+  validateAst(ast);
+
+  return compilers.glossary(ast);
+}
+
 function compileQuestion(ast) {
-  if (!ast || !ast.children) {
-    throw new Error('Missing or invalid AST');
-  }
+  validateAst(ast);
 
   // Don't mutate parameter
   const questionAst = { ...ast };
@@ -84,24 +93,26 @@ function compileQuestion(ast) {
 }
 
 function getCompiler(type) {
-  let compileSync;
   switch (type) {
     case contentTypes.EXERCISE:
     case contentTypes.INSIGHT: {
-      compileSync = compileInsight;
-      break;
+      return {
+        compileSync: compileInsight,
+      };
     }
     case contentTypes.QUESTION: {
-      compileSync = compileQuestion;
-      break;
+      return {
+        compileSync: compileQuestion,
+      };
+    }
+    case contentTypes.GLOSSARY: {
+      return {
+        compileSync: compileGlossary,
+      };
     }
     default:
       throw Error(`Unsupported type "${type}"`);
   }
-
-  return {
-    compileSync,
-  };
 }
 
 module.exports = {
