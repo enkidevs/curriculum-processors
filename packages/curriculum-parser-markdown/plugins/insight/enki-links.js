@@ -1,30 +1,43 @@
 const visit = require('unist-util-visit');
-const URL = require('url-parse');
+const { sectionNames } = require('@enkidevs/curriculum-helpers');
+const UrlParse = require('url-parse');
+
+const INTERNAL_LINKS_CONTEXT = ['glossary', 'content'];
 
 module.exports = function enkiLink() {
   return transform;
 
   function transform(ast) {
-    visit(ast, 'link', parseEnkiLink);
+    const content = ast.children.find(
+      (node) =>
+        node.type &&
+        node.type === 'section' &&
+        node.name === sectionNames.CONTENT
+    );
+    visit(content, 'link', parseEnkiLink);
     return ast;
   }
 
   function parseEnkiLink(node) {
     /**
-     * protocol: enki-context:
-     * host: slug-1.slug-2.slug-3.etc
-     *
-     * notice ':' after 'context'
-     * 'context' should, ideally, be __camelCase__
+     * ## glossary
+     * [Object-Oriented Programming](https://enki.com/INTERNAL_LINKS_CONTEXT/path/to/entry/oop)
+     * OR
+     * [Object-Oriented Programming](enki.com/INTERNAL_LINKS_CONTEXT/path/to/entry/oop)
      */
-    const { protocol, host } = new URL(node.url);
-    const [enki, context] = protocol.slice(0, -1).split('-');
-    if (enki === 'enki') {
-      Object.assign(node, {
-        isInternal: true,
-        context,
-        path: host.split('.'),
-      });
+    const indexOfEnki = node.url.indexOf('enki.com'); // hardcoded url for now
+    if (indexOfEnki > -1) {
+      const toParse = `https://${node.url.substring(indexOfEnki)}`;
+      const { pathname, origin } = new UrlParse(toParse);
+      const [context, ...path] = pathname.split('/').filter(Boolean);
+      if (INTERNAL_LINKS_CONTEXT.includes(context)) {
+        Object.assign(node, {
+          isInternal: true,
+          context,
+          path,
+          origin,
+        });
+      }
     }
   }
 };

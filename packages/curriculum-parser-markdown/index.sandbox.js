@@ -37,6 +37,8 @@ aspects:
 The ledger, or better said "the transaction-based ledger"[1], is a blockchain's *log of transactions*. As with any other ledger, the transacted object must be **uniquely identifiable**, under one form or another. Bitcoin, like most of the other blockchains, are gravitating around their only asset - the cryptocoin. Hence, the Bitcoin ledger will record bitcoin transactions.
              	
 Other types of ledgers include an account-based ledger, used by the [Ethereum blockchain](enki-glossary://ethereum), or a combination of the two, used by the QTUM blockchain.
+
+The new format for [enki links](enki.com/glossary/oop).
              	
 ### Why are most blockchains built around coins?[2]
              	
@@ -117,5 +119,5 @@ NaN === NaN
 * SyntaxError
 * NaN
 `);
-
+// compactAst(ast);
 process.stdout.write(JSON.stringify(compactAst(ast), null, 2));
