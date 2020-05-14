@@ -5,6 +5,7 @@ const questionTypes = require('./question-types');
 const insightCategories = require('./insight-categories');
 const insightAspects = require('./insight-aspects');
 const insightLinkResourceTypes = require('./insight-link-resource-types');
+const internalLinks = require('./internal-links');
 
 module.exports = {
   contentTypes,
@@ -14,4 +15,5 @@ module.exports = {
   insightCategories,
   insightLinkResourceTypes,
   insightAspects,
+  internalLinks,
 };

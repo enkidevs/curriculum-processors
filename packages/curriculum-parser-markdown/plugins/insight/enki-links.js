@@ -1,8 +1,8 @@
 const visit = require('unist-util-visit');
-const { sectionNames } = require('@enkidevs/curriculum-helpers');
+const { sectionNames, internalLinks } = require('@enkidevs/curriculum-helpers');
 const UrlParse = require('url-parse');
 
-const INTERNAL_LINKS_CONTEXT = ['glossary', 'content'];
+const { CONTEXTS } = internalLinks;
 
 module.exports = function enkiLink() {
   return transform;
@@ -29,8 +29,8 @@ module.exports = function enkiLink() {
     if (indexOfEnki > -1) {
       const toParse = `https://${node.url.substring(indexOfEnki)}`;
       const { pathname, origin } = new UrlParse(toParse);
-      const [context, ...path] = pathname.split('/').filter(Boolean);
-      if (INTERNAL_LINKS_CONTEXT.includes(context)) {
+      const { context, path } = getContextAndPath(pathname);
+      if (CONTEXTS.includes(context)) {
         Object.assign(node, {
           isInternal: true,
           context,
@@ -39,5 +39,13 @@ module.exports = function enkiLink() {
         });
       }
     }
+  }
+
+  function getContextAndPath(pathname) {
+    const firstSlashIndex = pathname.indexOf('/');
+    return {
+      context: pathname.substring(0, firstSlashIndex),
+      path: pathname.substring(firstSlashIndex + 1),
+    };
   }
 };
