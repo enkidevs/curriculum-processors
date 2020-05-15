@@ -7,7 +7,7 @@ module.exports = function glossary(ast) {
   const heading1Count = countNodes(ast, isHeading1);
 
   if (heading1Count !== 1 || !isHeading1(ast.children[0])) {
-    throw Error('Glossary entry MUST contain a single H1 as title');
+    throw Error('Glossary entry MUST contain a single H1 as the first line');
   }
 
   const rawText = compileNodeToMarkdown(ast);

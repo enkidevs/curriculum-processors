@@ -9,10 +9,7 @@ module.exports = function enkiLink() {
 
   function transform(ast) {
     const content = ast.children.find(
-      (node) =>
-        node.type &&
-        node.type === 'section' &&
-        node.name === sectionNames.CONTENT
+      (node) => node.type === 'section' && node.name === sectionNames.CONTENT
     );
     visit(content, 'link', parseEnkiLink);
     return ast;
@@ -25,7 +22,8 @@ module.exports = function enkiLink() {
      * OR
      * [Object-Oriented Programming](enki.com/INTERNAL_LINKS_CONTEXT/path/to/entry/oop)
      */
-    const indexOfEnki = node.url.indexOf('enki.com'); // hardcoded url for now
+    const ENKI_ROOT = 'enki.com'; // hardcoded for now
+    const indexOfEnki = node.url.indexOf(ENKI_ROOT);
     if (indexOfEnki > -1) {
       const toParse = `https://${node.url.substring(indexOfEnki)}`;
       const { pathname, origin } = new UrlParse(toParse);

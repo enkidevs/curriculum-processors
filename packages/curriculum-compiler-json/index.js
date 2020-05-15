@@ -48,7 +48,7 @@ function compileSection(node) {
 }
 
 function validateAst(ast) {
-  if (!ast || !ast.children) {
+  if (!ast || !Array.isArray(ast.children)) {
     throw new Error('Missing or invalid AST');
   }
 }
