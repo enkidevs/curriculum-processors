@@ -33,13 +33,13 @@
   ],
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^7.0.1",
-    "decode-uri-component": "^0.2.0",
     "js-yaml": "^3.13.0",
     "remark-frontmatter": "^2.0.0",
     "remark-parse": "^8.0.0",
     "unified": "^9.0.0",
     "unist-builder": "^2.0.0",
-    "unist-util-visit": "^2.0.0"
+    "unist-util-visit": "^2.0.0",
+    "url-parse": "^1.4.7"
   },
   "devDependencies": {
     "jest": "^26.0.1",
