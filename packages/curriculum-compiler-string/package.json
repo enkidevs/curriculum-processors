@@ -29,7 +29,8 @@
   },
   "files": [
     "index.js",
-    "plugins"
+    "plugins",
+    "patches"
   ],
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^7.1.0",
