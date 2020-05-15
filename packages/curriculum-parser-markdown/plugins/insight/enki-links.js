@@ -26,24 +26,24 @@ module.exports = function enkiLink() {
     const indexOfEnki = node.url.indexOf(ENKI_ROOT);
     if (indexOfEnki > -1) {
       const toParse = `https://${node.url.substring(indexOfEnki)}`;
-      const { pathname, origin } = new UrlParse(toParse);
+      const { pathname, host } = new UrlParse(toParse);
       const { context, path } = getContextAndPath(pathname);
       if (CONTEXTS.includes(context)) {
         Object.assign(node, {
           isInternal: true,
           context,
           path,
-          origin,
+          host,
         });
       }
     }
   }
 
   function getContextAndPath(pathname) {
-    const firstSlashIndex = pathname.indexOf('/');
+    const [context, ...path] = pathname.split('/').filter(Boolean);
     return {
-      context: pathname.substring(0, firstSlashIndex),
-      path: pathname.substring(firstSlashIndex + 1),
+      context,
+      path: path.join('/'),
     };
   }
 };

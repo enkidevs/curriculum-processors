@@ -50,7 +50,11 @@
                   "type": "text",
                   "value": "binary tree"
                 }
-              ]
+              ],
+              "isInternal": true,
+              "context": "glossary",
+              "path": "general/binary-tree",
+              "host": "enki.com"
             },
             {
               "type": "text",
