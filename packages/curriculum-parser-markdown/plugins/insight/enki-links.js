@@ -11,7 +11,11 @@ module.exports = function enkiLink() {
     const content = ast.children.find(
       (node) => node.type === 'section' && node.name === sectionNames.CONTENT
     );
-    visit(content, 'link', parseEnkiLink);
+
+    if (content) {
+      visit(content, 'link', parseEnkiLink);
+    }
+
     return ast;
   }
 
