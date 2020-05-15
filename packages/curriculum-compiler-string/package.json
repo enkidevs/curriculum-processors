@@ -5,7 +5,6 @@
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "postinstall": "patch-package",
     "test:watch": "jest --watchAll",
     "test": "jest --coverage --notify",
     "test:regex": "npm test -- regexToMatchFile"
@@ -29,14 +28,12 @@
   },
   "files": [
     "index.js",
-    "plugins",
-    "patches"
+    "plugins"
   ],
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^7.1.0",
     "js-yaml": "^3.13.0",
-    "patch-package": "^6.2.2",
-    "remark-stringify": "^8.0.0",
+    "@enkidevs/remark-stringify": "^8.0.0",
     "unified": "^9.0.0"
   },
   "devDependencies": {
