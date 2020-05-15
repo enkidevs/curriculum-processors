@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-compiler-string",
-  "version": "6.1.1",
+  "version": "6.2.0",
   "description": "Compiles Enki Curriculum AST into a markdown string",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
@@ -32,8 +32,8 @@
   ],
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^7.1.0",
-    "js-yaml": "^3.13.0",
     "@enkidevs/remark-stringify": "^8.0.0",
+    "js-yaml": "^3.13.0",
     "unified": "^9.0.0"
   },
   "devDependencies": {
