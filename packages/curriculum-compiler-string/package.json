@@ -33,8 +33,7 @@
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^7.1.0",
     "js-yaml": "^3.13.0",
-    "patch-package": "^6.2.2",
-    "remark-stringify": "^8.0.0",
+    "@enkidevs/remark-stringify": "^8.0.0",
     "unified": "^9.0.0"
   },
   "devDependencies": {

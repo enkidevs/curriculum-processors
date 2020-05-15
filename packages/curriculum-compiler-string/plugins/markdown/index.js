@@ -1,4 +1,4 @@
-const remarkStringify = require('remark-stringify');
+const remarkStringify = require('@enkidevs/remark-stringify');
 
 module.exports = [
   [
