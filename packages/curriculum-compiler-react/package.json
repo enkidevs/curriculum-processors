@@ -23,7 +23,7 @@
     "hast-to-hyperscript": "^8.0.0",
     "mdast-util-to-hast": "^9.0.1",
     "react": "^16.8.5",
-    "remark-rehype": "^6.0.0",
+    "remark-rehype": "^7.0.0",
     "unified": "^9.0.0",
     "unist-builder": "^2.0.0",
     "unist-util-map": "^2.0.0"
