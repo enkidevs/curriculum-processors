@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-ast-validators",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Validators for Enki Curriculum AST",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
@@ -38,7 +38,7 @@
     "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
-    "@enkidevs/curriculum-parser-markdown": "^8.0.2",
+    "@enkidevs/curriculum-parser-markdown": "^8.1.0",
     "jest": "^26.0.1"
   },
   "gitHead": "a4ce08a6e24ea21b50daa67a1af518ff55fec34a"
