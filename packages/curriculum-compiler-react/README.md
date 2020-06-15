@@ -1,3 +1,0 @@
-# Curriculum Compiler React
-
-TODO
