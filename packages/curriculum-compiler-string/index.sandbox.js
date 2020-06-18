@@ -7,13 +7,12 @@ const ast = {
     {
       type: 'yaml',
       value:
-        "author: claremarie\n\nlevels:\n\n  - beginner\n\n  - basic\n\ntags:\n\n  - introduction\naspects:\n  - introduction\n\ntype: exercise\n\nlinkType: website\n\nlink: https://goo.gl/hghspF\n\nstandards:\n\n  python.native-types-operations.0: 1000\n  python.control-structures.1: 1000\n\nlinks:\n  - '[Control Structures in Python](http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html){website}'\n",
+        "author: claremarie\n\nlevels:\n\n  - beginner\n\n  - basic\n\ntags:\n\n  - introduction\ntype: exercise\n\nlinkType: website\n\nlink: https://goo.gl/hghspF\n\nstandards:\n\n  python.native-types-operations.0: 1000\n  python.control-structures.1: 1000\n\nlinks:\n  - '[Control Structures in Python](http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html){website}'\n",
       data: {
         parsedValue: {
           author: 'claremarie',
           levels: ['beginner', 'basic'],
           tags: ['introduction'],
-          aspects: ['introduction'],
           type: 'exercise',
           linkType: 'website',
           link: 'https://goo.gl/hghspF',
