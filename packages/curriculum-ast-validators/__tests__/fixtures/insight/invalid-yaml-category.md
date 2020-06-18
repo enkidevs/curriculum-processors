@@ -1,7 +1,5 @@
 ---
 author: enki
-aspects:
-  - introduction
 category: invalid
 ---
 
