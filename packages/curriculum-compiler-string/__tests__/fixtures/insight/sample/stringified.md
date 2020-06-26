@@ -14,7 +14,7 @@ links:
 parent: removing-keys-from-a-binary-search-tree
 ---
 
-# Balanced vs. Unbalanced Binary Trees
+# **Balanced** vs. **Unbalanced** Binary Trees
 
 
 ---
