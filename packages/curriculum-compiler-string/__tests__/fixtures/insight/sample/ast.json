@@ -25,8 +25,30 @@
       "type": "headline",
       "children": [
         {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Balanced"
+            }
+          ]
+        },
+        {
           "type": "text",
-          "value": "Balanced vs. Unbalanced Binary Trees"
+          "value": " vs. "
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Unbalanced"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " Binary Trees"
         }
       ]
     },
