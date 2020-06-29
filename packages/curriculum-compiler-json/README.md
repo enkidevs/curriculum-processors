@@ -124,7 +124,7 @@ It will return:
 ```json
 {
   "key": {
-    "rawText": "question with two gaps ??? ???\n* answer1\n*answer2\nanswer3",
+    "rawText": "question with two gaps ??? ???\n- answer1\n- answer2\n- answer3",
     "question": "question with two gaps ??? ???",
     "answers": [
       {
@@ -174,7 +174,7 @@ It returns the following object:
 ```json
 {
   "quiz": {
-    "rawText": "### Quiz name\nQuiz text\n* answer1\nanswer2",
+    "rawText": "### Quiz name\nQuiz text\n- answer1\n- answer2",
     "headline": "Quiz name",
     "question": "Quiz text",
     "answers": [
@@ -264,10 +264,10 @@ The final schema of a compiled JSON looks like:
     ]
   },
   "headline": "Sample title with `code` within",
-  "content": "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n* item one\n* item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
+  "content": "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n- item one\n- item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
   "gameContent": "Sample game content\n",
   "practice": {
-    "rawText": "This is a sample question with one gap:\n\n???\n\n* correct\n* incorrect\n* not a chance\n",
+    "rawText": "This is a sample question with one gap:\n\n???\n\n- correct\n- incorrect\n- not a chance\n",
     "question": "This is a sample question with one gap:\n\n???\n",
     "answers": [
       {
@@ -288,7 +288,7 @@ The final schema of a compiled JSON looks like:
     ]
   },
   "revision": {
-    "rawText": "This is a sample question with two gaps:\n\n???\n\n???\n\n* correct\n* also correct\n* nah bro\n* fam, just no\n",
+    "rawText": "This is a sample question with two gaps:\n\n???\n\n???\n\n- correct\n- also correct\n- nah bro\n- fam, just no\n",
     "question": "This is a sample question with two gaps:\n\n???\n\n???\n",
     "answers": [
       {
@@ -314,7 +314,7 @@ The final schema of a compiled JSON looks like:
     ]
   },
   "quiz": {
-    "rawText": "### Quiz title\n\n\nSample quiz question\n\n???\n* correct\n* *incorrect*\n* not a `chance`\n* nope\n",
+    "rawText": "### Quiz title\n\n\nSample quiz question\n\n???\n- correct\n- *incorrect*\n- not a `chance`\n- nope\n",
     "headline": "Quiz title",
     "question": "Sample quiz question\n\n???\n",
     "answers": [

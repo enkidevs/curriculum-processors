@@ -41,7 +41,7 @@ Log the string `"example"`
 console.???('example')
 ```
 
-* `log`
-* `logger`
-* `print`
-* `stdout`
+- `log`
+- `logger`
+- `print`
+- `stdout`

@@ -1,4 +1,4 @@
-/* eslint-disable */
+// eslint-disable */
 // Use this sandbox to play with the parser
 const { compactAst } = require('../curriculum-helpers');
 
@@ -24,10 +24,10 @@ const json = {
   },
   headline: 'Sample title with `code` within',
   content:
-    "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n* item one\n* item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
+    "This is a sample paragraph.[1]\n\nThis is a sample list[2]:\n\n- item one\n- item `two`\n\nSample code[3]:\n\n```javascript\nconsole.log('sample code')\n```\n",
   practice: {
     rawText:
-      'This is a sample question with one gap:\n\n???\n\n* correct\n* incorrect\n* not a chance\n',
+      'This is a sample question with one gap:\n\n???\n\n- correct\n- incorrect\n- not a chance\n',
     question: 'This is a sample question with one gap:\n\n???\n',
     answers: [
       {
@@ -49,7 +49,7 @@ const json = {
   },
   revision: {
     rawText:
-      'This is a sample question with two gaps:\n\n???\n\n???\n\n* correct\n* also correct\n* nah bro\n* fam, just no\n',
+      'This is a sample question with two gaps:\n\n???\n\n???\n\n- correct\n- also correct\n- nah bro\n- fam, just no\n',
     question: 'This is a sample question with two gaps:\n\n???\n\n???\n',
     answers: [
       {
@@ -76,7 +76,7 @@ const json = {
   },
   quiz: {
     rawText:
-      '### Quiz title\n\n\nSample quiz question\n\n???\n* correct\n* *incorrect*\n* not a `chance`\n* nope\n',
+      '### Quiz title\n\n\nSample quiz question\n\n???\n- correct\n- *incorrect*\n- not a `chance`\n- nope\n',
     headline: 'Quiz title',
     question: 'Sample quiz question',
     answers: [
@@ -126,6 +126,7 @@ const json = {
 };
 
 const { getParser } = require('./index');
+
 const parser = getParser('insight');
 (async () => {
   const ast = await parser.parse(json);

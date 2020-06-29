@@ -46,10 +46,10 @@ Which of the following data structures is a type of *maximally-unbalanced* binar
 
 ???
 
-* Ordered linked list
-* Ordered array
-* Weighted graph
-* Max-heap
+- Ordered linked list
+- Ordered array
+- Weighted graph
+- Max-heap
 
 ---
 ## Quiz
@@ -65,10 +65,10 @@ echo $a
 
 ???
 
-* "Error: unexpected end of file"
-* 1
-* 2
-* $a
+- "Error: unexpected end of file"
+- 1
+- 2
+- $a
 
 ---
 ## Footnotes

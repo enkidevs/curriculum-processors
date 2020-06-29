@@ -31,10 +31,10 @@ Log the string `"example"`
 console.???('example')
 ```
 
-* `log`
-* `logger`
-* `print`
-* `stdout`
+- `log`
+- `logger`
+- `print`
+- `stdout`
 
 ---
 ## Revision
@@ -45,13 +45,13 @@ Enki is awesome.
 
 ???
 
-* true
-* false
+- true
+- false
 
 ---
 ## Quiz
 
 How are you doing?
 
-* great
-* meh
+- great
+- meh

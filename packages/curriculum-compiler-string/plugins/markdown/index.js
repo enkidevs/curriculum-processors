@@ -4,7 +4,7 @@ module.exports = [
   [
     remarkStringify,
     {
-      bullet: '*',
+      bullet: '-',
       emphasis: '*',
       listItemIndent: 1,
       rule: '-',
