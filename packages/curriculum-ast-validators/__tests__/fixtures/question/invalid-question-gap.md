@@ -1,3 +1,3 @@
 What are the answers?
 
-* `1`
+- `1`
