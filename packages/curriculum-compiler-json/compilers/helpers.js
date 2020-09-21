@@ -1,5 +1,6 @@
 const unistBuilder = require('unist-builder');
 const unistAssert = require('unist-util-assert');
+const find = require('unist-util-find');
 const { getCompiler } = require('@enkidevs/curriculum-compiler-string');
 const { contentTypes } = require('@enkidevs/curriculum-helpers');
 
@@ -22,7 +23,8 @@ const compileNodeToInsightMarkdown = getAstCompiler(insightCompiler);
 const compileNodeToQuestionMarkdown = getAstCompiler(questionCompiler);
 
 function getAnswersFromNode(node) {
-  const answersASTList = node.children.find(
+  const answersASTList = find(
+    node,
     (child) => child.type === 'list' && child.answers
   );
   if (!answersASTList || !answersASTList.children) {

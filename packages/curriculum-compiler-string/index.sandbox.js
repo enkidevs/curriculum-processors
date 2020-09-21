@@ -7,24 +7,22 @@ const ast = {
     {
       type: 'yaml',
       value:
-        "author: claremarie\n\nlevels:\n\n  - beginner\n\n  - basic\n\ntags:\n\n  - introduction\ntype: exercise\n\nlinkType: website\n\nlink: https://goo.gl/hghspF\n\nstandards:\n\n  python.native-types-operations.0: 1000\n  python.control-structures.1: 1000\n\nlinks:\n  - '[Control Structures in Python](http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html){website}'\n",
+        "author: nem035\naspects:\n  - introduction\n  - workout\ntype: normal\ncategory: must-know\nlinks:\n- '[A](enki.com){documentation}'\n- '[B](enki.com){website}'",
       data: {
         parsedValue: {
-          author: 'claremarie',
-          levels: ['beginner', 'basic'],
-          tags: ['introduction'],
-          type: 'exercise',
-          linkType: 'website',
-          link: 'https://goo.gl/hghspF',
-          standards: {
-            'python.native-types-operations.0': 1000,
-            'python.control-structures.1': 1000,
-          },
+          author: 'nem035',
+          aspects: ['introduction', 'workout'],
+          type: 'normal',
+          category: 'must-know',
           links: [
             {
-              name: 'Control Structures in Python',
-              url:
-                'http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html',
+              name: 'Docker Registry',
+              url: 'https://docs.docker.com/registry/',
+              nature: 'documentation',
+            },
+            {
+              name: 'Docker Hub',
+              url: 'https://hub.docker.com/',
               nature: 'website',
             },
           ],
@@ -36,126 +34,23 @@ const ast = {
       children: [
         {
           type: 'text',
-          value: 'Python Control Flow Exercise',
+          value: 'Test',
         },
       ],
     },
     {
       type: 'section',
-      name: 'Exercise',
+      name: 'Content',
       children: [
         {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              value: 'Click ',
-            },
-            {
-              type: 'emphasis',
-              children: [
-                {
-                  type: 'text',
-                  value: 'Launch Exercise',
-                },
-              ],
-            },
-            {
-              type: 'text',
-              value: ' to open a Python Tutor page.',
-            },
-          ],
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              value: 'This exercise introduces the ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'elif',
-            },
-            {
-              type: 'text',
-              value: ' keyword. In this construction, if the ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'if',
-            },
-            {
-              type: 'text',
-              value:
-                ' statement evaluates to false, the executor will next check the condition of the ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'elif',
-            },
-            {
-              type: 'text',
-              value: ' statement. Any number of ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'elif',
-            },
-            {
-              type: 'text',
-              value:
-                's can be chained together; the code block will continue to execute until a true condition is found. Once the code associated with the true condition is executed, the program will skip the rest of the ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'if/else',
-            },
-            {
-              type: 'text',
-              value: ' block.',
-            },
-          ],
-        },
-        {
-          type: 'paragraph',
-          children: [
-            {
-              type: 'text',
-              value:
-                'After you have executed the Python Tutor code once (it should print ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'elif!',
-            },
-            {
-              type: 'text',
-              value: '), change the value of ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'x',
-            },
-            {
-              type: 'text',
-              value: ' so that the program prints ',
-            },
-            {
-              type: 'inlineCode',
-              value: 'else!',
-            },
-            {
-              type: 'text',
-              value: ' instead.',
-            },
-          ],
+          type: 'code',
+          lang: null, // <-- this is the key
+          meta: null,
+          value: 'test',
         },
       ],
     },
   ],
 };
 
-const x = getCompiler('insight').compileSync(ast);
-
-process.stdout.write(x);
+process.stdout.write(getCompiler('insight').compileSync(ast));
