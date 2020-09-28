@@ -30,7 +30,7 @@
   "dependencies": {},
   "devDependencies": {
     "@enkidevs/assert-restricted-branch": "^1.0.2",
-    "@enkidevs/eslint-config-backend": "^6.0.0",
+    "@enkidevs/eslint-config-backend": "^7.0.0",
     "eslint": "^7.2.0",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
