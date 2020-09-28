@@ -50,7 +50,7 @@ module.exports = function validateQuestionAnswers(ast) {
           section.name ? ` ${section.name}` : ''
         } question. There are ${
           questionGapCount > correctAnswersCount ? 'more' : 'less'
-        } question gaps (${questionGapCount}) than correct answers (${correctAnswersCount})`
+        } question gaps (${questionGapCount}) than correct answers (${correctAnswersCount}). If there are 2 lists following one another, try having 2 new lines between them.`
       );
     }
   }

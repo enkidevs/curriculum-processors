@@ -66,7 +66,7 @@ module.exports = {
             validator(ast);
           });
       default:
-        throw Error(`Unsupported type ${type}`);
+        return () => [];
     }
   },
   validateSafe: (type) => {
@@ -99,7 +99,7 @@ module.exports = {
             return errors;
           }, []);
       default:
-        throw Error(`Unsupported type ${type}`);
+        return () => [];
     }
   },
   getValidator: (type) => {
@@ -109,7 +109,7 @@ module.exports = {
       case contentTypes.QUESTION:
         return questionValidator;
       default:
-        throw Error(`Unsupported type ${type}`);
+        return () => [];
     }
   },
   getSafeValidator: (type) => {
@@ -119,7 +119,7 @@ module.exports = {
       case contentTypes.QUESTION:
         return questionSafeValidator;
       default:
-        throw Error(`Unsupported type ${type}`);
+        return () => [];
     }
   },
 };
