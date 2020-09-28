@@ -65,8 +65,11 @@ module.exports = {
           Object.values(questionValidator).forEach((validator) => {
             validator(ast);
           });
+      case contentTypes.EXERCISE:
+      case contentTypes.GLOSSARY:
+        return () => true;
       default:
-        return () => [];
+        throw Error(`Unsupported type ${type}`);
     }
   },
   validateSafe: (type) => {
@@ -98,8 +101,11 @@ module.exports = {
             }
             return errors;
           }, []);
+      case contentTypes.EXERCISE:
+      case contentTypes.GLOSSARY:
+        return () => true;
       default:
-        return () => [];
+        throw Error(`Unsupported type ${type}`);
     }
   },
   getValidator: (type) => {
@@ -108,8 +114,11 @@ module.exports = {
         return insightValidator;
       case contentTypes.QUESTION:
         return questionValidator;
+      case contentTypes.EXERCISE:
+      case contentTypes.GLOSSARY:
+        return () => true;
       default:
-        return () => [];
+        throw Error(`Unsupported type ${type}`);
     }
   },
   getSafeValidator: (type) => {
@@ -118,8 +127,11 @@ module.exports = {
         return insightSafeValidator;
       case contentTypes.QUESTION:
         return questionSafeValidator;
+      case contentTypes.EXERCISE:
+      case contentTypes.GLOSSARY:
+        return () => true;
       default:
-        return () => [];
+        throw Error(`Unsupported type ${type}`);
     }
   },
 };
