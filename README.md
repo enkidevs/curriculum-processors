@@ -11,8 +11,6 @@ Note: The language used here follows this pattern:
 
 - [@enkidevs/curriculum-compiler-json](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-compiler-json)
   - Compile parsed curriculum AST into a more user-friendly JSON
-- [@enkidevs/curriculum-compiler-react](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-compiler-react)
-  - Compile parsed curriculum AST into a [React](http://reactjs.org/) tree
 - [@enkidevs/curriculum-compiler-string](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-compiler-string)
   - Compile parsed curriculum AST into a string
 - [@enkidevs/curriculum-helpers](https://github.com/enkidevs/curriculum-processors/tree/master/packages/curriculum-helpers)
