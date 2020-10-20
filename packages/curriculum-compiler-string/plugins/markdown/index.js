@@ -10,6 +10,7 @@ module.exports = [
       rule: '-',
       ruleSpaces: false,
       escape: false,
+      fences: true,
     },
   ],
 ];
