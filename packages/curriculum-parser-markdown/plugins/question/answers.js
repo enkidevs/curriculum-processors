@@ -11,7 +11,6 @@ module.exports = function questionAnswers() {
   function isQuestionAnswers(node, index, parent) {
     return (
       node.type === 'list' &&
-      !node.ordered &&
       index === parent.children.length - 1 &&
       (parent.type === 'root' || (parent.type === 'section' && parent.question))
     );
