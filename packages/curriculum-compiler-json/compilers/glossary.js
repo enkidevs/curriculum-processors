@@ -11,12 +11,12 @@ module.exports = function glossary(ast) {
   }
 
   const rawText = compileNodeToMarkdown(ast);
-  const [headline, ...content] = rawText.split('\n').filter(Boolean);
+  const [headline, ...content] = rawText.split(/(\n)/).filter(Boolean);
 
   return {
     rawText,
     // get rid of first #
     headline: headline.substring(headline.indexOf('#') + 1).trim(),
-    content: content.join('\n'),
+    content: content.join('').trim(),
   };
 };
