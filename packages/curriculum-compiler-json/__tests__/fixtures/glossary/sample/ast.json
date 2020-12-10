@@ -1,0 +1,246 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Markdown Formatting"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Just as we use punctuation to improve readability, we can use markdown to format text in our comment section."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Before you leave your first submission, it might help to brush up your markdown."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When submitting an answer in the comment section, you'll want to use something like this:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "py",
+      "meta": null,
+      "value": "print(\"So this is markdown!\");\nthis should "
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That is called a code block. To write it, you start with "
+        },
+        {
+          "type": "inlineCode",
+          "value": "```"
+        },
+        {
+          "type": "text",
+          "value": " and end with "
+        },
+        {
+          "type": "inlineCode",
+          "value": "```"
+        },
+        {
+          "type": "text",
+          "value": ", just like this:"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "md",
+      "meta": null,
+      "value": "```python\n# your code\n# goes here\n```"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice how we also include "
+        },
+        {
+          "type": "inlineCode",
+          "value": "python"
+        },
+        {
+          "type": "text",
+          "value": " after the first "
+        },
+        {
+          "type": "inlineCode",
+          "value": "```"
+        },
+        {
+          "type": "text",
+          "value": ". This enables syntax highlighting, which is a way to colour different parts of the code to make it more readable."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Depending on what you are learning, you can use the following tags: "
+        },
+        {
+          "type": "inlineCode",
+          "value": "python"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "javascript"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "sql"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "html"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "css"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "java"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "go"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "bash"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "git"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "docker"
+        },
+        {
+          "type": "text",
+          "value": ", "
+        },
+        {
+          "type": "inlineCode",
+          "value": "jsx"
+        },
+        {
+          "type": "text",
+          "value": " or "
+        },
+        {
+          "type": "inlineCode",
+          "value": "plain-text"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When you're leaving a comment, you can press the "
+        },
+        {
+          "type": "inlineCode",
+          "value": "M⬇"
+        },
+        {
+          "type": "text",
+          "value": " button for a markdown cheat-sheet."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You can also press the eye button to preview your comment."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "https://img.enkipro.com/a92eef7bc6e5ad805e04d5c1e240924b.gif",
+          "alt": "markdown-and-preview-button-positions"
+        }
+      ]
+    }
+  ]
+}
