@@ -32,7 +32,7 @@
     "@enkidevs/assert-restricted-branch": "^1.0.2",
     "@enkidevs/eslint-config-backend": "^6.0.0",
     "eslint": "^7.2.0",
-    "husky": "^4.2.3",
+    "husky": "^5.2.0",
     "lerna": "^4.0.0",
     "lint-staged": "^10.0.8",
     "prettier": "^2.0.1"
