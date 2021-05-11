@@ -42,7 +42,7 @@ const mdUrlRegExWithType = /\[(.*)\]\((.*)\)\{(.*)\}/;
 //   url: "https://www.dotnettricks.com/learn/sqlserver/difference-between-primary-key-and-foreign-key",
 //   nature: "article"
 // }
-const yamlUrlRegExWithType = /\[(?<name>[^\[\]]*)\]\s*\((?<url>[^\(\)]*)\)\s*\{(?<nature>[^\{\}]*)\}/;
+const yamlUrlRegExWithType = /\[(?<name>[^[\]]*)\]\s*\((?<url>[^()]*)\)\s*\{(?<nature>[^{}]*)\}/;
 
 function getMarkdownLink(link) {
   if (yamlUrlRegExWithType.test(link)) {
