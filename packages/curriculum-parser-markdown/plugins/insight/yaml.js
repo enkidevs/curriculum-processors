@@ -81,7 +81,7 @@ function getDomainFromURL(url) {
       (url.indexOf('://') > -1 ? url.split('/')[2] : url.split('/'))
         // find & remove port number
         .split(':')
-    : null;
+    : [null];
 
   return urlDomainArray[0];
 }
