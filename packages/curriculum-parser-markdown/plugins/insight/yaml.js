@@ -52,8 +52,8 @@ function getMarkdownLink(link) {
     // remove any extra spaces before returning
     return {
       name: removeExtraSpaces(name),
-      url: removeExtraSpaces(url),
-      nature: removeExtraSpaces(nature),
+      url: removeAnySpaces(url),
+      nature: removeAnySpaces(nature),
     };
   }
 
@@ -88,4 +88,8 @@ function getDomainFromURL(url) {
 
 function removeExtraSpaces(string) {
   return string.replace(/\s+/g, ' ').trim();
+}
+
+function removeAnySpaces(string) {
+  return string.replace(/\s+/g, '').trim();
 }
