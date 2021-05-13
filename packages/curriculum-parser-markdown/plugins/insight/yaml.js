@@ -79,6 +79,7 @@ function getMarkdownLink(link) {
 function getDomainFromURL(url) {
   if (!url) return null;
 
+  // eslint-disable-next-line node/no-unsupported-features/node-builtins
   return new URL(url).hostname;
 }
 
