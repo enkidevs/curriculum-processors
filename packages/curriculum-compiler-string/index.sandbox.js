@@ -23,8 +23,7 @@ const ast = {
           links: [
             {
               name: 'Control Structures in Python',
-              url:
-                'http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html',
+              url: 'http://interactivepython.org/runestone/static/pythonds/Introduction/ControlStructures.html',
               nature: 'website',
             },
           ],
