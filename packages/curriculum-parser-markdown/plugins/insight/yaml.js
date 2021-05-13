@@ -76,9 +76,14 @@ function getMarkdownLink(link) {
 
 // http://stackoverflow.com/questions/8498592/extract-root-domain-name-from-string
 function getDomainFromURL(url) {
-  if (!url) return null;
+  const urlDomainArray = url
+    ? // find & remove protocol (http, ftp, etc.) and get domain
+      (url.indexOf('://') > -1 ? url.split('/')[2] : url.split('/'))
+        // find & remove port number
+        .split(':')
+    : [null];
 
-  return new URL(url).hostname;
+  return urlDomainArray[0];
 }
 
 function removeExtraSpaces(string) {
