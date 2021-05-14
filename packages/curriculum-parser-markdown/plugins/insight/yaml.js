@@ -32,7 +32,7 @@ const mdUrlRegEx = /\[(.*)\]\((.*)\)/;
 const mdUrlRegExWithType = /\[(.*)\]\((.*)\)\{(.*)\}/;
 
 // accounts for any spaces or newlines inside the name, url, nature or outside
-// this string:
+// for example, this string:
 // [Difference between Primary and Foreign
 //   Keys]
 //   (https://www.dotnettricks.com/learn/sqlserver/difference-between-primary-key-and-foreign-key){article}
