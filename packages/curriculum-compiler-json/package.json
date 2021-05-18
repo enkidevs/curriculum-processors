@@ -25,7 +25,7 @@
   "dependencies": {
     "@enkidevs/curriculum-compiler-string": "^8.2.2",
     "@enkidevs/curriculum-helpers": "^9.1.2",
-    "unist-builder": "^2.0.0",
+    "unist-builder": "^3.0.0",
     "unist-util-assert": "^2.0.0",
     "unist-util-size": "^2.0.0"
   },
