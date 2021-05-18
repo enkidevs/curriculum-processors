@@ -36,4 +36,5 @@ You can also press the eye button to preview your comment.
 ![markdown-and-preview-button-positions](https://img.enkipro.com/a92eef7bc6e5ad805e04d5c1e240924b.gif)
 `);
 // compactAst(ast);
+
 process.stdout.write(JSON.stringify(compactAst(ast), null, 2));

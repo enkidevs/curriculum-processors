@@ -24,6 +24,7 @@ try {
 }
 
 // strictly validate an entire insight
+
 try {
   validate(contentTypes.INSIGHT)(ast);
 } catch (e) {

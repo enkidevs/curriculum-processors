@@ -1,4 +1,5 @@
 // Use this sandbox to play with the compiler
+
 const { getCompiler } = require('./index');
 
 const ast = {

@@ -318,6 +318,7 @@ const ast = {
   },
 };
 const { getCompiler } = require('./index');
+
 const json = getCompiler('glossary').compileSync(ast);
 
 console.log(JSON.stringify(json, null, 2));
