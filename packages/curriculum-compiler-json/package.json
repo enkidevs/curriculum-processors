@@ -33,7 +33,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "jest": "^26.0.1",
+    "jest": "^27.0.4",
     "jest-in-case": "^1.0.2",
     "jsonfile": "^6.0.0"
   },
