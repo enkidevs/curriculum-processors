@@ -34,7 +34,7 @@
     "@enkidevs/curriculum-helpers": "^9.1.2",
     "@enkidevs/remark-stringify": "^8.0.0",
     "js-yaml": "^3.13.0",
-    "unified": "^9.0.0"
+    "unified": "^10.0.1"
   },
   "devDependencies": {
     "jest": "^26.0.1",
