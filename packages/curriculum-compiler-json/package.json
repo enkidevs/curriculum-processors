@@ -27,7 +27,7 @@
     "@enkidevs/curriculum-helpers": "^9.1.2",
     "unist-builder": "^2.0.0",
     "unist-util-assert": "^2.0.0",
-    "unist-util-size": "^2.0.0"
+    "unist-util-size": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"
