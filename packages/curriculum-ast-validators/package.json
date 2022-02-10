@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "@enkidevs/curriculum-helpers": "^9.1.2",
-    "js-yaml": "^3.13.1",
+    "js-yaml": "^4.1.0",
     "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
