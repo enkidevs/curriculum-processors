@@ -2,11 +2,11 @@ module.exports = [
   'hack',
   'caveats',
   'pattern',
-  'how to',
+  'how-to',
   'feature',
   'thought',
   'tip',
   'unclassified',
-  'best practice',
+  'best-practice',
   'must-know',
 ];
