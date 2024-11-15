@@ -1,6 +1,6 @@
 {
   "name": "@enkidevs/curriculum-ast-validators",
-  "version": "4.3.3",
+  "version": "4.3.4",
   "description": "Validators for Enki Curriculum AST",
   "author": "Nemanja Stojanovic <nemanjacoder@gmail.com>",
   "main": "index.js",
@@ -33,12 +33,12 @@
     "question"
   ],
   "dependencies": {
-    "@enkidevs/curriculum-helpers": "^9.1.2",
+    "@enkidevs/curriculum-helpers": "^9.1.3",
     "js-yaml": "^3.13.1",
     "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
-    "@enkidevs/curriculum-parser-markdown": "^10.2.3",
+    "@enkidevs/curriculum-parser-markdown": "^10.2.4",
     "jest": "^26.0.1"
   },
   "gitHead": "a4ce08a6e24ea21b50daa67a1af518ff55fec34a"
